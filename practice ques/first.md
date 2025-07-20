@@ -305,3 +305,4 @@ Which solution will meet these requirements?
     D. Use an API Gateway integration to send a message to an Amazon Simple Queue Service (Amazon SQS) standard queue when the application receives an order. Configure the SQS standard queue to invoke an AWS Lambda function for processing.
 
 Answer: B
+
