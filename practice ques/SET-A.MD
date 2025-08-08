@@ -1,5 +1,17 @@
 # AWS Solutions Architect Associate (SAA) Practice Questions
+
+This repository contains 25 comprehensive practice questions for the AWS Solutions Architect Associate certification exam. Each question focuses on real-world scenarios and AWS best practices.
+
+## Table of Contents
+- [Questions 1-5: Storage & Data Transfer](#questions-1-5-storage--data-transfer)
+- [Questions 6-10: Application Architecture](#questions-6-10-application-architecture)
+- [Questions 11-15: Security & Networking](#questions-11-15-security--networking)
+- [Questions 16-20: Data Analytics & Performance](#questions-16-20-data-analytics--performance)
+- [Questions 21-25: Cost Optimization & Monitoring](#questions-21-25-cost-optimization--monitoring)
+
 ---
+
+## Questions 1-5: Storage & Data Transfer
 
 ### Question 1: Global Data Aggregation
 **Scenario:** A company collects temperature, humidity, and atmospheric pressure data from global sites. Each site generates 500 GB daily and has high-speed internet. They need to aggregate data quickly in a single S3 bucket with minimal operational complexity.
@@ -493,6 +505,540 @@ D) Set up two Lambda functions. Configure one function to receive the informatio
    - Use IAM roles instead of access keys
    - Implement least privilege access
    - Use AWS Organizations for multi-account management
+
+---
+
+## Questions 26-30: Monitoring & Compliance
+
+### Question 26: S3 Configuration Change Monitoring
+**Scenario:** A company needs to review its AWS deployment to ensure S3 buckets don't have unauthorized configuration changes.
+
+**What should a solutions architect do?**
+
+A) Turn on AWS Config with the appropriate rules.
+
+B) Turn on AWS Trusted Advisor with the appropriate checks.
+
+C) Turn on Amazon Inspector with the appropriate assessment template.
+
+D) Turn on Amazon S3 server access logging. Configure Amazon EventBridge (Amazon CloudWatch Events).
+
+**Answer:** A
+
+---
+
+### Question 27: CloudWatch Dashboard Access for External User
+**Scenario:** A company's product manager (without AWS account) needs periodic access to a CloudWatch dashboard following least privilege principle.
+
+**Which solution meets these requirements?**
+
+A) Share the dashboard from the CloudWatch console. Enter the product manager's email address, and complete the sharing steps. Provide a shareable link for the dashboard to the product manager.
+
+B) Create an IAM user specifically for the product manager. Attach the CloudWatchReadOnlyAccess AWS managed policy to the user. Share the new login credentials with the product manager. Share the browser URL of the correct dashboard with the product manager.
+
+C) Create an IAM user for the company's employees. Attach the ViewOnlyAccess AWS managed policy to the IAM user. Share the new login credentials with the product manager. Ask the product manager to navigate to the CloudWatch console and locate the dashboard by name in the Dashboards section.
+
+D) Deploy a bastion server in a public subnet. When the product manager requires access to the dashboard, start the server and share the RDP credentials. On the bastion server, ensure that the browser is configured to open the dashboard URL with cached AWS credentials that have appropriate permissions to view the dashboard.
+
+**Answer:** A
+
+---
+
+### Question 28: SSO with On-Premises Active Directory
+**Scenario:** A company manages accounts with AWS Organizations and needs SSO across all accounts while continuing to manage users in on-premises Microsoft Active Directory.
+
+**Which solution meets these requirements?**
+
+A) Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console. Create a one-way forest trust or a one-way domain trust to connect the company's self-managed Microsoft Active Directory with AWS SSO by using AWS Directory Service for Microsoft Active Directory.
+
+B) Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console. Create a two-way forest trust to connect the company's self-managed Microsoft Active Directory with AWS SSO by using AWS Directory Service for Microsoft Active Directory.
+
+C) Use AWS Directory Service. Create a two-way trust relationship with the company's self-managed Microsoft Active Directory.
+
+D) Deploy an identity provider (IdP) on premises. Enable AWS Single Sign-On (AWS SSO) from the AWS SSO console.
+
+**Answer:** B
+
+---
+
+### Question 29: VoIP Service Global Routing
+**Scenario:** A VoIP service using UDP connections runs on EC2 Auto Scaling groups across multiple regions. Users need routing to the lowest latency region with automated failover.
+
+**Which solution meets these requirements?**
+
+A) Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Use the NLB as an AWS Global Accelerator endpoint in each Region.
+
+B) Deploy an Application Load Balancer (ALB) and an associated target group. Associate the target group with the Auto Scaling group. Use the ALB as an AWS Global Accelerator endpoint in each Region.
+
+C) Deploy a Network Load Balancer (NLB) and an associated target group. Associate the target group with the Auto Scaling group. Create an Amazon Route 53 latency record that points to aliases for each NLB. Create an Amazon CloudFront distribution that uses the latency record as an origin.
+
+D) Deploy an Application Load Balancer (ALB) and an associated target group. Associate the target group with the Auto Scaling group. Create an Amazon Route 53 weighted record that points to aliases for each ALB. Deploy an Amazon CloudFront distribution that uses the weighted record as an origin.
+
+**Answer:** A
+
+---
+
+### Question 30: Cost-Effective RDS Testing Strategy
+**Scenario:** A development team runs monthly 48-hour resource-intensive tests on a general purpose RDS MySQL instance. They want to reduce costs without reducing compute/memory attributes.
+
+**Which solution is MOST cost-effective?**
+
+A) Stop the DB instance when tests are completed. Restart the DB instance when required.
+
+B) Use an Auto Scaling policy with the DB instance to automatically scale when tests are completed.
+
+C) Create a snapshot when tests are completed. Terminate the DB instance and restore the snapshot when required.
+
+D) Modify the DB instance to a low-capacity instance when tests are completed. Modify the DB instance again when required.
+
+**Answer:** C
+
+---
+
+## Questions 31-35: Resource Management & Security
+
+### Question 31: Resource Tagging Compliance
+**Scenario:** A company wants to ensure all EC2, RDS, and Redshift resources are configured with tags with minimal effort for configuration and operation.
+
+**What should a solutions architect do?**
+
+A) Use AWS Config rules to define and detect resources that are not properly tagged.
+
+B) Use Cost Explorer to display resources that are not properly tagged. Tag those resources manually.
+
+C) Write API calls to check all resources for proper tag allocation. Periodically run the code on an EC2 instance.
+
+D) Write API calls to check all resources for proper tag allocation. Schedule an AWS Lambda function through Amazon CloudWatch to periodically run the code.
+
+**Answer:** A
+
+---
+
+### Question 32: Cost-Effective Static Website Hosting
+**Scenario:** A development team needs to host a website with HTML, CSS, client-side JavaScript, and images for access by other teams.
+
+**Which method is MOST cost-effective?**
+
+A) Containerize the website and host it in AWS Fargate.
+
+B) Create an Amazon S3 bucket and host the website there.
+
+C) Deploy a web server on an Amazon EC2 instance to host the website.
+
+D) Configure an Application Load Balancer with an AWS Lambda target that uses the Express.js framework.
+
+**Answer:** B
+
+---
+
+### Question 33: Real-Time Transaction Processing
+**Scenario:** An online marketplace needs a scalable, near-real-time solution to share millions of financial transactions with internal applications. Sensitive data must be removed before storage in a document database.
+
+**What should a solutions architect recommend?**
+
+A) Store the transactions data into Amazon DynamoDB. Set up a rule in DynamoDB to remove sensitive data from every transaction upon write. Use DynamoDB Streams to share the transactions data with other applications.
+
+B) Stream the transactions data into Amazon Kinesis Data Firehose to store data in Amazon DynamoDB and Amazon S3. Use AWS Lambda integration with Kinesis Data Firehose to remove sensitive data. Other applications can consume the data stored in Amazon S3.
+
+C) Stream the transactions data into Amazon Kinesis Data Streams. Use AWS Lambda integration to remove sensitive data from every transaction and then store the transactions data in Amazon DynamoDB. Other applications can consume the transactions data off the Kinesis data stream.
+
+D) Store the batched transactions data in Amazon S3 as files. Use AWS Lambda to process every file and remove sensitive data before updating the files in Amazon S3. The Lambda function then stores the data in Amazon DynamoDB. Other applications can consume transaction files stored in Amazon S3.
+
+**Answer:** C
+
+---
+
+### Question 34: Compliance and Auditing Requirements
+**Scenario:** A company must track configuration changes on AWS resources and record API call history for compliance, governance, auditing, and security.
+
+**What should a solutions architect do?**
+
+A) Use AWS CloudTrail to track configuration changes and AWS Config to record API calls.
+
+B) Use AWS Config to track configuration changes and AWS CloudTrail to record API calls.
+
+C) Use AWS Config to track configuration changes and Amazon CloudWatch to record API calls.
+
+D) Use AWS CloudTrail to track configuration changes and Amazon CloudWatch to record API calls.
+
+**Answer:** B
+
+---
+
+### Question 35: DDoS Protection for Public Web Application
+**Scenario:** A company is launching a public-facing web application with EC2 instances in a VPC behind an ELB, using third-party DNS. They need protection against large-scale DDoS attacks.
+
+**Which solution meets these requirements?**
+
+A) Enable Amazon GuardDuty on the account.
+
+B) Enable Amazon Inspector on the EC2 instances.
+
+C) Enable AWS Shield and assign Amazon Route 53 to it.
+
+D) Enable AWS Shield Advanced and assign the ELB to it.
+
+**Answer:** D
+
+---
+
+## Questions 36-40: Encryption & Performance
+
+### Question 36: Multi-Region KMS Encryption
+**Scenario:** An application stores data in S3 buckets in two regions. All data must be encrypted/decrypted with the same KMS customer managed key, with data and key stored in both regions.
+
+**Which solution meets requirements with LEAST operational overhead?**
+
+A) Create an S3 bucket in each Region. Configure the S3 buckets to use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Configure replication between the S3 buckets.
+
+B) Create a customer managed multi-Region KMS key. Create an S3 bucket in each Region. Configure replication between the S3 buckets. Configure the application to use the KMS key with client-side encryption.
+
+C) Create a customer managed KMS key and an S3 bucket in each Region. Configure the S3 buckets to use server-side encryption with Amazon S3 managed encryption keys (SSE-S3). Configure replication between the S3 buckets.
+
+D) Create a customer managed KMS key and an S3 bucket in each Region. Configure the S3 buckets to use server-side encryption with AWS KMS keys (SSE-KMS). Configure replication between the S3 buckets.
+
+**Answer:** B
+
+---
+
+### Question 37: Secure Remote EC2 Access
+**Scenario:** A company needs to create a repeatable strategy to access and administer EC2 instances remotely and securely using native AWS services following Well-Architected Framework.
+
+**Which solution has LEAST operational overhead?**
+
+A) Use the EC2 serial console to directly access the terminal interface of each instance for administration.
+
+B) Attach the appropriate IAM role to each existing instance and new instance. Use AWS Systems Manager Session Manager to establish a remote SSH session.
+
+C) Create an administrative SSH key pair. Load the public key into each EC2 instance. Deploy a bastion host in a public subnet to provide a tunnel for administration of each instance.
+
+D) Establish an AWS Site-to-Site VPN connection. Instruct administrators to use their local on-premises machines to connect directly to the instances by using SSH keys across the VPN tunnel.
+
+**Answer:** B
+
+---
+
+### Question 38: Global Static Website Performance
+**Scenario:** A company hosts a static website on S3 with Route 53 DNS. The website is experiencing increased global demand and needs decreased latency.
+
+**Which solution is MOST cost-effective?**
+
+A) Replicate the S3 bucket that contains the website to all AWS Regions. Add Route 53 geolocation routing entries.
+
+B) Provision accelerators in AWS Global Accelerator. Associate the supplied IP addresses with the S3 bucket. Edit the Route 53 entries to point to the IP addresses of the accelerators.
+
+C) Add an Amazon CloudFront distribution in front of the S3 bucket. Edit the Route 53 entries to point to the CloudFront distribution.
+
+D) Enable S3 Transfer Acceleration on the bucket. Edit the Route 53 entries to point to the new endpoint.
+
+**Answer:** C
+
+---
+
+### Question 39: RDS Performance Optimization
+**Scenario:** An RDS MySQL database with 10+ million rows and 2TB General Purpose SSD storage experiences slow insert operations (10+ seconds) due to storage performance issues.
+
+**Which solution addresses this performance issue?**
+
+A) Change the storage type to Provisioned IOPS SSD.
+
+B) Change the DB instance to a memory optimized instance class.
+
+C) Change the DB instance to a burstable performance instance class.
+
+D) Enable Multi-AZ RDS read replicas with MySQL native asynchronous replication.
+
+**Answer:** A
+
+---
+
+### Question 40: Edge Device Data Ingestion
+**Scenario:** Thousands of edge devices generate 1TB of 2KB status alerts daily. Need a highly available, cost-effective solution with 14-day immediate access and archiving of older data.
+
+**What is the MOST operationally efficient solution?**
+
+A) Create an Amazon Kinesis Data Firehose delivery stream to ingest the alerts. Configure the Kinesis Data Firehose stream to deliver the alerts to an Amazon S3 bucket. Set up an S3 Lifecycle configuration to transition data to Amazon S3 Glacier after 14 days.
+
+B) Launch Amazon EC2 instances across two Availability Zones and place them behind an Elastic Load Balancer to ingest the alerts. Create a script on the EC2 instances that will store the alerts in an Amazon S3 bucket. Set up an S3 Lifecycle configuration to transition data to Amazon S3 Glacier after 14 days.
+
+C) Create an Amazon Kinesis Data Firehose delivery stream to ingest the alerts. Configure the Kinesis Data Firehose stream to deliver the alerts to an Amazon OpenSearch Service (Amazon Elasticsearch Service) cluster. Set up the Amazon OpenSearch Service (Amazon Elasticsearch Service) cluster to take manual snapshots every day and delete data from the cluster that is older than 14 days.
+
+D) Create an Amazon Simple Queue Service (Amazon SQS) standard queue to ingest the alerts, and set the message retention period to 14 days. Configure consumers to poll the SQS queue, check the age of the message, and analyze the message data as needed. If the message is 14 days old, the consumer should copy the message to an Amazon S3 bucket and delete the message from the SQS queue.
+
+**Answer:** A
+
+---
+
+## Questions 41-45: Application Optimization & Reliability
+
+### Question 41: SaaS Integration Performance Improvement
+**Scenario:** An application integrates with multiple SaaS sources, with EC2 instances receiving, uploading to S3, and sending notifications. Performance is slow and needs improvement.
+
+**Which solution has LEAST operational overhead?**
+
+A) Create an Auto Scaling group so that EC2 instances can scale out. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete.
+
+B) Create an Amazon AppFlow flow to transfer data between each SaaS source and the S3 bucket. Configure an S3 event notification to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete.
+
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule for each SaaS source to send output data. Configure the S3 bucket as the rule's target. Create a second EventBridge (CloudWatch Events) rule to send events when the upload to the S3 bucket is complete. Configure an Amazon Simple Notification Service (Amazon SNS) topic as the second rule's target.
+
+D) Create a Docker container to use instead of an EC2 instance. Host the containerized application on Amazon Elastic Container Service (Amazon ECS). Configure Amazon CloudWatch Container Insights to send events to an Amazon Simple Notification Service (Amazon SNS) topic when the upload to the S3 bucket is complete.
+
+**Answer:** B
+
+---
+
+### Question 42: Cost-Effective S3 Access
+**Scenario:** EC2 instances in multiple AZs download/upload images to S3 through a single NAT gateway. The company is concerned about data transfer charges.
+
+**What is the MOST cost-effective way to avoid Regional data transfer charges?**
+
+A) Launch the NAT gateway in each Availability Zone.
+
+B) Replace the NAT gateway with a NAT instance.
+
+C) Deploy a gateway VPC endpoint for Amazon S3.
+
+D) Provision an EC2 Dedicated Host to run the EC2 instances.
+
+**Answer:** C
+
+---
+
+### Question 43: On-Premises Backup Bandwidth Solution
+**Scenario:** An on-premises application generates large amounts of time-sensitive data backed up to S3, but users complain about internet bandwidth limitations.
+
+**Which long-term solution meets these requirements?**
+
+A) Establish AWS VPN connections and proxy all traffic through a VPC gateway endpoint.
+
+B) Establish a new AWS Direct Connect connection and direct backup traffic through this new connection.
+
+C) Order daily AWS Snowball devices. Load the data onto the Snowball devices and return the devices to AWS each day.
+
+D) Submit a support ticket through the AWS Management Console. Request the removal of S3 service limits from the account.
+
+**Answer:** B
+
+---
+
+### Question 44: S3 Data Protection from Accidental Deletion
+**Scenario:** A company has an S3 bucket with critical data that must be protected from accidental deletion.
+
+**Which combination of steps should be taken? (Choose two)**
+
+A) Enable versioning on the S3 bucket.
+
+B) Enable MFA Delete on the S3 bucket.
+
+C) Create a bucket policy on the S3 bucket.
+
+D) Enable default encryption on the S3 bucket.
+
+E) Create a lifecycle policy for the objects in the S3 bucket.
+
+**Answer:** A, B
+
+---
+
+### Question 45: Lambda Function Reliability Improvement
+**Scenario:** A data ingestion workflow with SNS and Lambda occasionally fails due to network connectivity issues. When failures occur, Lambda doesn't process the corresponding data unless manually rerun.
+
+**Which combination ensures Lambda ingests all data? (Choose two)**
+
+A) Deploy the Lambda function in multiple Availability Zones.
+
+B) Create an Amazon Simple Queue Service (Amazon SQS) queue, and subscribe it to the SNS topic.
+
+C) Increase the CPU and memory that are allocated to the Lambda function.
+
+D) Increase provisioned throughput for the Lambda function.
+
+E) Modify the Lambda function to read from an Amazon Simple Queue Service (Amazon SQS) queue.
+
+**Answer:** B, E
+
+---
+
+## Questions 46-50: Advanced Security & Management
+
+### Question 46: PII Detection and Remediation
+**Scenario:** A company receives transaction files via SFTP (some >200GB) and discovered some contain PII that shouldn't be included. They want automated PII detection alerts and remediation.
+
+**What should a solutions architect do with LEAST development effort?**
+
+A) Use an Amazon S3 bucket as a secure transfer point. Use Amazon Inspector to scan the objects in the bucket. If objects contain PII, trigger an S3 Lifecycle policy to remove the objects that contain PII.
+
+B) Use an Amazon S3 bucket as a secure transfer point. Use Amazon Macie to scan the objects in the bucket. If objects contain PII, use Amazon Simple Notification Service (Amazon SNS) to trigger a notification to the administrators to remove the objects that contain PII.
+
+C) Implement custom scanning algorithms in an AWS Lambda function. Trigger the function when objects are loaded into the bucket. If objects contain PII, use Amazon Simple Notification Service (Amazon SNS) to trigger a notification to the administrators to remove the objects that contain PII.
+
+D) Implement custom scanning algorithms in an AWS Lambda function. Trigger the function when objects are loaded into the bucket. If objects contain PII, use Amazon Simple Email Service (Amazon SES) to trigger a notification to the administrators and trigger an S3 Lifecycle policy to remove the objects that contain PII.
+
+**Answer:** B
+
+---
+
+### Question 47: Guaranteed EC2 Capacity
+**Scenario:** A company needs guaranteed EC2 capacity in three specific Availability Zones in a specific region for a 1-week upcoming event.
+
+**What should the company do?**
+
+A) Purchase Reserved Instances that specify the Region needed.
+
+B) Create an On-Demand Capacity Reservation that specifies the Region needed.
+
+C) Purchase Reserved Instances that specify the Region and three Availability Zones needed.
+
+D) Create an On-Demand Capacity Reservation that specifies the Region and three Availability Zones needed.
+
+**Answer:** D
+
+---
+
+### Question 48: Durable Catalog Storage
+**Scenario:** A company's website uses EC2 instance store for its catalog. They want to ensure the catalog is highly available and stored in a durable location.
+
+**What should a solutions architect do?**
+
+A) Move the catalog to Amazon ElastiCache for Redis.
+
+B) Deploy a larger EC2 instance with a larger instance store.
+
+C) Move the catalog from the instance store to Amazon S3 Glacier Deep Archive.
+
+D) Move the catalog to an Amazon Elastic File System (Amazon EFS) file system.
+
+**Answer:** D
+
+---
+
+### Question 49: Call Transcript File Storage Optimization
+**Scenario:** A company stores call transcript files monthly. Users access files randomly within 1 year but infrequently after 1 year. Quick access needed for <1 year files, acceptable delay for older files.
+
+**Which solution is MOST cost-effective?**
+
+A) Store individual files with tags in Amazon S3 Glacier Instant Retrieval. Query the tags to retrieve the files from S3 Glacier Instant Retrieval.
+
+B) Store individual files in Amazon S3 Intelligent-Tiering. Use S3 Lifecycle policies to move the files to S3 Glacier Flexible Retrieval after 1 year. Query and retrieve the files that are in Amazon S3 by using Amazon Athena. Query and retrieve the files that are in S3 Glacier by using S3 Glacier Select.
+
+C) Store individual files with tags in Amazon S3 Standard storage. Store search metadata for each archive in Amazon S3 Standard storage. Use S3 Lifecycle policies to move the files to S3 Glacier Instant Retrieval after 1 year. Query and retrieve the files by searching for metadata from Amazon S3.
+
+D) Store individual files in Amazon S3 Standard storage. Use S3 Lifecycle policies to move the files to S3 Glacier Deep Archive after 1 year. Store search metadata in Amazon RDS. Query the files from Amazon RDS. Retrieve the files from S3 Glacier Deep Archive.
+
+**Answer:** B
+
+---
+
+### Question 50: Large-Scale EC2 Patching
+**Scenario:** A company has 1,000 EC2 Linux instances running third-party software that needs patching as quickly as possible to remediate a critical security vulnerability.
+
+**What should a solutions architect do?**
+
+A) Create an AWS Lambda function to apply the patch to all EC2 instances.
+
+B) Configure AWS Systems Manager Patch Manager to apply the patch to all EC2 instances.
+
+C) Schedule an AWS Systems Manager maintenance window to apply the patch to all EC2 instances.
+
+D) Use AWS Systems Manager Run Command to run a custom command that applies the patch to all EC2 instances.
+
+**Answer:** D
+
+---
+
+## Complete Answer Key Summary
+
+| Question | Answer | Key Concept |
+|----------|--------|-------------|
+| 1 | A | S3 Transfer Acceleration |
+| 2 | C | Amazon Athena for S3 queries |
+| 3 | A | AWS Organizations S3 bucket policy |
+| 4 | A | VPC Gateway Endpoint |
+| 5 | C | Amazon EFS for shared storage |
+| 6 | B | AWS Snowball for large data migration |
+| 7 | D | SNS with SQS for fan-out messaging |
+| 8 | B | SQS-based Auto Scaling |
+| 9 | B | S3 File Gateway with lifecycle policies |
+| 10 | B | SQS FIFO for ordered processing |
+| 11 | A | AWS Secrets Manager |
+| 12 | A | CloudFront with multiple origins |
+| 13 | A | Multi-Region Secrets Manager |
+| 14 | C | Aurora Auto Scaling |
+| 15 | C | AWS Network Firewall |
+| 16 | B | Amazon QuickSight user/group sharing |
+| 17 | A | IAM roles for EC2 |
+| 18 | A, B | S3 notifications with SQS and Lambda |
+| 19 | D | Gateway Load Balancer |
+| 20 | D | EBS Fast Snapshot Restore |
+| 21 | D | Serverless architecture |
+| 22 | B | S3 Intelligent-Tiering |
+| 23 | B | S3 Glacier Deep Archive |
+| 24 | B | AWS Cost Explorer |
+| 25 | D | Lambda decoupling with SQS |
+| 26 | A | AWS Config for configuration monitoring |
+| 27 | A | CloudWatch dashboard sharing |
+| 28 | B | AWS SSO with two-way forest trust |
+| 29 | A | Global Accelerator with NLB for UDP |
+| 30 | C | RDS snapshot and terminate strategy |
+| 31 | A | AWS Config rules for tagging compliance |
+| 32 | B | S3 static website hosting |
+| 33 | C | Kinesis Data Streams with Lambda processing |
+| 34 | B | Config for configuration, CloudTrail for API calls |
+| 35 | D | AWS Shield Advanced for DDoS protection |
+| 36 | B | Multi-Region KMS key |
+| 37 | B | Systems Manager Session Manager |
+| 38 | C | CloudFront for global content delivery |
+| 39 | A | Provisioned IOPS SSD for database performance |
+| 40 | A | Kinesis Data Firehose with S3 lifecycle |
+| 41 | B | Amazon AppFlow for SaaS integration |
+| 42 | C | VPC Gateway Endpoint for S3 |
+| 43 | B | AWS Direct Connect for dedicated bandwidth |
+| 44 | A, B | S3 versioning and MFA Delete |
+| 45 | B, E | SQS queue for Lambda reliability |
+| 46 | B | Amazon Macie for PII detection |
+| 47 | D | On-Demand Capacity Reservation for specific AZs |
+| 48 | D | Amazon EFS for durable file storage |
+| 49 | B | S3 Intelligent-Tiering with lifecycle policies |
+| 50 | D | Systems Manager Run Command for immediate patching |
+
+---
+
+## Extended Study Tips
+
+### Advanced Concepts to Master:
+
+1. **Multi-Region Architecture:**
+   - Global Accelerator vs CloudFront
+   - Multi-Region KMS keys
+   - Cross-Region replication strategies
+
+2. **Security Best Practices:**
+   - AWS Config for compliance monitoring
+   - Secrets Manager for credential rotation
+   - Macie for data classification and PII detection
+
+3. **Performance Optimization:**
+   - Storage types: GP2 vs GP3 vs Provisioned IOPS
+   - Database scaling patterns
+   - Content delivery strategies
+
+4. **Cost Optimization Advanced:**
+   - Reserved Instances vs Savings Plans vs Spot Instances
+   - S3 storage class optimization
+   - Data transfer cost reduction
+
+5. **Operational Excellence:**
+   - Systems Manager for patch management
+   - CloudWatch for monitoring and alerting
+   - AWS Config for configuration drift detection
+
+### Real-World Application Scenarios:
+
+- **Data Pipeline Design:** Kinesis → Lambda → DynamoDB patterns
+- **Hybrid Cloud Integration:** Direct Connect, VPN, and gateway patterns  
+- **Disaster Recovery:** RTO/RPO considerations with backup and restore strategies
+- **Compliance Automation:** Config rules, CloudTrail, and automated remediation
 
 ## Contributing
 
