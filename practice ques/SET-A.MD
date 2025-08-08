@@ -2,13 +2,6 @@
 
 This repository contains 25 comprehensive practice questions for the AWS Solutions Architect Associate certification exam. Each question focuses on real-world scenarios and AWS best practices.
 
-## Table of Contents
-- [Questions 1-5: Storage & Data Transfer](#questions-1-5-storage--data-transfer)
-- [Questions 6-10: Application Architecture](#questions-6-10-application-architecture)
-- [Questions 11-15: Security & Networking](#questions-11-15-security--networking)
-- [Questions 16-20: Data Analytics & Performance](#questions-16-20-data-analytics--performance)
-- [Questions 21-25: Cost Optimization & Monitoring](#questions-21-25-cost-optimization--monitoring)
-
 ---
 
 ## Questions 1-5: Storage & Data Transfer
