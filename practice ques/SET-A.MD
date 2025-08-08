@@ -441,6 +441,66 @@ D) Set up two Lambda functions. Configure one function to receive the informatio
 
 ---
 
+## Answer Key Summary
+
+| Question | Answer | Key Concept |
+|----------|--------|-------------|
+| 1 | A | S3 Transfer Acceleration |
+| 2 | C | Amazon Athena for S3 queries |
+| 3 | A | AWS Organizations S3 bucket policy |
+| 4 | A | VPC Gateway Endpoint |
+| 5 | C | Amazon EFS for shared storage |
+| 6 | B | AWS Snowball for large data migration |
+| 7 | D | SNS with SQS for fan-out messaging |
+| 8 | B | SQS-based Auto Scaling |
+| 9 | B | S3 File Gateway with lifecycle policies |
+| 10 | B | SQS FIFO for ordered processing |
+| 11 | A | AWS Secrets Manager |
+| 12 | A | CloudFront with multiple origins |
+| 13 | A | Multi-Region Secrets Manager |
+| 14 | C | Aurora Auto Scaling |
+| 15 | C | AWS Network Firewall |
+| 16 | B | Amazon QuickSight user/group sharing |
+| 17 | A | IAM roles for EC2 |
+| 18 | A, B | S3 notifications with SQS and Lambda |
+| 19 | D | Gateway Load Balancer |
+| 20 | D | EBS Fast Snapshot Restore |
+| 21 | D | Serverless architecture (S3, CloudFront, API Gateway, Lambda, DynamoDB) |
+| 22 | B | S3 Intelligent-Tiering |
+| 23 | B | S3 Glacier Deep Archive |
+| 24 | B | AWS Cost Explorer |
+| 25 | D | Lambda decoupling with SQS |
+
+---
+
+## Study Tips
+
+1. **Focus on AWS Well-Architected Framework pillars:**
+   - Operational Excellence
+   - Security
+   - Reliability
+   - Performance Efficiency
+   - Cost Optimization
+
+2. **Key service patterns to remember:**
+   - Use S3 for static content, Aurora/RDS for relational data
+   - SQS for decoupling, SNS for notifications
+   - CloudFront for global content delivery
+   - Auto Scaling for handling variable loads
+   - Secrets Manager for credential management
+
+3. **Cost optimization strategies:**
+   - Use appropriate storage classes (S3 Intelligent-Tiering, lifecycle policies)
+   - Implement Auto Scaling to match capacity with demand
+   - Use serverless services where appropriate
+
+4. **Security best practices:**
+   - Use IAM roles instead of access keys
+   - Implement least privilege access
+   - Use AWS Organizations for multi-account management
+
+---
+
 ## Questions 26-30: Monitoring & Compliance
 
 ### Question 26: S3 Configuration Change Monitoring
@@ -880,6 +940,269 @@ D) Use AWS Systems Manager Run Command to run a custom command that applies the 
 
 ---
 
+## Questions 51-55: Advanced Application Development
+
+### Question 51: Automated Email Reporting System
+**Scenario:** A company developing an application with a REST API for order shipping statistics wants to extract data, format it into HTML, and email reports to multiple addresses every morning.
+
+**Which combination of steps should be taken? (Choose two)**
+
+A) Configure the application to send the data to Amazon Kinesis Data Firehose.
+
+B) Use Amazon Simple Email Service (Amazon SES) to format the data and to send the report by email.
+
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) scheduled event that invokes an AWS Glue job to query the application's API for the data.
+
+D) Create an Amazon EventBridge (Amazon CloudWatch Events) scheduled event that invokes an AWS Lambda function to query the application's API for the data.
+
+E) Store the application data in Amazon S3. Create an Amazon Simple Notification Service (Amazon SNS) topic as an S3 event destination to send the report by email.
+
+**Answer:** D, B
+
+---
+
+### Question 52: Large File Processing Migration
+**Scenario:** A company wants to migrate an on-premises application to AWS. The application produces files ranging from tens of GB to hundreds of TB and needs standard file system structure with automatic scaling, high availability, and minimal operational overhead.
+
+**Which solution meets these requirements?**
+
+A) Migrate the application to run as containers on Amazon Elastic Container Service (Amazon ECS). Use Amazon S3 for storage.
+
+B) Migrate the application to run as containers on Amazon Elastic Kubernetes Service (Amazon EKS). Use Amazon Elastic Block Store (Amazon EBS) for storage.
+
+C) Migrate the application to Amazon EC2 instances in a Multi-AZ Auto Scaling group. Use Amazon Elastic File System (Amazon EFS) for storage.
+
+D) Migrate the application to Amazon EC2 instances in a Multi-AZ Auto Scaling group. Use Amazon Elastic Block Store (Amazon EBS) for storage.
+
+**Answer:** C
+
+---
+
+### Question 53: Long-Term Compliance Storage
+**Scenario:** A company needs to store accounting records in S3 with immediate access for 1 year, then archived for 9 more years. No one, including admin and root users, can delete records during the entire 10-year period. Maximum resiliency required.
+
+**Which solution meets these requirements?**
+
+A) Store the records in S3 Glacier for the entire 10-year period. Use an access control policy to deny deletion of the records for a period of 10 years.
+
+B) Store the records by using S3 Intelligent-Tiering. Use an IAM policy to deny deletion of the records. After 10 years, change the IAM policy to allow deletion.
+
+C) Use an S3 Lifecycle policy to transition the records from S3 Standard to S3 Glacier Deep Archive after 1 year. Use S3 Object Lock in compliance mode for a period of 10 years.
+
+D) Use an S3 Lifecycle policy to transition the records from S3 Standard to S3 One Zone-Infrequent Access (S3 One Zone-IA) after 1 year. Use S3 Object Lock in governance mode for a period of 10 years.
+
+**Answer:** C
+
+---
+
+### Question 54: Windows File Shares Modernization
+**Scenario:** A company runs Windows workloads with file shares on two EC2 instances that synchronize data. They want a highly available, durable storage solution preserving current user access patterns.
+
+**What should a solutions architect do?**
+
+A) Migrate all the data to Amazon S3. Set up IAM authentication for users to access files.
+
+B) Set up an Amazon S3 File Gateway. Mount the S3 File Gateway on the existing EC2 instances.
+
+C) Extend the file share environment to Amazon FSx for Windows File Server with a Multi-AZ configuration. Migrate all the data to FSx for Windows File Server.
+
+D) Extend the file share environment to Amazon Elastic File System (Amazon EFS) with a Multi-AZ configuration. Migrate all the data to Amazon EFS.
+
+**Answer:** C
+
+---
+
+### Question 55: VPC Database Access Control
+**Scenario:** A VPC architecture has six subnets in two AZs (public, private, and database subnets per AZ). Only EC2 instances in private subnets should access RDS databases.
+
+**Which solution meets these requirements?**
+
+A) Create a new route table that excludes the route to the public subnets' CIDR blocks. Associate the route table with the database subnets.
+
+B) Create a security group that denies inbound traffic from the security group that is assigned to instances in the public subnets. Attach the security group to the DB instances.
+
+C) Create a security group that allows inbound traffic from the security group that is assigned to instances in the private subnets. Attach the security group to the DB instances.
+
+D) Create a new peering connection between the public subnets and the private subnets. Create a different peering connection between the private subnets and the database subnets.
+
+**Answer:** C
+
+---
+
+## Questions 56-60: API Gateway & Web Applications
+
+### Question 56: Custom Domain API Gateway with HTTPS
+**Scenario:** A company uses API Gateway in ca-central-1 as public interface for backend APIs. Third-party services need HTTPS access using the company's domain name and certificate.
+
+**Which solution meets these requirements?**
+
+A) Create stage variables in API Gateway with Name="Endpoint-URL" and Value="Company Domain Name" to overwrite the default URL. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM).
+
+B) Create Route 53 DNS records with the company's domain name. Point the alias record to the Regional API Gateway stage endpoint. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM) in the us-east-1 Region.
+
+C) Create a Regional API Gateway endpoint. Associate the API Gateway endpoint with the company's domain name. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM) in the same Region. Attach the certificate to the API Gateway endpoint. Configure Route 53 to route traffic to the API Gateway endpoint.
+
+D) Create a Regional API Gateway endpoint. Associate the API Gateway endpoint with the company's domain name. Import the public certificate associated with the company's domain name into AWS Certificate Manager (ACM) in the us-east-1 Region. Attach the certificate to the API Gateway APIs. Create Route 53 DNS records with the company's domain name. Point an A record to the company's domain name.
+
+**Answer:** C
+
+---
+
+### Question 57: Image Content Moderation
+**Scenario:** A social media website allows users to upload images. The company wants to ensure images don't contain inappropriate content with minimal development effort.
+
+**What should a solutions architect do?**
+
+A) Use Amazon Comprehend to detect inappropriate content. Use human review for low-confidence predictions.
+
+B) Use Amazon Rekognition to detect inappropriate content. Use human review for low-confidence predictions.
+
+C) Use Amazon SageMaker to detect inappropriate content. Use ground truth to label low-confidence predictions.
+
+D) Use AWS Fargate to deploy a custom machine learning model to detect inappropriate content. Use ground truth to label low-confidence predictions.
+
+**Answer:** B
+
+---
+
+### Question 58: Serverless Container Management
+**Scenario:** A company wants to run critical applications in containers for scalability and availability. They want to focus on application maintenance without managing underlying infrastructure.
+
+**What should a solutions architect do?**
+
+A) Use Amazon EC2 instances, and install Docker on the instances.
+
+B) Use Amazon Elastic Container Service (Amazon ECS) on Amazon EC2 worker nodes.
+
+C) Use Amazon Elastic Container Service (Amazon ECS) on AWS Fargate.
+
+D) Use Amazon EC2 instances from an Amazon Elastic Container Service (Amazon ECS)-optimized Amazon Machine Image (AMI).
+
+**Answer:** C
+
+---
+
+### Question 59: Large-Scale Clickstream Analytics
+**Scenario:** A company hosts 300+ global websites and needs to analyze 30+ TB of clickstream data daily.
+
+**What should a solutions architect do to transmit and process the data?**
+
+A) Design an AWS Data Pipeline to archive the data to an Amazon S3 bucket and run an Amazon EMR cluster with the data to generate analytics.
+
+B) Create an Auto Scaling group of Amazon EC2 instances to process the data and send it to an Amazon S3 data lake for Amazon Redshift to use for analysis.
+
+C) Cache the data to Amazon CloudFront. Store the data in an Amazon S3 bucket. When an object is added to the S3 bucket, run an AWS Lambda function to process the data for analysis.
+
+D) Collect the data from Amazon Kinesis Data Streams. Use Amazon Kinesis Data Firehose to transmit the data to an Amazon S3 data lake. Load the data in Amazon Redshift for analysis.
+
+**Answer:** D
+
+---
+
+### Question 60: HTTP to HTTPS Redirection
+**Scenario:** A company has a website behind an ALB configured to handle HTTP and HTTPS separately. They want to forward all requests to use HTTPS.
+
+**What should a solutions architect do?**
+
+A) Update the ALB's network ACL to accept only HTTPS traffic.
+
+B) Create a rule that replaces the HTTP in the URL with HTTPS.
+
+C) Create a listener rule on the ALB to redirect HTTP traffic to HTTPS.
+
+D) Replace the ALB with a Network Load Balancer configured to use Server Name Indication (SNI).
+
+**Answer:** C
+
+---
+
+## Questions 61-65: Security & Healthcare Applications
+
+### Question 61: Database Credential Management
+**Scenario:** A two-tier web application on EC2 connects to RDS. The company must not hardcode database credentials and needs automatic credential rotation.
+
+**Which solution has LEAST operational overhead?**
+
+A) Store the database credentials in the instance metadata. Use Amazon EventBridge (Amazon CloudWatch Events) rules to run a scheduled AWS Lambda function that updates the RDS credentials and instance metadata at the same time.
+
+B) Store the database credentials in a configuration file in an encrypted Amazon S3 bucket. Use Amazon EventBridge (Amazon CloudWatch Events) rules to run a scheduled AWS Lambda function that updates the RDS credentials and the credentials in the configuration file at the same time. Use S3 Versioning to ensure the ability to fall back to previous values.
+
+C) Store the database credentials as a secret in AWS Secrets Manager. Turn on automatic rotation for the secret. Attach the required permission to the EC2 role to grant access to the secret.
+
+D) Store the database credentials as encrypted parameters in AWS Systems Manager Parameter Store. Turn on automatic rotation for the encrypted parameters. Attach the required permission to the EC2 role to grant access to the encrypted parameters.
+
+**Answer:** C
+
+---
+
+### Question 62: External Certificate Management
+**Scenario:** A public web application behind an ALB needs encryption with an SSL/TLS certificate from an external CA. The certificate must be rotated yearly before expiration.
+
+**What should a solutions architect do?**
+
+A) Use AWS Certificate Manager (ACM) to issue an SSL/TLS certificate. Apply the certificate to the ALB. Use the managed renewal feature to automatically rotate the certificate.
+
+B) Use AWS Certificate Manager (ACM) to issue an SSL/TLS certificate. Import the key material from the certificate. Apply the certificate to the ALB. Use the managed renewal feature to automatically rotate the certificate.
+
+C) Use AWS Certificate Manager (ACM) Private Certificate Authority to issue an SSL/TLS certificate from the root CA. Apply the certificate to the ALB. Use the managed renewal feature to automatically rotate the certificate.
+
+D) Use AWS Certificate Manager (ACM) to import an SSL/TLS certificate. Apply the certificate to the ALB. Use Amazon EventBridge (Amazon CloudWatch Events) to send a notification when the certificate is nearing expiration. Rotate the certificate manually.
+
+**Answer:** D
+
+---
+
+### Question 63: PDF to JPG Conversion at Scale
+**Scenario:** A company with 700,000 users needs to convert large PDF files (5MB average) to JPG format. They need to store both original and converted files with a scalable solution for rapid growth.
+
+**Which solution is MOST cost-effective?**
+
+A) Save the .pdf files to Amazon S3. Configure an S3 PUT event to invoke an AWS Lambda function to convert the files to .jpg format and store them back in Amazon S3.
+
+B) Save the .pdf files to Amazon DynamoDB. Use the DynamoDB Streams feature to invoke an AWS Lambda function to convert the files to .jpg format and store them back in DynamoDB.
+
+C) Upload the .pdf files to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic Block Store (Amazon EBS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the files to .jpg format. Save the .pdf files and the .jpg files in the EBS store.
+
+D) Upload the .pdf files to an AWS Elastic Beanstalk application that includes Amazon EC2 instances, Amazon Elastic File System (Amazon EFS) storage, and an Auto Scaling group. Use a program in the EC2 instances to convert the file to .jpg format. Save the .pdf files and the .jpg files in the EBS store.
+
+**Answer:** A
+
+---
+
+### Question 64: Hybrid File Storage Solution
+**Scenario:** A company has 5+ TB of Windows file data on-premises. During AWS migration, they need access to both AWS and on-premises storage with minimum latency, minimal operational overhead, and no changes to file access patterns. They use Site-to-Site VPN.
+
+**What should a solutions architect do?**
+
+A) Deploy and configure Amazon FSx for Windows File Server on AWS. Move the on-premises file data to FSx for Windows File Server. Reconfigure the workloads to use FSx for Windows File Server on AWS.
+
+B) Deploy and configure an Amazon S3 File Gateway on premises. Move the on-premises file data to the S3 File Gateway. Reconfigure the on-premises workloads and the cloud workloads to use the S3 File Gateway.
+
+C) Deploy and configure an Amazon S3 File Gateway on premises. Move the on-premises file data to Amazon S3. Reconfigure the workloads to use either Amazon S3 directly or the S3 File Gateway, depending on each workload's location.
+
+D) Deploy and configure Amazon FSx for Windows File Server on AWS. Deploy and configure an Amazon FSx File Gateway on premises. Move the on-premises file data to the FSx File Gateway. Configure the cloud workloads to use FSx for Windows File Server on AWS. Configure the on-premises workloads to use the FSx File Gateway.
+
+**Answer:** D
+
+---
+
+### Question 65: Healthcare PHI Detection
+**Scenario:** A hospital uses API Gateway and Lambda to upload PDF and JPEG reports. They need to modify Lambda code to identify protected health information (PHI) in the reports.
+
+**Which solution has LEAST operational overhead?**
+
+A) Use existing Python libraries to extract the text from the reports and to identify the PHI from the extracted text.
+
+B) Use Amazon Textract to extract the text from the reports. Use Amazon SageMaker to identify the PHI from the extracted text.
+
+C) Use Amazon Textract to extract the text from the reports. Use Amazon Comprehend Medical to identify the PHI from the extracted text.
+
+D) Use Amazon Rekognition to extract the text from the reports. Use Amazon Comprehend Medical to identify the PHI from the extracted text.
+
+**Answer:** C
+
+---
+
 ## Complete Answer Key Summary
 
 | Question | Answer | Key Concept |
@@ -934,6 +1257,21 @@ D) Use AWS Systems Manager Run Command to run a custom command that applies the 
 | 48 | D | Amazon EFS for durable file storage |
 | 49 | B | S3 Intelligent-Tiering with lifecycle policies |
 | 50 | D | Systems Manager Run Command for immediate patching |
+| 51 | D, B | EventBridge scheduling with SES for email reports |
+| 52 | C | EFS for scalable file system storage |
+| 53 | C | S3 Object Lock compliance mode for retention |
+| 54 | C | FSx for Windows File Server |
+| 55 | C | Security groups for database access control |
+| 56 | C | Regional API Gateway with ACM certificate |
+| 57 | B | Amazon Rekognition for image content moderation |
+| 58 | C | ECS on Fargate for serverless containers |
+| 59 | D | Kinesis Data Streams and Firehose for analytics |
+| 60 | C | ALB listener rule for HTTP to HTTPS redirect |
+| 61 | C | Secrets Manager for credential management |
+| 62 | D | Manual certificate rotation for external CA |
+| 63 | A | S3 event-driven Lambda processing |
+| 64 | D | FSx File Gateway for hybrid storage |
+| 65 | C | Textract and Comprehend Medical for PHI detection |
 
 ---
 
@@ -961,12 +1299,40 @@ D) Use AWS Systems Manager Run Command to run a custom command that applies the 
    - S3 storage class optimization
    - Data transfer cost reduction
 
-5. **Operational Excellence:**
+6. **Healthcare & Compliance:**
+   - Amazon Textract for document text extraction
+   - Amazon Comprehend Medical for PHI detection
+   - S3 Object Lock for compliance requirements
+   - HIPAA-compliant architectures
+
+7. **Operational Excellence:**
    - Systems Manager for patch management
    - CloudWatch for monitoring and alerting
    - AWS Config for configuration drift detection
 
-### Real-World Application Scenarios:
+### Service-Specific Best Practices:
+
+**API Gateway:**
+- Use Regional endpoints for better performance
+- Custom domain names require ACM certificates in same region
+- Implement proper HTTPS redirection patterns
+
+**Container Services:**
+- ECS on Fargate for serverless container management
+- Use appropriate storage solutions (EFS for shared, EBS for instance-specific)
+- Consider operational overhead when choosing between ECS and EKS
+
+**File Storage Solutions:**
+- S3 for object storage and static websites
+- EFS for scalable, shared file systems
+- FSx for Windows-specific file sharing needs
+- Storage Gateways for hybrid scenarios
+
+**Machine Learning Services:**
+- Rekognition for image analysis and content moderation
+- Textract for document text extraction
+- Comprehend Medical for healthcare text analysis
+- Choose managed services over custom solutions for faster implementation
 
 - **Data Pipeline Design:** Kinesis → Lambda → DynamoDB patterns
 - **Hybrid Cloud Integration:** Direct Connect, VPN, and gateway patterns  
