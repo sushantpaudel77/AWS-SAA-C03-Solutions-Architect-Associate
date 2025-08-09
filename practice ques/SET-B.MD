@@ -793,3 +793,80 @@ C) Use Amazon MQ with active/standby brokers configured across two Availability 
 D) Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an Auto Scaling group for the consumer EC2 instances across two Availability Zones. Use Amazon RDS for MySQL with Multi-AZ enabled.
 
 ---
+
+## Answer Key
+
+| Question | Answer | Key Concepts |
+|----------|--------|-------------|
+| 66 | C | S3 storage classes, lifecycle policies, cost optimization |
+| 67 | D | SQS visibility timeout, message processing |
+| 68 | A | Direct Connect, VPN backup, cost optimization |
+| 69 | B | Multi-AZ deployment, Auto Scaling, RDS Proxy |
+| 70 | C | Application Load Balancer vs Network Load Balancer, health checks |
+| 71 | B | DynamoDB point-in-time recovery, RPO/RTO |
+| 72 | D | S3 VPC gateway endpoint, data transfer costs |
+| 73 | C, D | Bastion host security, security groups |
+| 74 | A, C | Security groups, multi-tier architecture |
+| 75 | A | API Gateway, Lambda, SQS, application modernization |
+| 76 | B | DataSync, Direct Connect, secure transfer |
+| 77 | C | API Gateway, Kinesis, Lambda, real-time processing |
+| 78 | B | AWS Backup, DynamoDB, retention policies |
+| 79 | A | DynamoDB on-demand capacity, unpredictable traffic |
+| 80 | B | AMI sharing, KMS, cross-account access |
+| 81 | C | SQS, Auto Scaling, loosely coupled architecture |
+| 82 | D | EventBridge, certificate monitoring, SNS |
+| 83 | C | CloudFront, content delivery, global optimization |
+| 84 | B | Reserved vs On-Demand instances, cost optimization |
+| 85 | A | S3 Object Lock, versioning, compliance |
+| 86 | A | AWS Secrets Manager, credential rotation |
+| 87 | A | RDS Proxy, Lambda database connections |
+| 88 | A | S3 Requester Pays, cross-account access |
+| 89 | A | S3 versioning, MFA Delete, data protection |
+| 90 | B | RDS read replicas, performance optimization |
+| 91 | A | S3 gateway endpoint, private connectivity |
+| 92 | A, C | VPC endpoint, S3 bucket policies |
+| 93 | B | Aurora cloning, database staging |
+| 94 | C | S3 events, SQS, Lambda, serverless processing |
+| 95 | D | RDS read replicas, read/write separation |
+| 96 | D | IAM policies, conditional access |
+| 97 | D | FSx for Windows, Active Directory integration |
+| 98 | C | SQS visibility timeout, Lambda processing |
+| 99 | D | FSx for Lustre, high-performance computing |
+| 100 | C | KMS, S3, encryption, high availability |
+| 101 | A | NAT gateways, private subnet internet access |
+| 102 | B, E | DataSync, SFTP migration, EFS |
+| 103 | A | AWS Glue job bookmarks, incremental processing |
+| 104 | A, C | AWS Shield Advanced, CloudFront, DDoS protection |
+| 105 | D | Lambda resource-based policy, least privilege |
+| 106 | D | KMS automatic rotation, compliance, encryption |
+| 107 | B | API Gateway, Lambda, REST API |
+| 108 | D | SNS fan-out, SQS, multi-target distribution |
+| 109 | D | S3 Object Lock, legal hold, selective deletion |
+| 110 | C, D | S3 presigned URLs, Lambda image processing |
+| 111 | D | Amazon MQ, Auto Scaling, RDS Multi-AZ |
+| 112 | A | AWS Fargate, ECS, containerized applications |
+| 113 | C | Snowball Edge, AWS Glue, large data migration |
+| 114 | C | Lambda, S3, DynamoDB, scalable architecture |
+| 115 | C | VPC endpoint, private connectivity, S3 access |
+
+## Study Tips
+
+1. **Focus on Cost Optimization**: Many questions test your understanding of choosing the most cost-effective solution among technically viable options.
+
+2. **Understand Service Integration**: Pay attention to how different AWS services work together, especially around messaging (SQS/SNS), storage (S3/EBS/EFS), and compute (EC2/Lambda).
+
+3. **Security Best Practices**: Know the principle of least privilege, IAM policies, security groups, and encryption options.
+
+4. **High Availability Patterns**: Understand Multi-AZ deployments, Auto Scaling, load balancing, and disaster recovery strategies.
+
+5. **Serverless vs Traditional**: Know when to choose serverless solutions (Lambda, API Gateway) vs traditional compute (EC2) based on requirements.
+
+6. **Storage Classes**: Understand different S3 storage classes, lifecycle policies, and when to use each type of storage service.
+
+## Contributing
+
+Feel free to contribute additional questions, corrections, or improvements to this study guide. Please ensure all questions follow the AWS exam format and include detailed explanations for the correct answers.
+
+## Disclaimer
+
+These practice questions are for educational purposes only and are not affiliated with Amazon Web Services or the official AWS certification program. Always refer to the official AWS documentation and training materials for the most up-to-date information.
