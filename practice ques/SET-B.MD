@@ -401,3 +401,395 @@ D) Create a DynamoDB table in provisioned capacity mode, and configure it as a g
 
 ---
 
+### Question 86: RDS Credential Management
+A company has several web servers that need to frequently access a common Amazon RDS MySQL Multi-AZ DB instance. The company wants a secure method for the web servers to connect to the database while meeting a security requirement to rotate user credentials frequently.
+
+**Which solution meets these requirements?**
+
+A) Store the database user credentials in AWS Secrets Manager. Grant the necessary IAM permissions to allow the web servers to access AWS Secrets Manager.
+
+B) Store the database user credentials in AWS Systems Manager OpsCenter. Grant the necessary IAM permissions to allow the web servers to access OpsCenter.
+
+C) Store the database user credentials in a secure Amazon S3 bucket. Grant the necessary IAM permissions to allow the web servers to retrieve credentials and access the database.
+
+D) Store the database user credentials in files encrypted with AWS Key Management Service (AWS KMS) on the web server file system. The web server should be able to decrypt the files and access the database.
+
+---
+
+### Question 87: Lambda Database Connection Management
+A company hosts an application on AWS Lambda functions that are invoked by an Amazon API Gateway API. The Lambda functions save customer data to an Amazon Aurora MySQL database. Whenever the company upgrades the database, the Lambda functions fail to establish database connections until the upgrade is complete. The result is that customer data is not recorded for some of the events. A solutions architect needs to design a solution that stores customer data that is created during database upgrades.
+
+**Which solution will meet these requirements?**
+
+A) Provision an Amazon RDS proxy to sit between the Lambda functions and the database. Configure the Lambda functions to connect to the RDS proxy.
+
+B) Increase the run time of the Lambda functions to the maximum. Create a retry mechanism in the code that stores the customer data in the database.
+
+C) Persist the customer data to Lambda local storage. Configure new Lambda functions to scan the local storage to save the customer data to the database.
+
+D) Store the customer data in an Amazon Simple Queue Service (Amazon SQS) FIFO queue. Create a new Lambda function that polls the queue and stores the customer data in the database.
+
+---
+
+### Question 90: RDS Read Replica for Development Workload
+A company is using a SQL database to store movie data that is publicly accessible. The database runs on an Amazon RDS Single-AZ DB instance. A script runs queries at random intervals each day to record the number of new movies that have been added to the database. The script must report a final total during business hours. The company's development team notices that the database performance is inadequate for development tasks when the script is running. A solutions architect must recommend a solution to resolve this issue.
+
+**Which solution will meet this requirement with the LEAST operational overhead?**
+
+A) Modify the DB instance to be a Multi-AZ deployment.
+
+B) Create a read replica of the database. Configure the script to query only the read replica.
+
+C) Instruct the development team to manually export the entries in the database at the end of each day.
+
+D) Use Amazon ElastiCache to cache the common queries that the script runs against the database.
+
+---
+
+### Question 93: MySQL Migration with Read Replicas
+A company runs an on-premises application that is powered by a MySQL database. The company is migrating the application to AWS to increase the application's elasticity and availability. The current architecture shows heavy read activity on the database during times of normal operation. Every 4 hours, the company's development team pulls a full export of the production database to populate a database in the staging environment. During this period, users experience unacceptable application latency. The development team is unable to use the staging environment until the procedure completes. A solutions architect must recommend replacement architecture that alleviates the application latency issue. The replacement architecture also must give the development team the ability to continue using the staging environment without delay.
+
+**Which solution meets these requirements?**
+
+A) Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Populate the staging database by implementing a backup and restore process that uses the mysqldump utility.
+
+B) Use Amazon Aurora MySQL with Multi-AZ Aurora Replicas for production. Use database cloning to create the staging database on-demand.
+
+C) Use Amazon RDS for MySQL with a Multi-AZ deployment and read replicas for production. Use the standby instance for the staging database.
+
+D) Use Amazon RDS for MySQL with a Multi-AZ deployment and read replicas for production. Populate the staging database by implementing a backup and restore process that uses the mysqldump utility.
+
+---
+
+### Question 95: RDS Read Replica Performance Optimization
+An application allows users at a company's headquarters to access product data. The product data is stored in an Amazon RDS MySQL DB instance. The operations team has isolated an application performance slowdown and wants to separate read traffic from write traffic. A solutions architect needs to optimize the application's performance quickly.
+
+**What should the solutions architect recommend?**
+
+A) Change the existing database to a Multi-AZ deployment. Serve the read requests from the primary Availability Zone.
+
+B) Change the existing database to a Multi-AZ deployment. Serve the read requests from the secondary Availability Zone.
+
+C) Create read replicas for the database. Configure the read replicas with half of the compute and storage resources as the source database.
+
+D) Create read replicas for the database. Configure the read replicas with the same compute and storage resources as the source database.
+
+---
+
+## Security and Compliance
+
+### Question 80: Secure AMI Sharing with KMS
+A company recently signed a contract with an AWS Managed Service Provider (MSP) Partner for help with an application migration initiative. A solutions architect needs to share an Amazon Machine Image (AMI) from an existing AWS account with the MSP Partner's AWS account. The AMI is backed by Amazon Elastic Block Store (Amazon EBS) and uses an AWS Key Management Service (AWS KMS) customer managed key to encrypt EBS volume snapshots.
+
+**What is the MOST secure way for the solutions architect to share the AMI with the MSP Partner's AWS account?**
+
+A) Make the encrypted AMI and snapshots publicly available. Modify the key policy to allow the MSP Partner's AWS account to use the key.
+
+B) Modify the launchPermission property of the AMI. Share the AMI with the MSP Partner's AWS account only. Modify the key policy to allow the MSP Partner's AWS account to use the key.
+
+C) Modify the launchPermission property of the AMI. Share the AMI with the MSP Partner's AWS account only. Modify the key policy to trust a new KMS key that is owned by the MSP Partner for encryption.
+
+D) Export the AMI from the source account to an Amazon S3 bucket in the MSP Partner's AWS account. Encrypt the S3 bucket with a new KMS key that is owned by the MSP Partner. Copy and launch the AMI in the MSP Partner's AWS account.
+
+---
+
+### Question 100: Certificate Encryption and Storage
+A company's containerized application runs on an Amazon EC2 instance. The application needs to download security certificates before it can communicate with other business applications. The company wants a highly secure solution to encrypt and decrypt the certificates in near real time. The solution also needs to store data in highly available storage after the data is encrypted.
+
+**Which solution will meet these requirements with the LEAST operational overhead?**
+
+A) Create AWS Secrets Manager secrets for encrypted certificates. Manually update the certificates as needed. Control access to the data by using fine-grained IAM access.
+
+B) Create an AWS Lambda function that uses the Python cryptography library to receive and perform encryption operations. Store the function in an Amazon S3 bucket.
+
+C) Create an AWS Key Management Service (AWS KMS) customer managed key. Allow the EC2 role to use the KMS key for encryption operations. Store the encrypted data on Amazon S3.
+
+D) Create an AWS Key Management Service (AWS KMS) customer managed key. Allow the EC2 role to use the KMS key for encryption operations. Store the encrypted data on Amazon Elastic Block Store (Amazon EBS) volumes.
+
+---
+
+### Question 105: Lambda Function Least Privilege Permissions
+A company is preparing to deploy a new serverless workload. A solutions architect must use the principle of least privilege to configure permissions that will be used to run an AWS Lambda function. An Amazon EventBridge (Amazon CloudWatch Events) rule will invoke the function.
+
+**Which solution meets these requirements?**
+
+A) Add an execution role to the function with lambda:InvokeFunction as the action and * as the principal.
+
+B) Add an execution role to the function with lambda:InvokeFunction as the action and Service: lambda.amazonaws.com as the principal.
+
+C) Add a resource-based policy to the function with lambda:* as the action and Service: events.amazonaws.com as the principal.
+
+D) Add a resource-based policy to the function with lambda:InvokeFunction as the action and Service: events.amazonaws.com as the principal.
+
+---
+
+## Monitoring and Analytics
+
+### Question 82: Certificate Expiration Monitoring
+A company hosts its web applications in the AWS Cloud. The company configures Elastic Load Balancers to use certificates that are imported into AWS Certificate Manager (ACM). The company's security team must be notified 30 days before the expiration of each certificate.
+
+**What should a solutions architect recommend to meet this requirement?**
+
+A) Add a rule in ACM to publish a custom message to an Amazon Simple Notification Service (Amazon SNS) topic every day, beginning 30 days before any certificate will expire.
+
+B) Create an AWS Config rule that checks for certificates that will expire within 30 days. Configure Amazon EventBridge (Amazon CloudWatch Events) to invoke a custom alert by way of Amazon Simple Notification Service (Amazon SNS) when AWS Config reports a noncompliant resource.
+
+C) Use AWS Trusted Advisor to check for certificates that will expire within 30 days. Create an Amazon CloudWatch alarm that is based on Trusted Advisor metrics for check status changes. Configure the alarm to send a custom alert by way of Amazon Simple Notification Service (Amazon SNS).
+
+D) Create an Amazon EventBridge (Amazon CloudWatch Events) rule to detect any certificates that will expire within 30 days. Configure the rule to invoke an AWS Lambda function. Configure the Lambda function to send a custom alert by way of Amazon Simple Notification Service (Amazon SNS).
+
+---
+
+### Question 103: AWS Glue Job Optimization
+A company has an AWS Glue extract, transform, and load (ETL) job that runs every day at the same time. The job processes XML data that is in an Amazon S3 bucket. New data is added to the S3 bucket every day. A solutions architect notices that AWS Glue is processing all the data during each run.
+
+**What should the solutions architect do to prevent AWS Glue from reprocessing old data?**
+
+A) Edit the job to use job bookmarks.
+
+B) Edit the job to delete data after the data is processed.
+
+C) Edit the job by setting the NumberOfWorkers field to 1.
+
+D) Use a FindMatches machine learning (ML) transform.
+
+---
+
+### Question 107: Real-time Data Analytics API
+A bicycle sharing company is developing a multi-tier architecture to track the location of its bicycles during peak operating hours. The company wants to use these data points in its existing analytics platform. A solutions architect must determine the most viable multi-tier option to support this architecture. The data points must be accessible from the REST API.
+
+**Which action meets these requirements for storing and retrieving location data?**
+
+A) Use Amazon Athena with Amazon S3.
+
+B) Use Amazon API Gateway with AWS Lambda.
+
+C) Use Amazon QuickSight with Amazon Redshift.
+
+D) Use Amazon API Gateway with Amazon Kinesis Data Analytics.
+
+---
+
+## Migration and Transfer
+
+### Question 76: Secure Data Transfer to AWS
+A company receives 10 TB of instrumentation data each day from several machines located at a single factory. The data consists of JSON files stored on a storage area network (SAN) in an on-premises data center located within the factory. The company wants to send this data to Amazon S3 where it can be accessed by several additional systems that provide critical near-real-time analytics. A secure transfer is important because the data is considered sensitive.
+
+**Which solution offers the MOST reliable data transfer?**
+
+A) AWS DataSync over public internet
+
+B) AWS DataSync over AWS Direct Connect
+
+C) AWS Database Migration Service (AWS DMS) over public internet
+
+D) AWS Database Migration Service (AWS DMS) over AWS Direct Connect
+
+---
+
+### Question 102: SFTP Server Migration to AWS
+A company wants to migrate an on-premises data center to AWS. The data center hosts an SFTP server that stores its data on an NFS-based file system. The server holds 200 GB of data that needs to be transferred. The server must be hosted on an Amazon EC2 instance that uses an Amazon Elastic File System (Amazon EFS) file system.
+
+**Which combination of steps should a solutions architect take to automate this task? (Choose two.)**
+
+A) Launch the EC2 instance into the same Availability Zone as the EFS file system.
+
+B) Install an AWS DataSync agent in the on-premises data center.
+
+C) Create a secondary Amazon Elastic Block Store (Amazon EBS) volume on the EC2 instance for the data.
+
+D) Manually use an operating system copy command to push the data to the EC2 instance.
+
+E) Use AWS DataSync to create a suitable location configuration for the on-premises SFTP server.
+
+---
+
+### Question 113: Large Dataset Migration with Processing
+A company uses 50 TB of data for reporting. The company wants to move this data from on premises to AWS. A custom application in the company's data center runs a weekly data transformation job. The company plans to pause the application until the data transfer is complete and needs to begin the transfer process as soon as possible. The data center does not have any available network bandwidth for additional workloads. A solutions architect must transfer the data and must configure the transformation job to continue to run in the AWS Cloud.
+
+**Which solution will meet these requirements with the LEAST operational overhead?**
+
+A) Use AWS DataSync to move the data. Create a custom transformation job by using AWS Glue.
+
+B) Order an AWS Snowcone device to move the data. Deploy the transformation application to the device.
+
+C) Order an AWS Snowball Edge Storage Optimized device. Copy the data to the device. Create a custom transformation job by using AWS Glue.
+
+D) Order an AWS Snowball Edge Storage Optimized device that includes Amazon EC2 compute. Copy the data to the device. Create a new EC2 instance on AWS to run the transformation application.
+
+---
+
+## Serverless Architecture
+
+### Question 75: Multi-Tier Application Modernization
+A company wants to move a multi-tiered application from on premises to the AWS Cloud to improve the application's performance. The application consists of application tiers that communicate with each other by way of RESTful services. Transactions are dropped when one tier becomes overloaded. A solutions architect must design a solution that resolves these issues and modernizes the application.
+
+**Which solution meets these requirements and is the MOST operationally efficient?**
+
+A) Use Amazon API Gateway and direct transactions to the AWS Lambda functions as the application layer. Use Amazon Simple Queue Service (Amazon SQS) as the communication layer between application services.
+
+B) Use Amazon CloudWatch metrics to analyze the application performance history to determine the servers' peak utilization during the performance failures. Increase the size of the application server's Amazon EC2 instances to meet the peak requirements.
+
+C) Use Amazon Simple Notification Service (Amazon SNS) to handle the messaging between application servers running on Amazon EC2 in an Auto Scaling group. Use Amazon CloudWatch to monitor the SNS queue length and scale up and down as required.
+
+D) Use Amazon Simple Queue Service (Amazon SQS) to handle the messaging between application servers running on Amazon EC2 in an Auto Scaling group. Use Amazon CloudWatch to monitor the SQS queue length and scale up when communication failures are detected.
+
+---
+
+### Question 77: Real-time Data Ingestion Architecture
+A company needs to configure a real-time data ingestion architecture for its application. The company needs an API, a process that transforms data as the data is streamed, and a storage solution for the data.
+
+**Which solution will meet these requirements with the LEAST operational overhead?**
+
+A) Deploy an Amazon EC2 instance to host an API that sends data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use the Kinesis Data Firehose delivery stream to send the data to Amazon S3.
+
+B) Deploy an Amazon EC2 instance to host an API that sends data to AWS Glue. Stop source/destination checking on the EC2 instance. Use AWS Glue to transform the data and to send the data to Amazon S3.
+
+C) Configure an Amazon API Gateway API to send data to an Amazon Kinesis data stream. Create an Amazon Kinesis Data Firehose delivery stream that uses the Kinesis data stream as a data source. Use AWS Lambda functions to transform the data. Use the Kinesis Data Firehose delivery stream to send the data to Amazon S3.
+
+D) Configure an Amazon API Gateway API to send data to AWS Glue. Use AWS Lambda functions to transform the data. Use AWS Glue to send the data to Amazon S3.
+
+---
+
+### Question 94: S3 Event-Driven File Processing
+A company is designing an application where users upload small files into Amazon S3. After a user uploads a file, the file requires one-time simple processing to transform the data and save the data in JSON format for later analysis. Each file must be processed as quickly as possible after it is uploaded. Demand will vary. On some days, users will upload a high number of files. On other days, users will upload a few files or no files.
+
+**Which solution meets these requirements with the LEAST operational overhead?**
+
+A) Configure Amazon EMR to read text files from Amazon S3. Run processing scripts to transform the data. Store the resulting JSON file in an Amazon Aurora DB cluster.
+
+B) Configure Amazon S3 to send an event notification to an Amazon Simple Queue Service (Amazon SQS) queue. Use Amazon EC2 instances to read from the queue and process the data. Store the resulting JSON file in Amazon DynamoDB.
+
+C) Configure Amazon S3 to send an event notification to an Amazon Simple Queue Service (Amazon SQS) queue. Use an AWS Lambda function to read from the queue and process the data. Store the resulting JSON file in Amazon DynamoDB.
+
+D) Configure Amazon EventBridge (Amazon CloudWatch Events) to send an event to Amazon Kinesis Data Streams when a new file is uploaded. Use an AWS Lambda function to consume the event from the stream and process the data. Store the resulting JSON file in an Amazon Aurora DB cluster.
+
+---
+
+### Question 98: SQS Lambda Integration Duplicate Processing
+An image-processing company has a web application that users use to upload images. The application uploads the images into an Amazon S3 bucket. The company has set up S3 event notifications to publish the object creation events to an Amazon Simple Queue Service (Amazon SQS) standard queue. The SQS queue serves as the event source for an AWS Lambda function that processes the images and sends the results to users through email. Users report that they are receiving multiple email messages for every uploaded image. A solutions architect determines that SQS messages are invoking the Lambda function more than once, resulting in multiple email messages.
+
+**What should the solutions architect do to resolve this issue with the LEAST operational overhead?**
+
+A) Set up long polling in the SQS queue by increasing the ReceiveMessage wait time to 30 seconds.
+
+B) Change the SQS standard queue to an SQS FIFO queue. Use the message deduplication ID to discard duplicate messages.
+
+C) Increase the visibility timeout in the SQS queue to a value that is greater than the total of the function timeout and the batch window timeout.
+
+D) Modify the Lambda function to delete each message from the SQS queue immediately after the message is read before processing.
+
+---
+
+### Question 108: Multi-Target Data Distribution
+A company has an automobile sales website that stores its listings in a database on Amazon RDS. When an automobile is sold, the listing needs to be removed from the website and the data must be sent to multiple target systems.
+
+**Which design should a solutions architect recommend?**
+
+A) Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) queue for the targets to consume.
+
+B) Create an AWS Lambda function triggered when the database on Amazon RDS is updated to send the information to an Amazon Simple Queue Service (Amazon SQS) FIFO queue for the targets to consume.
+
+C) Subscribe to an RDS event notification and send an Amazon Simple Queue Service (Amazon SQS) queue fanned out to multiple Amazon Simple Notification Service (Amazon SNS) topics. Use AWS Lambda functions to update the targets.
+
+D) Subscribe to an RDS event notification and send an Amazon Simple Notification Service (Amazon SNS) topic fanned out to multiple Amazon Simple Queue Service (Amazon SQS) queues. Use AWS Lambda functions to update the targets.
+
+---
+
+### Question 110: S3 Upload Performance Optimization
+A social media company allows users to upload images to its website. The website runs on Amazon EC2 instances. During upload requests, the website resizes the images to a standard size and stores the resized images in Amazon S3. Users are experiencing slow upload requests to the website. The company needs to reduce coupling within the application and improve website performance. A solutions architect must design the most operationally efficient process for image uploads.
+
+**Which combination of actions should the solutions architect take to meet these requirements? (Choose two.)**
+
+A) Configure the application to upload images to S3 Glacier.
+
+B) Configure the web server to upload the original images to Amazon S3.
+
+C) Configure the application to upload images directly from each user's browser to Amazon S3 through the use of a presigned URL.
+
+D) Configure S3 Event Notifications to invoke an AWS Lambda function when an image is uploaded. Use the function to resize the image.
+
+E) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that invokes an AWS Lambda function on a schedule to resize uploaded images.
+
+---
+
+### Question 114: Scalable Image Processing Application
+A company has created an image analysis application in which users can upload photos and add photo frames to their images. The users upload images and metadata to indicate which photo frames they want to add to their images. The application uses a single Amazon EC2 instance and Amazon DynamoDB to store the metadata. The application is becoming more popular, and the number of users is increasing. The company expects the number of concurrent users to vary significantly depending on the time of day and day of week. The company must ensure that the application can scale to meet the needs of the growing user base.
+
+**Which solution meets these requirements?**
+
+A) Use AWS Lambda to process the photos. Store the photos and metadata in DynamoDB.
+
+B) Use Amazon Kinesis Data Firehose to process the photos and to store the photos and metadata.
+
+C) Use AWS Lambda to process the photos. Store the photos in Amazon S3. Retain DynamoDB to store the metadata.
+
+D) Increase the number of EC2 instances to three. Use Provisioned IOPS SSD (io2) Amazon Elastic Block Store (Amazon EBS) volumes to store the photos and metadata.
+
+---
+
+## Specialized Storage Solutions
+
+### Question 97: Windows File Storage with Active Directory
+A company has a large Microsoft SharePoint deployment running on-premises that requires Microsoft Windows shared file storage. The company wants to migrate this workload to the AWS Cloud and is considering various storage options. The storage solution must be highly available and integrated with Active Directory for access control.
+
+**Which solution will satisfy these requirements?**
+
+A) Configure Amazon EFS storage and set the Active Directory domain for authentication.
+
+B) Create an SMB file share on an AWS Storage Gateway file gateway in two Availability Zones.
+
+C) Create an Amazon S3 bucket and configure Microsoft Windows Server to mount it as a volume.
+
+D) Create an Amazon FSx for Windows File Server file system on AWS and set the Active Directory domain for authentication.
+
+---
+
+### Question 99: Lustre File System for Gaming
+A company is implementing a shared storage solution for a gaming application that is hosted in an on-premises data center. The company needs the ability to use Lustre clients to access data. The solution must be fully managed.
+
+**Which solution meets these requirements?**
+
+A) Create an AWS Storage Gateway file gateway. Create a file share that uses the required client protocol. Connect the application server to the file share.
+
+B) Create an Amazon EC2 Windows instance. Install and configure a Windows file share role on the instance. Connect the application server to the file share.
+
+C) Create an Amazon Elastic File System (Amazon EFS) file system, and configure it to support Lustre. Attach the file system to the origin server. Connect the application server to the file system.
+
+D) Create an Amazon FSx for Lustre file system. Attach the file system to the origin server. Connect the application server to the file system.
+
+---
+
+## High Availability and Disaster Recovery
+
+### Question 104: DDoS Protection for High Availability Website
+A solutions architect must design a highly available infrastructure for a website. The website is powered by Windows web servers that run on Amazon EC2 instances. The solutions architect must implement a solution that can mitigate a large-scale DDoS attack that originates from thousands of IP addresses. Downtime is not acceptable for the website.
+
+**Which actions should the solutions architect take to protect the website from such an attack? (Choose two.)**
+
+A) Use AWS Shield Advanced to stop the DDoS attack.
+
+B) Configure Amazon GuardDuty to automatically block the attackers.
+
+C) Configure the website to use Amazon CloudFront for both static and dynamic content.
+
+D) Use an AWS Lambda function to automatically add attacker IP addresses to VPC network ACLs.
+
+E) Use EC2 Spot Instances in an Auto Scaling group with a target tracking scaling policy that is set to 80% CPU utilization.
+
+---
+
+### Question 111: Message Processing System High Availability
+A company recently migrated a message processing system to AWS. The system receives messages into an ActiveMQ queue running on an Amazon EC2 instance. Messages are processed by a consumer application running on Amazon EC2. The consumer application processes the messages and writes results to a MySQL database running on Amazon EC2. The company wants this application to be highly available with low operational complexity.
+
+**Which architecture offers the HIGHEST availability?**
+
+A) Add a second ActiveMQ server to another Availability Zone. Add an additional consumer EC2 instance in another Availability Zone. Replicate the MySQL database to another Availability Zone.
+
+B) Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an additional consumer EC2 instance in another Availability Zone. Replicate the MySQL database to another Availability Zone.
+
+C) Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an additional consumer EC2 instance in another Availability Zone. Use Amazon RDS for MySQL with Multi-AZ enabled.
+
+D) Use Amazon MQ with active/standby brokers configured across two Availability Zones. Add an Auto Scaling group for the consumer EC2 instances across two Availability Zones. Use Amazon RDS for MySQL with Multi-AZ enabled.
+
+---
