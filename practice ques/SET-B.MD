@@ -2,7 +2,7 @@
 
 This repository contains practice questions for the AWS Solutions Architect Associate certification exam. These questions cover various AWS services and architectural best practices.
 
-## Questions 66-115
+## Questions 66-130
 
 ### Question 66
 A company has an application that generates a large number of files, each approximately 5 MB in size. The files are stored in Amazon S3. Company policy requires the files to be stored for 4 years before they can be deleted. Immediate accessibility is always required as the files contain critical business data that is not easy to reproduce. The files are frequently accessed in the first 30 days of object creation but are rarely accessed after the first 30 days.
@@ -486,6 +486,36 @@ B) Create an SMB file share on an AWS Storage Gateway file gateway in two Availa
 
 C) Create an Amazon S3 bucket and configure Microsoft Windows Server to mount it as a volume.
 
+D) Create an Amazon FSx for Windows File Server file system and set the Active Directory domain for authentication.
+
+---
+
+### Question 98
+An image-processing company has a web application that users use to upload images. The application uploads the images into an Amazon S3 bucket. The company has set up S3 event notifications to publish the object creation events to an Amazon Simple Queue Service (Amazon SQS) standard queue. The SQS queue serves as the event source for an AWS Lambda function that processes the images and sends the results to users through email. Users report that they are receiving multiple email messages for every uploaded image. A solutions architect determines that SQS messages are invoking the Lambda function more than once, resulting in multiple email messages.
+
+**What should the solutions architect do to resolve this issue with the LEAST operational overhead?**
+
+A) Set up long polling in the SQS queue by increasing the ReceiveMessage wait time to 30 seconds.
+
+B) Change the SQS standard queue to an SQS FIFO queue. Use the message deduplication ID to discard duplicate messages.
+
+C) Increase the visibility timeout in the SQS queue to a value that is greater than the total of the function timeout and the batch window timeout.
+
+D) Modify the Lambda function to delete each message from the SQS queue immediately after the message is read before processing.
+
+---
+
+### Question 99
+A company is implementing a shared storage solution for a gaming application that is hosted in an on-premises data center. The company needs the ability to use Lustre clients to access data. The solution must be fully managed.
+
+**Which solution meets these requirements?**
+
+A) Create an AWS Storage Gateway file gateway. Create a file share that uses the required client protocol. Connect the application server to the file share.
+
+B) Create an Amazon EC2 Windows instance. Install and configure a Windows file share role on the instance. Connect the application server to the file share.
+
+C) Create an Amazon Elastic File System (Amazon EFS) file system, and configure it to support Lustre. Attach the file system to the origin server. Connect the application server to the file system.
+
 D) Create an Amazon FSx for Lustre file system. Attach the file system to the origin server. Connect the application server to the file system.
 
 ---
@@ -736,6 +766,237 @@ D) Remove the internet gateway from the VPC. Set up an AWS Direct Connect connec
 
 ---
 
+### Question 116
+A company uses a popular content management system (CMS) for its corporate website. However, the required patching and maintenance are burdensome. The company is redesigning its website and wants a new solution. The website will be updated four times a year and does not need to have any dynamic content available. The solution must provide high scalability and enhanced security.
+
+**Which combination of changes will meet these requirements with the LEAST operational overhead? (Choose two.)**
+
+A) Configure Amazon CloudFront in front of the website to use HTTPS functionality.
+
+B) Deploy an AWS WAF web ACL in front of the website to provide HTTPS functionality.
+
+C) Create and deploy an AWS Lambda function to manage and serve the website content.
+
+D) Create the new website and an Amazon S3 bucket. Deploy the website on the S3 bucket with static website hosting enabled.
+
+E) Create the new website. Deploy the website by using an Auto Scaling group of Amazon EC2 instances behind an Application Load Balancer.
+
+---
+
+### Question 117
+A company stores its application logs in an Amazon CloudWatch Logs log group. A new policy requires the company to store all application logs in Amazon OpenSearch Service (Amazon Elasticsearch Service) in near-real time.
+
+**Which solution will meet this requirement with the LEAST operational overhead?**
+
+A) Configure a CloudWatch Logs subscription to stream the logs to Amazon OpenSearch Service (Amazon Elasticsearch Service).
+
+B) Create an AWS Lambda function. Use the log group to invoke the function to write the logs to Amazon OpenSearch Service (Amazon Elasticsearch Service).
+
+C) Create an Amazon Kinesis Data Firehose delivery stream. Configure the log group as the delivery stream's sources. Configure Amazon OpenSearch Service (Amazon Elasticsearch Service) as the delivery stream's destination.
+
+D) Install and configure Amazon Kinesis Agent on each application server to deliver the logs to Amazon Kinesis Data Streams. Configure Kinesis Data Streams to deliver the logs to Amazon OpenSearch Service (Amazon Elasticsearch Service).
+
+---
+
+### Question 118
+A company is building a web-based application running on Amazon EC2 instances in multiple Availability Zones. The web application will provide access to a repository of text documents totaling about 900 TB in size. The company anticipates that the web application will experience periods of high demand. A solutions architect must ensure that the storage component for the text documents can scale to meet the demand of the application at all times. The company is concerned about the overall cost of the solution.
+
+**Which storage solution meets these requirements MOST cost-effectively?**
+
+A) Amazon Elastic Block Store (Amazon EBS)
+
+B) Amazon Elastic File System (Amazon EFS)
+
+C) Amazon OpenSearch Service (Amazon Elasticsearch Service)
+
+D) Amazon S3
+
+---
+
+### Question 119
+A global company is using Amazon API Gateway to design REST APIs for its loyalty club users in the us-east-1 Region and the ap-southeast-2 Region. A solutions architect must design a solution to protect these API Gateway managed REST APIs across multiple accounts from SQL injection and cross-site scripting attacks.
+
+**Which solution will meet these requirements with the LEAST amount of administrative effort?**
+
+A) Set up AWS WAF in both Regions. Associate Regional web ACLs with an API stage.
+
+B) Set up AWS Firewall Manager in both Regions. Centrally configure AWS WAF rules.
+
+C) Set up AWS Shield in both Regions. Associate Regional web ACLs with an API stage.
+
+D) Set up AWS Shield in one of the Regions. Associate Regional web ACLs with an API stage.
+
+---
+
+### Question 120
+A company has implemented a self-managed DNS solution on three Amazon EC2 instances behind a Network Load Balancer (NLB) in the us-west-2 Region. Most of the company's users are located in the United States and Europe. The company wants to improve the performance and availability of the solution. The company launches and configures three EC2 instances in the eu-west-1 Region and adds the EC2 instances as targets for a new NLB.
+
+**Which solution can the company use to route traffic to all the EC2 instances?**
+
+A) Create an Amazon Route 53 geolocation routing policy to route requests to one of the two NLBs. Create an Amazon CloudFront distribution. Use the Route 53 record as the distribution's origin.
+
+B) Create a standard accelerator in AWS Global Accelerator. Create endpoint groups in us-west-2 and eu-west-1. Add the two NLBs as endpoints for the endpoint groups.
+
+C) Attach Elastic IP addresses to the six EC2 instances. Create an Amazon Route 53 geolocation routing policy to route requests to one of the six EC2 instances. Create an Amazon CloudFront distribution. Use the Route 53 record as the distribution's origin.
+
+D) Replace the two NLBs with two Application Load Balancers (ALBs). Create an Amazon Route 53 latency routing policy to route requests to one of the two ALBs. Create an Amazon CloudFront distribution. Use the Route 53 record as the distribution's origin.
+
+---
+
+### Question 121
+A company is running an online transaction processing (OLTP) workload on AWS. This workload uses an unencrypted Amazon RDS DB instance in a Multi-AZ deployment. Daily database snapshots are taken from this instance.
+
+**What should a solutions architect do to ensure the database and snapshots are always encrypted moving forward?**
+
+A) Encrypt a copy of the latest DB snapshot. Replace existing DB instance by restoring the encrypted snapshot.
+
+B) Create a new encrypted Amazon Elastic Block Store (Amazon EBS) volume and copy the snapshots to it. Enable encryption on the DB instance.
+
+C) Copy the snapshots and enable encryption using AWS Key Management Service (AWS KMS). Restore encrypted snapshot to an existing DB instance.
+
+D) Copy the snapshots to an Amazon S3 bucket that is encrypted using server-side encryption with AWS Key Management Service (AWS KMS) managed keys (SSE-KMS).
+
+---
+
+### Question 122
+A company wants to build a scalable key management infrastructure to support developers who need to encrypt data in their applications.
+
+**What should a solutions architect do to reduce the operational burden?**
+
+A) Use multi-factor authentication (MFA) to protect the encryption keys.
+
+B) Use AWS Key Management Service (AWS KMS) to protect the encryption keys.
+
+C) Use AWS Certificate Manager (ACM) to create, store, and assign the encryption keys.
+
+D) Use an IAM policy to limit the scope of users who have access permissions to protect the encryption keys.
+
+---
+
+### Question 123
+A company has a dynamic web application hosted on two Amazon EC2 instances. The company has its own SSL certificate, which is on each instance to perform SSL termination. There has been an increase in traffic recently, and the operations team determined that SSL encryption and decryption is causing the compute capacity of the web servers to reach their maximum limit.
+
+**What should a solutions architect do to increase the application's performance?**
+
+A) Create a new SSL certificate using AWS Certificate Manager (ACM). Install the ACM certificate on each instance.
+
+B) Create an Amazon S3 bucket. Migrate the SSL certificate to the S3 bucket. Configure the EC2 instances to reference the bucket for SSL termination.
+
+C) Create another EC2 instance as a proxy server. Migrate the SSL certificate to the new instance and configure it to direct connections to the existing EC2 instances.
+
+D) Import the SSL certificate into AWS Certificate Manager (ACM). Create an Application Load Balancer with an HTTPS listener that uses the SSL certificate from ACM.
+
+---
+
+### Question 124
+A company has a highly dynamic batch processing job that uses many Amazon EC2 instances to complete it. The job is stateless in nature, can be started and stopped at any given time with no negative impact, and typically takes upwards of 60 minutes total to complete. The company has asked a solutions architect to design a scalable and cost-effective solution that meets the requirements of the job.
+
+**What should the solutions architect recommend?**
+
+A) Implement EC2 Spot Instances.
+
+B) Purchase EC2 Reserved Instances.
+
+C) Implement EC2 On-Demand Instances.
+
+D) Implement the processing on AWS Lambda.
+
+---
+
+### Question 125
+A company runs its two-tier ecommerce website on AWS. The web tier consists of a load balancer that sends traffic to Amazon EC2 instances. The database tier uses an Amazon RDS DB instance. The EC2 instances and the RDS DB instance should not be exposed to the public internet. The EC2 instances require internet access to complete payment processing of orders through a third-party web service. The application must be highly available.
+
+**Which combination of configuration options will meet these requirements? (Choose two.)**
+
+A) Use an Auto Scaling group to launch the EC2 instances in private subnets. Deploy an RDS Multi-AZ DB instance in private subnets.
+
+B) Configure a VPC with two private subnets and two NAT gateways across two Availability Zones. Deploy an Application Load Balancer in the private subnets.
+
+C) Use an Auto Scaling group to launch the EC2 instances in public subnets across two Availability Zones. Deploy an RDS Multi-AZ DB instance in private subnets.
+
+D) Configure a VPC with one public subnet, one private subnet, and two NAT gateways across two Availability Zones. Deploy an Application Load Balancer in the public subnet.
+
+E) Configure a VPC with two public subnets, two private subnets, and two NAT gateways across two Availability Zones. Deploy an Application Load Balancer in the public subnets.
+
+---
+
+### Question 126
+A solutions architect needs to implement a solution to reduce a company's storage costs. All the company's data is in the Amazon S3 Standard storage class. The company must keep all data for at least 25 years. Data from the most recent 2 years must be highly available and immediately retrievable.
+
+**Which solution will meet these requirements?**
+
+A) Set up an S3 Lifecycle policy to transition objects to S3 Glacier Deep Archive immediately.
+
+B) Set up an S3 Lifecycle policy to transition objects to S3 Glacier Deep Archive after 2 years.
+
+C) Use S3 Intelligent-Tiering. Activate the archiving option to ensure that data is archived in S3 Glacier Deep Archive.
+
+D) Set up an S3 Lifecycle policy to transition objects to S3 One Zone-Infrequent Access (S3 One Zone-IA) immediately and to S3 Glacier Deep Archive after 2 years.
+
+---
+
+### Question 127
+A media company is evaluating the possibility of moving its systems to the AWS Cloud. The company needs at least 10 TB of storage with the maximum possible I/O performance for video processing, 300 TB of very durable storage for storing media content, and 900 TB of storage to meet requirements for archival media that is not in use anymore.
+
+**Which set of services should a solutions architect recommend to meet these requirements?**
+
+A) Amazon EBS for maximum performance, Amazon S3 for durable data storage, and Amazon S3 Glacier for archival storage
+
+B) Amazon EBS for maximum performance, Amazon EFS for durable data storage, and Amazon S3 Glacier for archival storage
+
+C) Amazon EC2 instance store for maximum performance, Amazon EFS for durable data storage, and Amazon S3 for archival storage
+
+D) Amazon EC2 instance store for maximum performance, Amazon S3 for durable data storage, and Amazon S3 Glacier for archival storage
+
+---
+
+### Question 128
+A company wants to run applications in containers in the AWS Cloud. These applications are stateless and can tolerate disruptions within the underlying infrastructure. The company needs a solution that minimizes cost and operational overhead.
+
+**What should a solutions architect do to meet these requirements?**
+
+A) Use Spot Instances in an Amazon EC2 Auto Scaling group to run the application containers.
+
+B) Use Spot Instances in an Amazon Elastic Kubernetes Service (Amazon EKS) managed node group.
+
+C) Use On-Demand Instances in an Amazon EC2 Auto Scaling group to run the application containers.
+
+D) Use On-Demand Instances in an Amazon Elastic Kubernetes Service (Amazon EKS) managed node group.
+
+---
+
+### Question 129
+A company is running a multi-tier web application on premises. The web application is containerized and runs on a number of Linux hosts connected to a PostgreSQL database that contains user records. The operational overhead of maintaining the infrastructure and capacity planning is limiting the company's growth. A solutions architect must improve the application's infrastructure.
+
+**Which combination of actions should the solutions architect take to accomplish this? (Choose two.)**
+
+A) Migrate the PostgreSQL database to Amazon Aurora.
+
+B) Migrate the web application to be hosted on Amazon EC2 instances.
+
+C) Set up an Amazon CloudFront distribution for the web application content.
+
+D) Set up Amazon ElastiCache between the web application and the PostgreSQL database.
+
+E) Migrate the web application to be hosted on AWS Fargate with Amazon Elastic Container Service (Amazon ECS).
+
+---
+
+### Question 130
+An application runs on Amazon EC2 instances across multiple Availability Zones. The instances run in an Amazon EC2 Auto Scaling group behind an Application Load Balancer. The application performs best when the CPU utilization of the EC2 instances is at or near 40%.
+
+**What should a solutions architect do to maintain the desired performance across all instances in the group?**
+
+A) Use a simple scaling policy to dynamically scale the Auto Scaling group.
+
+B) Use a target tracking policy to dynamically scale the Auto Scaling group.
+
+C) Use an AWS Lambda function to update the desired Auto Scaling group capacity.
+
+D) Use scheduled scaling actions to scale up and scale down the Auto Scaling group.
+
+---
+
 ## Answer Key
 
 | Question | Answer | Key Concepts |
@@ -790,8 +1051,105 @@ D) Remove the internet gateway from the VPC. Set up an AWS Direct Connect connec
 | 113 | C | Snowball Edge with AWS Glue for large data migration |
 | 114 | C | Lambda with S3 and DynamoDB for scalable architecture |
 | 115 | C | VPC endpoint for private S3 access |
+| 116 | A, D | CloudFront with HTTPS, S3 static website hosting |
+| 117 | A | CloudWatch Logs subscription to OpenSearch |
+| 118 | D | S3 for scalable and cost-effective document storage |
+| 119 | B | AWS Firewall Manager for centralized WAF management |
+| 120 | B | AWS Global Accelerator with endpoint groups |
+| 121 | A | Encrypt snapshot copy and restore to new instance |
+| 122 | B | AWS KMS for managed key infrastructure |
+| 123 | D | Application Load Balancer with ACM for SSL offloading |
+| 124 | A | Spot Instances for cost-effective batch processing |
+| 125 | A, E | Private subnets with RDS Multi-AZ, public ALB setup |
+| 126 | B | S3 Lifecycle policy to Glacier Deep Archive after 2 years |
+| 127 | D | Instance store for performance, S3 for durability, Glacier for archive |
+| 128 | B | EKS with Spot Instances for cost optimization |
+| 129 | A, E | Aurora migration and Fargate with ECS |
+| 130 | B | Target tracking policy for Auto Scaling |
 
 ---
 
+## Study Tips
 
+1. **Sequential Practice**: Work through these questions in order (66-130) to build knowledge progressively
+2. **Focus Areas**: Pay special attention to storage lifecycle management, security groups, and serverless architectures
+3. **Cost Optimization**: Many questions test your ability to choose the most cost-effective solution
+4. **Service Integration**: Understand how AWS services work together (e.g., SQS + Lambda, S3 + CloudFront)
+5. **Security Best Practices**: Know IAM policies, encryption options, and network security configurations
+6. **High Availability**: Focus on Multi-AZ deployments, Auto Scaling, and disaster recovery strategies
+7. **Performance Optimization**: Understand caching, load balancing, and database optimization techniques
+8. **Serverless Solutions**: Know when to use Lambda, API Gateway, and other serverless services
+9. **Storage Solutions**: Master S3 storage classes, EBS types, and EFS use cases
+10. **Network Architecture**: Understand VPC design, subnetting, and connectivity options
 
+## Key Service Categories Covered
+
+### Compute Services
+- **EC2**: Instance types, Auto Scaling, Load Balancing
+- **Lambda**: Serverless functions, event triggers, performance optimization
+- **Fargate**: Container orchestration without server management
+- **ECS/EKS**: Container services and Kubernetes management
+
+### Storage Services
+- **S3**: Storage classes, lifecycle policies, encryption, versioning
+- **EBS**: Volume types, snapshots, performance optimization
+- **EFS**: Shared file systems, performance modes
+- **FSx**: Specialized file systems (Windows, Lustre)
+
+### Database Services
+- **RDS**: Multi-AZ, read replicas, backup strategies
+- **Aurora**: Cloning, global databases, serverless options
+- **DynamoDB**: Capacity modes, backup and restore, global tables
+
+### Networking Services
+- **VPC**: Subnets, routing, security groups, NACLs
+- **CloudFront**: Global content delivery, caching strategies
+- **Route 53**: DNS routing policies, health checks
+- **Direct Connect**: Dedicated network connections
+- **VPN**: Site-to-site connectivity options
+
+### Security Services
+- **IAM**: Policies, roles, least privilege principle
+- **KMS**: Key management, encryption at rest and in transit
+- **Secrets Manager**: Credential rotation and management
+- **WAF**: Web application firewall, DDoS protection
+
+### Management & Monitoring
+- **CloudWatch**: Metrics, alarms, logs management
+- **AWS Backup**: Centralized backup across services
+- **EventBridge**: Event-driven architectures
+- **Systems Manager**: Operational data and automation
+
+### Integration Services
+- **SQS**: Message queuing, decoupling applications
+- **SNS**: Pub/sub messaging, fan-out patterns
+- **API Gateway**: REST APIs, serverless backends
+- **Kinesis**: Real-time data streaming and processing
+
+## Common Question Patterns
+
+1. **Cost Optimization**: Choose between Reserved, On-Demand, and Spot Instances
+2. **High Availability**: Multi-AZ deployments vs. single AZ with backups
+3. **Security**: Principle of least privilege, encryption requirements
+4. **Performance**: Read replicas, caching, CDN usage
+5. **Scalability**: Auto Scaling policies, serverless architectures
+6. **Disaster Recovery**: RTO/RPO requirements, backup strategies
+7. **Compliance**: Data retention, audit trails, immutability
+8. **Migration**: Data transfer methods, application modernization
+
+## Exam Strategy Tips
+
+1. **Read Carefully**: Pay attention to requirements like "LEAST operational overhead" or "MOST cost-effective"
+2. **Eliminate Obviously Wrong**: Rule out answers that don't meet basic requirements
+3. **Consider Trade-offs**: Understand when to prioritize cost vs. performance vs. availability
+4. **Think End-to-End**: Consider the complete architecture, not just individual services
+5. **Know Service Limits**: Understand default limits and when to use alternatives
+6. **Practice Time Management**: Allocate about 2 minutes per question during the actual exam
+
+## Contributing
+
+Feel free to contribute additional explanations, corrections, or improvements to this study guide.
+
+## Disclaimer
+
+These practice questions are for educational purposes only and are not affiliated with Amazon Web Services or the official AWS certification program.
