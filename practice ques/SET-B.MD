@@ -793,23 +793,5 @@ D) Remove the internet gateway from the VPC. Set up an AWS Direct Connect connec
 
 ---
 
-## Study Tips
-
-1. **Sequential Practice**: Work through these questions in order (66-115) to build knowledge progressively
-2. **Focus Areas**: Pay special attention to storage lifecycle management, security groups, and serverless architectures
-3. **Cost Optimization**: Many questions test your ability to choose the most cost-effective solution
-4. **Service Integration**: Understand how AWS services work together (e.g., SQS + Lambda, S3 + CloudFront)
-5. **Security Best Practices**: Know IAM policies, encryption options, and network security configurations
-
-## Contributing
-
-Feel free to contribute additional explanations, corrections, or improvements to this study guide.
-
-## Disclaimer
-
-These practice questions are for educational purposes only and are not affiliated with Amazon Web Services or the official AWS certification program. Windows File Server file system on AWS and set the Active Directory domain for authentication.
-
----
-
 
 
