@@ -411,3 +411,38 @@ This repository contains 30 practice questions (131-160) for AWS Solutions Archi
 
 ---
 
+## Answer Key Summary
+
+| Question | Answer | Key Concept |
+|----------|--------|-------------|
+| 131 | 4 | Origin Access Identity (OAI) |
+| 132 | 1 | CloudFront + S3 |
+| 133 | 3 | RDS Custom for Oracle |
+| 134 | 3 | S3 + Athena Serverless Analytics |
+| 135 | 4 | AWS PrivateLink |
+| 136 | 1,3 | DMS Replication |
+| 137 | 2 | AWS Organizations Alternate Contacts |
+| 138 | 2 | Amazon MQ + RDS Multi-AZ |
+| 139 | 3 | S3 Replication + Event Notifications |
+| 140 | 1,3 | Spot Instances + Compute Savings Plan |
+| 141 | 3 | CloudFront for Static, ALB for Dynamic |
+| 142 | 3 | Global Accelerator + NLB |
+| 143 | 2 | AWS Amplify + API Gateway |
+| 144 | 2 | Aurora Read Replica |
+| 145 | 4 | Aurora + Auto Scaling + Spot Fleet |
+| 146 | 2 | Reserved + Spot Instances |
+| 147 | 2 | S3 Lifecycle Policies |
+| 148 | 4 | SQS Dead Letter Queue |
+| 149 | 1 | SQS FIFO Queue |
+| 150 | 1 | CloudWatch Composite Alarms |
+| 151 | 1,3 | Control Tower + Organizations SCPs |
+| 152 | 4 | Lambda + EventBridge Scheduling |
+| 153 | 4 | S3 Lifecycle to Standard-IA |
+| 154 | 2 | S3 Object Lock Compliance Mode |
+| 155 | 3 | CloudFront Edge Servers |
+| 156 | 1,5 | Athena/QuickSight + Lake Formation |
+| 157 | 4,5 | CloudWatch Logs + AWS Backup |
+| 158 | 1 | CloudFront for Streaming |
+| 159 | 1,3 | API Keys + AWS WAF |
+| 160 | 3 | S3 Standard for Quick Access |
+
