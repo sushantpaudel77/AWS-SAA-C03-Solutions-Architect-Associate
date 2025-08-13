@@ -2,13 +2,13 @@
 
 This repository contains a comprehensive collection of practice questions for the AWS Solutions Architect Associate certification exam. These questions cover various AWS services and architectural patterns commonly tested in the certification.
 
-## Table of Contents
+<!-- ## Table of Contents
 - [Overview](#overview)
 - [Question Categories](#question-categories)
 - [How to Use](#how-to-use)
 - [Questions](#questions)
 - [Answer Key](#answer-key)
-- [Contributing](#contributing)
+- [Contributing](#contributing) -->
 
 ## Overview
 
