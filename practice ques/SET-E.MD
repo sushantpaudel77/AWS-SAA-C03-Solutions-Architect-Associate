@@ -403,3 +403,62 @@ C. A mix of On-Demand Instances and Spot Instances
 D. A mix of On-Demand Instances and Reserved Instances
 
 ---
+
+## Answer Key
+
+### Questions 261-270
+- **261**: A, C
+- **262**: A
+- **263**: A, D
+- **264**: D
+- **265**: C
+- **266**: A
+- **267**: D
+- **268**: A
+- **269**: C
+- **270**: A
+
+### Questions 271-280
+- **271**: C
+- **272**: B
+- **273**: B
+- **274**: B
+- **275**: A
+- **276**: A, D
+- **277**: D
+- **278**: B, E
+- **279**: A
+- **280**: B
+
+### Questions 281-290
+- **281**: A
+- **282**: B
+- **283**: D
+- **284**: B
+- **285**: B
+- **286**: C
+- **287**: B
+- **288**: C
+- **289**: B
+- **290**: C
+
+---
+
+## Contributing
+
+If you'd like to contribute to this collection:
+
+1. Fork the repository
+2. Add new questions following the same format
+3. Ensure questions are relevant to the AWS Solutions Architect Associate exam
+4. Include detailed scenarios and realistic answer choices
+5. Provide correct answers in the answer key
+6. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Disclaimer
+
+These practice questions are created for educational purposes. They are not official AWS questions and may not reflect the exact format or content of the actual AWS Certified Solutions Architect Associate exam.
