@@ -162,3 +162,244 @@ D. Enable the security option to encrypt the S3 buckets through the use of a def
 
 ---
 
+### Question 271
+**Scenario**: A solutions architect observes that a nightly batch processing job is automatically scaled up for 1 hour before the desired Amazon EC2 capacity is reached. The peak capacity is the same every night and the batch jobs always start at 1 AM. The solutions architect needs to find a cost-effective solution that will allow for the desired EC2 capacity to be reached quickly and allow the Auto Scaling group to scale down after the batch jobs are complete.
+
+**What should the solutions architect do to meet these requirements?**
+
+A. Increase the minimum capacity for the Auto Scaling group.
+B. Increase the maximum capacity for the Auto Scaling group.
+C. Configure scheduled scaling to scale up to the desired compute level.
+D. Change the scaling policy to add more EC2 instances during each scaling operation.
+
+---
+
+### Question 272
+**Scenario**: A company serves a dynamic website from a fleet of Amazon EC2 instances behind an Application Load Balancer (ALB). The website needs to support multiple languages to serve customers around the world. The website's architecture is running in the us-west-1 Region and is exhibiting high request latency for users that are located in other parts of the world. The website needs to serve requests quickly and efficiently regardless of a user's location. However, the company does not want to recreate the existing architecture across multiple Regions.
+
+**What should a solutions architect do to meet these requirements?**
+
+A. Replace the existing architecture with a website that is served from an Amazon S3 bucket. Configure an Amazon CloudFront distribution with the S3 bucket as the origin. Set the cache behavior settings to cache based on the Accept-Language request header.
+B. Configure an Amazon CloudFront distribution with the ALB as the origin. Set the cache behavior settings to cache based on the Accept-Language request header.
+C. Create an Amazon API Gateway API that is integrated with the ALB. Configure the API to use the HTTP integration type. Set up an API Gateway stage to enable the API cache based on the Accept-Language request header.
+D. Launch an EC2 instance in each additional Region and configure NGINX to act as a cache server for that Region. Put all the EC2 instances and the ALB behind an Amazon Route 53 record set with a geolocation routing policy.
+
+---
+
+### Question 273
+**Scenario**: A rapidly growing ecommerce company is running its workloads in a single AWS Region. A solutions architect must create a disaster recovery (DR) strategy that includes a different AWS Region. The company wants its database to be up to date in the DR Region with the least possible latency. The remaining infrastructure in the DR Region needs to run at reduced capacity and must be able to scale up if necessary.
+
+**Which solution will meet these requirements with the LOWEST recovery time objective (RTO)?**
+
+A. Use an Amazon Aurora global database with a pilot light deployment.
+B. Use an Amazon Aurora global database with a warm standby deployment.
+C. Use an Amazon RDS Multi-AZ DB instance with a pilot light deployment.
+D. Use an Amazon RDS Multi-AZ DB instance with a warm standby deployment.
+
+---
+
+### Question 274
+**Scenario**: A company runs an application on Amazon EC2 instances. The company needs to implement a disaster recovery (DR) solution for the application. The DR solution needs to have a recovery time objective (RTO) of less than 4 hours. The DR solution also needs to use the fewest possible AWS resources during normal operations.
+
+**Which solution will meet these requirements in the MOST operationally efficient way?**
+
+A. Create Amazon Machine Images (AMIs) to back up the EC2 instances. Copy the AMIs to a secondary AWS Region. Automate infrastructure deployment in the secondary Region by using AWS Lambda and custom scripts.
+B. Create Amazon Machine Images (AMIs) to back up the EC2 instances. Copy the AMIs to a secondary AWS Region. Automate infrastructure deployment in the secondary Region by using AWS CloudFormation.
+C. Launch EC2 instances in a secondary AWS Region. Keep the EC2 instances in the secondary Region active at all times.
+D. Launch EC2 instances in a secondary Availability Zone. Keep the EC2 instances in the secondary Availability Zone active at all times.
+
+---
+
+### Question 275
+**Scenario**: A company runs an internal browser-based application. The application runs on Amazon EC2 instances behind an Application Load Balancer. The instances run in an Amazon EC2 Auto Scaling group across multiple Availability Zones. The Auto Scaling group scales up to 20 instances during work hours, but scales down to 2 instances overnight. Staff are complaining that the application is very slow when the day begins, although it runs well by mid-morning.
+
+**How should the scaling be changed to address the staff complaints and keep costs to a minimum?**
+
+A. Implement a scheduled action that sets the desired capacity to 20 shortly before the office opens.
+B. Implement a step scaling action triggered at a lower CPU threshold, and decrease the cooldown period.
+C. Implement a target tracking action triggered at a lower CPU threshold, and decrease the cooldown period.
+D. Implement a scheduled action that sets the minimum and maximum capacity to 20 shortly before the office opens.
+
+---
+
+### Question 276
+**Scenario**: A company has a multi-tier application deployed on several Amazon EC2 instances in an Auto Scaling group. An Amazon RDS for Oracle instance is the application's data layer that uses Oracle-specific PL/SQL functions. Traffic to the application has been steadily increasing. This is causing the EC2 instances to become overloaded and the RDS instance to run out of storage. The Auto Scaling group does not have any scaling metrics and defines the minimum healthy instance count only. The company predicts that traffic will continue to increase at a steady but unpredictable rate before leveling off.
+
+**What should a solutions architect do to ensure the system can automatically scale for the increased traffic? (Choose two.)**
+
+A. Configure storage Auto Scaling on the RDS for Oracle instance.
+B. Migrate the database to Amazon Aurora to use Auto Scaling storage.
+C. Configure an alarm on the RDS for Oracle instance for low free storage space.
+D. Configure the Auto Scaling group to use the average CPU as the scaling metric.
+E. Configure the Auto Scaling group to use the average free memory as the scaling metric.
+
+---
+
+### Question 277
+**Scenario**: A company provides an online service for posting video content and transcoding it for use by any mobile platform. The application architecture uses Amazon Elastic File System (Amazon EFS) Standard to collect and store the videos so that multiple Amazon EC2 Linux instances can access the video content for processing. As the popularity of the service has grown over time, the storage costs have become too expensive.
+
+**Which storage solution is MOST cost-effective?**
+
+A. Use AWS Storage Gateway for files to store and process the video content.
+B. Use AWS Storage Gateway for volumes to store and process the video content.
+C. Use Amazon EFS for storing the video content. Once processing is complete, transfer the files to Amazon Elastic Block Store (Amazon EBS).
+D. Use Amazon S3 for storing the video content. Move the files temporarily over to an Amazon Elastic Block Store (Amazon EBS) volume attached to the server for processing.
+
+---
+
+### Question 278
+**Scenario**: A company wants to create an application to store employee data in a hierarchical structured relationship. The company needs a minimum-latency response to high-traffic queries for the employee data and must protect any sensitive data. The company also needs to receive monthly email messages if any financial information is present in the employee data.
+
+**Which combination of steps should a solutions architect take to meet these requirements? (Choose two.)**
+
+A. Use Amazon Redshift to store the employee data in hierarchies. Unload the data to Amazon S3 every month.
+B. Use Amazon DynamoDB to store the employee data in hierarchies. Export the data to Amazon S3 every month.
+C. Configure Amazon Macie for the AWS account. Integrate Macie with Amazon EventBridge to send monthly events to AWS Lambda.
+D. Use Amazon Athena to analyze the employee data in Amazon S3. Integrate Athena with Amazon QuickSight to publish analysis dashboards and share the dashboards with users.
+E. Configure Amazon Macie for the AWS account. Integrate Macie with Amazon EventBridge to send monthly notifications through an Amazon Simple Notification Service (Amazon SNS) subscription.
+
+---
+
+### Question 279
+**Scenario**: A company has an application that is backed by an Amazon DynamoDB table. The company's compliance requirements specify that database backups must be taken every month, must be available for 6 months, and must be retained for 7 years.
+
+**Which solution will meet these requirements?**
+
+A. Create an AWS Backup plan to back up the DynamoDB table on the first day of each month. Specify a lifecycle policy that transitions the backup to cold storage after 6 months. Set the retention period for each backup to 7 years.
+B. Create a DynamoDB on-demand backup of the DynamoDB table on the first day of each month. Transition the backup to Amazon S3 Glacier Flexible Retrieval after 6 months. Create an S3 Lifecycle policy to delete backups that are older than 7 years.
+C. Use the AWS SDK to develop a script that creates an on-demand backup of the DynamoDB table. Set up an Amazon EventBridge rule that runs the script on the first day of each month. Create a second script that will run on the second day of each month to transition DynamoDB backups that are older than 6 months to cold storage and to delete backups that are older than 7 years.
+D. Use the AWS CLI to create an on-demand backup of the DynamoDB table. Set up an Amazon EventBridge rule that runs the command on the first day of each month with a cron expression. Specify in the command to transition the backups to cold storage after 6 months and to delete the backups after 7 years.
+
+---
+
+### Question 280
+**Scenario**: A company is using Amazon CloudFront with its website. The company has enabled logging on the CloudFront distribution, and logs are saved in one of the company's Amazon S3 buckets. The company needs to perform advanced analyses on the logs and build visualizations.
+
+**What should a solutions architect do to meet these requirements?**
+
+A. Use standard SQL queries in Amazon Athena to analyze the CloudFront logs in the S3 bucket. Visualize the results with AWS Glue.
+B. Use standard SQL queries in Amazon Athena to analyze the CloudFront logs in the S3 bucket. Visualize the results with Amazon QuickSight.
+C. Use standard SQL queries in Amazon DynamoDB to analyze the CloudFront logs in the S3 bucket. Visualize the results with AWS Glue.
+D. Use standard SQL queries in Amazon DynamoDB to analyze the CloudFront logs in the S3 bucket. Visualize the results with Amazon QuickSight.
+
+---
+
+### Question 281
+**Scenario**: A company runs a fleet of web servers using an Amazon RDS for PostgreSQL DB instance. After a routine compliance check, the company sets a standard that requires a recovery point objective (RPO) of less than 1 second for all its production databases.
+
+**Which solution meets these requirements?**
+
+A. Enable a Multi-AZ deployment for the DB instance.
+B. Enable auto scaling for the DB instance in one Availability Zone.
+C. Configure the DB instance in one Availability Zone, and create multiple read replicas in a separate Availability Zone.
+D. Configure the DB instance in one Availability Zone, and configure AWS Database Migration Service (AWS DMS) change data capture (CDC) tasks.
+
+---
+
+### Question 282
+**Scenario**: A company runs a web application that is deployed on Amazon EC2 instances in the private subnet of a VPC. An Application Load Balancer (ALB) that extends across the public subnets directs web traffic to the EC2 instances. The company wants to implement new security measures to restrict inbound traffic from the ALB to the EC2 instances while preventing access from any other source inside or outside the private subnet of the EC2 instances.
+
+**Which solution will meet these requirements?**
+
+A. Configure a route in a route table to direct traffic from the internet to the private IP addresses of the EC2 instances.
+B. Configure the security group for the EC2 instances to only allow traffic that comes from the security group for the ALB.
+C. Move the EC2 instances into the public subnet. Give the EC2 instances a set of Elastic IP addresses.
+D. Configure the security group for the ALB to allow any TCP traffic on any port.
+
+---
+
+### Question 283
+**Scenario**: A research company runs experiments that are powered by a simulation application and a visualization application. The simulation application runs on Linux and outputs intermediate data to an NFS share every 5 minutes. The visualization application is a Windows desktop application that displays the simulation output and requires an SMB file system. The company maintains two synchronized file systems. This strategy is causing data duplication and inefficient resource usage. The company needs to migrate the applications to AWS without making code changes to either application.
+
+**Which solution will meet these requirements?**
+
+A. Migrate both applications to AWS Lambda. Create an Amazon S3 bucket to exchange data between the applications.
+B. Migrate both applications to Amazon Elastic Container Service (Amazon ECS). Configure Amazon FSx File Gateway for storage.
+C. Migrate the simulation application to Linux Amazon EC2 instances. Migrate the visualization application to Windows EC2 instances. Configure Amazon Simple Queue Service (Amazon SQS) to exchange data between the applications.
+D. Migrate the simulation application to Linux Amazon EC2 instances. Migrate the visualization application to Windows EC2 instances. Configure Amazon FSx for NetApp ONTAP for storage.
+
+---
+
+### Question 284
+**Scenario**: As part of budget planning, management wants a report of AWS billed items listed by user. The data will be used to create department budgets. A solutions architect needs to determine the most efficient way to obtain this report information.
+
+**Which solution meets these requirements?**
+
+A. Run a query with Amazon Athena to generate the report.
+B. Create a report in Cost Explorer and download the report.
+C. Access the bill details from the billing dashboard and download the bill.
+D. Modify a cost budget in AWS Budgets to alert with Amazon Simple Email Service (Amazon SES).
+
+---
+
+### Question 285
+**Scenario**: A company hosts its static website by using Amazon S3. The company wants to add a contact form to its webpage. The contact form will have dynamic server-side components for users to input their name, email address, phone number, and user message. The company anticipates that there will be fewer than 100 site visits each month.
+
+**Which solution will meet these requirements MOST cost-effectively?**
+
+A. Host a dynamic contact form page in Amazon Elastic Container Service (Amazon ECS). Set up Amazon Simple Email Service (Amazon SES) to connect to any third-party email provider.
+B. Create an Amazon API Gateway endpoint with an AWS Lambda backend that makes a call to Amazon Simple Email Service (Amazon SES).
+C. Convert the static webpage to dynamic by deploying Amazon Lightsail. Use client-side scripting to build the contact form. Integrate the form with Amazon WorkMail.
+D. Create a t2.micro Amazon EC2 instance. Deploy a LAMP (Linux, Apache, MySQL, PHP/Perl/Python) stack to host the webpage. Use client-side scripting to build the contact form. Integrate the form with Amazon WorkMail.
+
+---
+
+### Question 286
+**Scenario**: A company has a static website that is hosted on Amazon CloudFront in front of Amazon S3. The static website uses a database backend. The company notices that the website does not reflect updates that have been made in the website's Git repository. The company checks the continuous integration and continuous delivery (CI/CD) pipeline between the Git repository and Amazon S3. The company verifies that the webhooks are configured properly and that the CI/CD pipeline is sending messages that indicate successful deployments. A solutions architect needs to implement a solution that displays the updates on the website.
+
+**Which solution will meet these requirements?**
+
+A. Add an Application Load Balancer.
+B. Add Amazon ElastiCache for Redis or Memcached to the database layer of the web application.
+C. Invalidate the CloudFront cache.
+D. Use AWS Certificate Manager (ACM) to validate the website's SSL certificate.
+
+---
+
+### Question 287
+**Scenario**: A company wants to migrate a Windows-based application from on premises to the AWS Cloud. The application has three tiers: an application tier, a business tier, and a database tier with Microsoft SQL Server. The company wants to use specific features of SQL Server such as native backups and Data Quality Services. The company also needs to share files for processing between the tiers.
+
+**How should a solutions architect design the architecture to meet these requirements?**
+
+A. Host all three tiers on Amazon EC2 instances. Use Amazon FSx File Gateway for file sharing between the tiers.
+B. Host all three tiers on Amazon EC2 instances. Use Amazon FSx for Windows File Server for file sharing between the tiers.
+C. Host the application tier and the business tier on Amazon EC2 instances. Host the database tier on Amazon RDS. Use Amazon Elastic File System (Amazon EFS) for file sharing between the tiers.
+D. Host the application tier and the business tier on Amazon EC2 instances. Host the database tier on Amazon RDS. Use a Provisioned IOPS SSD (io2) Amazon Elastic Block Store (Amazon EBS) volume for file sharing between the tiers.
+
+---
+
+### Question 288
+**Scenario**: A company is migrating a Linux-based web server group to AWS. The web servers must access files in a shared file store for some content. The company must not make any changes to the application.
+
+**What should a solutions architect do to meet these requirements?**
+
+A. Create an Amazon S3 Standard bucket with access to the web servers.
+B. Configure an Amazon CloudFront distribution with an Amazon S3 bucket as the origin.
+C. Create an Amazon Elastic File System (Amazon EFS) file system. Mount the EFS file system on all web servers.
+D. Configure a General Purpose SSD (gp3) Amazon Elastic Block Store (Amazon EBS) volume. Mount the EBS volume to all web servers.
+
+---
+
+### Question 289
+**Scenario**: A company has an AWS Lambda function that needs read access to an Amazon S3 bucket that is located in the same AWS account.
+
+**Which solution will meet these requirements in the MOST secure manner?**
+
+A. Apply an S3 bucket policy that grants read access to the S3 bucket.
+B. Apply an IAM role to the Lambda function. Apply an IAM policy to the role to grant read access to the S3 bucket.
+C. Embed an access key and a secret key in the Lambda function's code to grant the required IAM permissions for read access to the S3 bucket.
+D. Apply an IAM role to the Lambda function. Apply an IAM policy to the role to grant read access to all S3 buckets in the account.
+
+---
+
+### Question 290
+**Scenario**: A company hosts a web application on multiple Amazon EC2 instances. The EC2 instances are in an Auto Scaling group that scales in response to user demand. The company wants to optimize cost savings without making a long-term commitment.
+
+**Which EC2 instance purchasing option should a solutions architect recommend to meet these requirements?**
+
+A. Dedicated Instances only
+B. On-Demand Instances only
+C. A mix of On-Demand Instances and Spot Instances
+D. A mix of On-Demand Instances and Reserved Instances
+
+---
