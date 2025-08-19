@@ -925,3 +925,38 @@ E) Use AWS Systems Manager Application Manager in the application to manage user
 | 389 | A | RDS read replicas offload reporting queries from the primary write instance. |
 | 390 | B, D | DynamoDB provides durable session storage (B), ElastiCache Redis offers fast session access (D). |
 
+## Study Tips
+
+1. **Focus on the requirements**: Always identify what the question is asking for (cost optimization, high availability, security, etc.)
+
+2. **Consider operational overhead**: AWS prefers managed services over self-managed solutions
+
+3. **Think about scale**: Consider how solutions will perform under load and growth
+
+4. **Security first**: Always choose the most secure option that meets requirements
+
+5. **Cost optimization**: Look for solutions that balance performance with cost-effectiveness
+
+## Contributing
+
+If you find errors in the questions or answers, or want to contribute additional practice questions, please:
+
+1. Fork this repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## Disclaimer
+
+These practice questions are for educational purposes only. They are not official AWS questions and do not guarantee success on the actual AWS Certified Solutions Architect Associate exam. Always refer to official AWS documentation and training materials for the most current information.
+
+## Resources
+
+- [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
+- [AWS Architecture Center](https://aws.amazon.com/architecture/)
+- [AWS Solutions Library](https://aws.amazon.com/solutions/)
+- [AWS Whitepapers](https://aws.amazon.com/whitepapers/)
+
+---
+
+**Happy studying and good luck with your AWS certification!** 🚀
