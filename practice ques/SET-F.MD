@@ -501,6 +501,360 @@ E) Write the messages to an Amazon Simple Queue Service (Amazon SQS) FIFO queue.
 
 ---
 
+### Question 363: Event-Driven System for Gaming
+A company is building a game system that needs to send unique events to separate leaderboard, matchmaking, and authentication services concurrently. The company needs an AWS event-driven system that guarantees the order of the events.
+
+Which solution will meet these requirements?
+
+A) Amazon EventBridge event bus  
+B) Amazon Simple Notification Service (Amazon SNS) FIFO topics  
+C) Amazon Simple Notification Service (Amazon SNS) standard topics  
+D) Amazon Simple Queue Service (Amazon SQS) FIFO queues
+
+---
+
+### Question 364: Healthcare Data Encryption with SQS and SNS
+A hospital is designing a new application that gathers symptoms from patients. The hospital has decided to use Amazon Simple Queue Service (Amazon SQS) and Amazon Simple Notification Service (Amazon SNS) in the architecture.
+
+A solutions architect is reviewing the infrastructure design. Data must be encrypted at rest and in transit. Only authorized personnel of the hospital should be able to access the data.
+
+Which combination of steps should the solutions architect take to meet these requirements? (Choose two.)
+
+A) Turn on server-side encryption on the SQS components. Update the default key policy to restrict key usage to a set of authorized principals  
+B) Turn on server-side encryption on the SNS components by using an AWS Key Management Service (AWS KMS) customer managed key. Apply a key policy to restrict key usage to a set of authorized principals  
+C) Turn on encryption on the SNS components. Update the default key policy to restrict key usage to a set of authorized principals. Set a condition in the topic policy to allow only encrypted connections over TLS  
+D) Turn on server-side encryption on the SQS components by using an AWS Key Management Service (AWS KMS) customer managed key. Apply a key policy to restrict key usage to a set of authorized principals. Set a condition in the queue policy to allow only encrypted connections over TLS  
+E) Turn on server-side encryption on the SQS components by using an AWS Key Management Service (AWS KMS) customer managed key. Apply an IAM policy to restrict key usage to a set of authorized principals. Set a condition in the queue policy to allow only encrypted connections over TLS
+
+---
+
+### Question 365: Database Point-in-Time Recovery
+A company runs a web application that is backed by Amazon RDS. A new database administrator caused data loss by accidentally editing information in a database table. To help recover from this type of incident, the company wants the ability to restore the database to its state from 5 minutes before any change within the last 30 days.
+
+Which feature should the solutions architect include in the design to meet this requirement?
+
+A) Read replicas  
+B) Manual snapshots  
+C) Automated backups  
+D) Multi-AZ deployments
+
+---
+
+### Question 366: API Access Control for Premium Content
+A company's web application consists of an Amazon API Gateway API in front of an AWS Lambda function and an Amazon DynamoDB database. The Lambda function handles the business logic, and the DynamoDB table hosts the data. The application uses Amazon Cognito user pools to identify the individual users of the application. A solutions architect needs to update the application so that only users who have a subscription can access premium content.
+
+Which solution will meet this requirement with the LEAST operational overhead?
+
+A) Enable API caching and throttling on the API Gateway API  
+B) Set up AWS WAF on the API Gateway API. Create a rule to filter users who have a subscription  
+C) Apply fine-grained IAM permissions to the premium content in the DynamoDB table  
+D) Implement API usage plans and API keys to limit the access of users who do not have a subscription
+
+---
+
+### Question 367: Global UDP Application Performance
+A company is using Amazon Route 53 latency-based routing to route requests to its UDP-based application for users around the world. The application is hosted on redundant servers in the company's on-premises data centers in the United States, Asia, and Europe. The company's compliance requirements state that the application must be hosted on premises. The company wants to improve the performance and availability of the application.
+
+What should a solutions architect do to meet these requirements?
+
+A) Configure three Network Load Balancers (NLBs) in the three AWS Regions to address the on-premises endpoints. Create an accelerator by using AWS Global Accelerator, and register the NLBs as its endpoints. Provide access to the application by using a CNAME that points to the accelerator DNS  
+B) Configure three Application Load Balancers (ALBs) in the three AWS Regions to address the on-premises endpoints. Create an accelerator by using AWS Global Accelerator, and register the ALBs as its endpoints. Provide access to the application by using a CNAME that points to the accelerator DNS  
+C) Configure three Network Load Balancers (NLBs) in the three AWS Regions to address the on-premises endpoints. In Route 53, create a latency-based record that points to the three NLBs, and use it as an origin for an Amazon CloudFront distribution. Provide access to the application by using a CNAME that points to the CloudFront DNS  
+D) Configure three Application Load Balancers (ALBs) in the three AWS Regions to address the on-premises endpoints. In Route 53, create a latency-based record that points to the three ALBs, and use it as an origin for an Amazon CloudFront distribution. Provide access to the application by using a CNAME that points to the CloudFront DNS
+
+---
+
+### Question 368: IAM Password Policy Implementation
+A solutions architect wants all new users to have specific complexity requirements and mandatory rotation periods for IAM user passwords.
+
+What should the solutions architect do to accomplish this?
+
+A) Set an overall password policy for the entire AWS account  
+B) Set a password policy for each IAM user in the AWS account  
+C) Use third-party vendor software to set password requirements  
+D) Attach an Amazon CloudWatch rule to the Create_newuser event to set the password with the appropriate requirements
+
+---
+
+### Question 369: Multi-Language Task Scheduling Optimization
+A company has migrated an application to Amazon EC2 Linux instances. One of these EC2 instances runs several 1-hour tasks on a schedule. These tasks were written by different teams and have no common programming language. The company is concerned about performance and scalability while these tasks run on a single instance. A solutions architect needs to implement a solution to resolve these concerns.
+
+Which solution will meet these requirements with the LEAST operational overhead?
+
+A) Use AWS Batch to run the tasks as jobs. Schedule the jobs by using Amazon EventBridge (Amazon CloudWatch Events)  
+B) Convert the EC2 instance to a container. Use AWS App Runner to create the container on demand to run the tasks as jobs  
+C) Copy the tasks into AWS Lambda functions. Schedule the Lambda functions by using Amazon EventBridge (Amazon CloudWatch Events)  
+D) Create an Amazon Machine Image (AMI) of the EC2 instance that runs the tasks. Create an Auto Scaling group with the AMI to run multiple copies of the instance
+
+---
+
+### Question 370: Managed Internet Access for Private Subnets
+A company runs a public three-tier web application in a VPC. The application runs on Amazon EC2 instances across multiple Availability Zones. The EC2 instances that run in private subnets need to communicate with a license server over the internet. The company needs a managed solution that minimizes operational maintenance.
+
+Which solution meets these requirements?
+
+A) Provision a NAT instance in a public subnet. Modify each private subnet's route table with a default route that points to the NAT instance  
+B) Provision a NAT instance in a private subnet. Modify each private subnet's route table with a default route that points to the NAT instance  
+C) Provision a NAT gateway in a public subnet. Modify each private subnet's route table with a default route that points to the NAT gateway  
+D) Provision a NAT gateway in a private subnet. Modify each private subnet's route table with a default route that points to the NAT gateway
+
+---
+
+### Question 371: EKS Cluster Encryption with Customer Managed Keys
+A company needs to create an Amazon Elastic Kubernetes Service (Amazon EKS) cluster to host a digital media streaming application. The EKS cluster will use a managed node group that is backed by Amazon Elastic Block Store (Amazon EBS) volumes for storage. The company must encrypt all data at rest by using a customer managed key that is stored in AWS Key Management Service (AWS KMS).
+
+Which combination of actions will meet this requirement with the LEAST operational overhead? (Choose two.)
+
+A) Use a Kubernetes plugin that uses the customer managed key to perform data encryption  
+B) After creation of the EKS cluster, locate the EBS volumes. Enable encryption by using the customer managed key  
+C) Enable EBS encryption by default in the AWS Region where the EKS cluster will be created. Select the customer managed key as the default key  
+D) Create the EKS cluster. Create an IAM role that has a policy that grants permission to the customer managed key. Associate the role with the EKS cluster  
+E) Store the customer managed key as a Kubernetes secret in the EKS cluster. Use the customer managed key to encrypt the EBS volumes
+
+---
+
+### Question 372: GIS Database Migration and Scaling
+A company wants to migrate an Oracle database to AWS. The database consists of a single table that contains millions of geographic information systems (GIS) images that are high resolution and are identified by a geographic code.
+
+When a natural disaster occurs, tens of thousands of images get updated every few minutes. Each geographic code has a single image or row that is associated with it. The company wants a solution that is highly available and scalable during such events.
+
+Which solution meets these requirements MOST cost-effectively?
+
+A) Store the images and geographic codes in a database table. Use Oracle running on an Amazon RDS Multi-AZ DB instance  
+B) Store the images in Amazon S3 buckets. Use Amazon DynamoDB with the geographic code as the key and the image S3 URL as the value  
+C) Store the images and geographic codes in an Amazon DynamoDB table. Configure DynamoDB Accelerator (DAX) during times of high load  
+D) Store the images in Amazon S3 buckets. Store geographic codes and image S3 URLs in a database table. Use Oracle running on an Amazon RDS Multi-AZ DB instance
+
+---
+
+### Question 373: IoT Data Lifecycle Management
+A company has an application that collects data from IoT sensors on automobiles. The data is streamed and stored in Amazon S3 through Amazon Kinesis Data Firehose. The data produces trillions of S3 objects each year. Each morning, the company uses the data from the previous 30 days to retrain a suite of machine learning (ML) models.
+
+Four times each year, the company uses the data from the previous 12 months to perform analysis and train other ML models. The data must be available with minimal delay for up to 1 year. After 1 year, the data must be retained for archival purposes.
+
+Which storage solution meets these requirements MOST cost-effectively?
+
+A) Use the S3 Intelligent-Tiering storage class. Create an S3 Lifecycle policy to transition objects to S3 Glacier Deep Archive after 1 year  
+B) Use the S3 Intelligent-Tiering storage class. Configure S3 Intelligent-Tiering to automatically move objects to S3 Glacier Deep Archive after 1 year  
+C) Use the S3 Standard-Infrequent Access (S3 Standard-IA) storage class. Create an S3 Lifecycle policy to transition objects to S3 Glacier Deep Archive after 1 year  
+D) Use the S3 Standard storage class. Create an S3 Lifecycle policy to transition objects to S3 Standard-Infrequent Access (S3 Standard-IA) after 30 days, and then to S3 Glacier Deep Archive after 1 year
+
+---
+
+### Question 374: Multi-VPC Connectivity with On-Premises Integration
+A company is running several business applications in three separate VPCs within the us-east-1 Region. The applications must be able to communicate between VPCs. The applications also must be able to consistently send hundreds of gigabytes of data each day to a latency-sensitive application that runs in a single on-premises data center.
+
+A solutions architect needs to design a network connectivity solution that maximizes cost-effectiveness.
+
+Which solution meets these requirements?
+
+A) Configure three AWS Site-to-Site VPN connections from the data center to AWS. Establish connectivity by configuring one VPN connection for each VPC  
+B) Launch a third-party virtual network appliance in each VPC. Establish an IPsec VPN tunnel between the data center and each virtual appliance  
+C) Set up three AWS Direct Connect connections from the data center to a Direct Connect gateway in us-east-1. Establish connectivity by configuring each VPC to use one of the Direct Connect connections  
+D) Set up one AWS Direct Connect connection from the data center to AWS. Create a transit gateway, and attach each VPC to the transit gateway. Establish connectivity between the Direct Connect connection and the transit gateway
+
+---
+
+### Question 375: Serverless Workflow Orchestration
+An ecommerce company is building a distributed application that involves several serverless functions and AWS services to complete order-processing tasks. These tasks require manual approvals as part of the workflow. A solutions architect needs to design an architecture for the order-processing application. The solution must be able to combine multiple AWS Lambda functions into responsive serverless applications. The solution also must orchestrate data and services that run on Amazon EC2 instances, containers, or on-premises servers.
+
+Which solution will meet these requirements with the LEAST operational overhead?
+
+A) Use AWS Step Functions to build the application  
+B) Integrate all the application components in an AWS Glue job  
+C) Use Amazon Simple Queue Service (Amazon SQS) to build the application  
+D) Use AWS Lambda functions and Amazon EventBridge events to build the application
+
+---
+
+### Question 376: Database Connection Management for Serverless
+A company has launched an Amazon RDS for MySQL DB instance. Most of the connections to the database come from serverless applications. Application traffic to the database changes significantly at random intervals. At times of high demand, users report that their applications experience database connection rejection errors.
+
+Which solution will resolve this issue with the LEAST operational overhead?
+
+A) Create a proxy in RDS Proxy. Configure the users' applications to use the DB instance through RDS Proxy  
+B) Deploy Amazon ElastiCache for Memcached between the users' applications and the DB instance  
+C) Migrate the DB instance to a different instance class that has higher I/O capacity. Configure the users' applications to use the new DB instance  
+D) Configure Multi-AZ for the DB instance. Configure the users' applications to switch between the DB instances
+
+---
+
+### Question 377: Auto Scaling Auditing Integration
+A company recently deployed a new auditing system to centralize information about operating system versions, patching, and installed software for Amazon EC2 instances. A solutions architect must ensure all instances provisioned through EC2 Auto Scaling groups successfully send reports to the auditing system as soon as they are launched and terminated.
+
+Which solution achieves these goals MOST efficiently?
+
+A) Use a scheduled AWS Lambda function and run a script remotely on all EC2 instances to send data to the audit system  
+B) Use EC2 Auto Scaling lifecycle hooks to run a custom script to send data to the audit system when instances are launched and terminated  
+C) Use an EC2 Auto Scaling launch configuration to run a custom script through user data to send data to the audit system when instances are launched and terminated  
+D) Run a custom script on the instance operating system to send data to the audit system. Configure the script to be invoked by the EC2 Auto Scaling group when the instance starts and is terminated
+
+---
+
+### Question 378: Real-Time Gaming Infrastructure
+A company is developing a real-time multiplayer game that uses UDP for communications between the client and servers in an Auto Scaling group. Spikes in demand are anticipated during the day, so the game server platform must adapt accordingly. Developers want to store gamer scores and other non-relational data in a database solution that will scale without intervention.
+
+Which solution should a solutions architect recommend?
+
+A) Use Amazon Route 53 for traffic distribution and Amazon Aurora Serverless for data storage  
+B) Use a Network Load Balancer for traffic distribution and Amazon DynamoDB on-demand for data storage  
+C) Use a Network Load Balancer for traffic distribution and Amazon Aurora Global Database for data storage  
+D) Use an Application Load Balancer for traffic distribution and Amazon DynamoDB global tables for data storage
+
+---
+
+### Question 379: Lambda Performance Optimization
+A company hosts a frontend application that uses an Amazon API Gateway API backend that is integrated with AWS Lambda. When the API receives requests, the Lambda function loads many libraries. Then the Lambda function connects to an Amazon RDS database, processes the data, and returns the data to the frontend application. The company wants to ensure that response latency is as low as possible for all its users with the fewest number of changes to the company's operations.
+
+Which solution will meet these requirements?
+
+A) Establish a connection between the frontend application and the database to make queries faster by bypassing the API  
+B) Configure provisioned concurrency for the Lambda function that handles the requests  
+C) Cache the results of the queries in Amazon S3 for faster retrieval of similar datasets  
+D) Increase the size of the database to increase the number of connections Lambda can establish at one time
+
+---
+
+### Question 380: Automated Resource Scheduling
+A company is migrating its on-premises workload to the AWS Cloud. The company already uses several Amazon EC2 instances and Amazon RDS DB instances. The company wants a solution that automatically starts and stops the EC2 instances and DB instances outside of business hours. The solution must minimize cost and infrastructure maintenance.
+
+Which solution will meet these requirements?
+
+A) Scale the EC2 instances by using elastic resize. Scale the DB instances to zero outside of business hours  
+B) Explore AWS Marketplace for partner solutions that will automatically start and stop the EC2 instances and DB instances on a schedule  
+C) Launch another EC2 instance. Configure a crontab schedule to run shell scripts that will start and stop the existing EC2 instances and DB instances on a schedule  
+D) Create an AWS Lambda function that will start and stop the EC2 instances and DB instances. Configure Amazon EventBridge to invoke the Lambda function on a schedule
+
+---
+
+### Question 381: PostgreSQL Reporting Performance
+A company hosts a three-tier web application that includes a PostgreSQL database. The database stores the metadata from documents. The company searches the metadata for key terms to retrieve documents that the company reviews in a report each month. The documents are stored in Amazon S3. The documents are usually written only once, but they are updated frequently.
+
+The reporting process takes a few hours with the use of relational queries. The reporting process must not prevent any document modifications or the addition of new documents. A solutions architect needs to implement a solution to speed up the reporting process.
+
+Which solution will meet these requirements with the LEAST amount of change to the application code?
+
+A) Set up a new Amazon DocumentDB (with MongoDB compatibility) cluster that includes a read replica. Scale the read replica to generate the reports  
+B) Set up a new Amazon Aurora PostgreSQL DB cluster that includes an Aurora Replica. Issue queries to the Aurora Replica to generate the reports  
+C) Set up a new Amazon RDS for PostgreSQL Multi-AZ DB instance. Configure the reporting module to query the secondary RDS node so that the reporting module does not affect the primary node  
+D) Set up a new Amazon DynamoDB table to store the documents. Use a fixed write capacity to support new document entries. Automatically scale the read capacity to support the reports
+
+---
+
+### Question 382: Three-Tier Application Security
+A company has a three-tier application on AWS that ingests sensor data from its users' devices. The traffic flows through a Network Load Balancer (NLB), then to Amazon EC2 instances for the web tier, and finally to EC2 instances for the application tier. The application tier makes calls to a database.
+
+What should a solutions architect do to improve the security of the data in transit?
+
+A) Configure a TLS listener. Deploy the server certificate on the NLB  
+B) Configure AWS Shield Advanced. Enable AWS WAF on the NLB  
+C) Change the load balancer to an Application Load Balancer (ALB). Enable AWS WAF on the ALB  
+D) Encrypt the Amazon Elastic Block Store (Amazon EBS) volume on the EC2 instances by using AWS Key Management Service (AWS KMS)
+
+---
+
+### Question 383: License Management for EC2
+A company is planning to migrate a commercial off-the-shelf application from its on-premises data center to AWS. The software has a software licensing model using sockets and cores with predictable capacity and uptime requirements. The company wants to use its existing licenses, which were purchased earlier this year.
+
+Which Amazon EC2 pricing option is the MOST cost-effective?
+
+A) Dedicated Reserved Hosts  
+B) Dedicated On-Demand Hosts  
+C) Dedicated Reserved Instances  
+D) Dedicated On-Demand Instances
+
+---
+
+### Question 384: POSIX-Compliant Shared Storage
+A company runs an application on Amazon EC2 Linux instances across multiple Availability Zones. The application needs a storage layer that is highly available and Portable Operating System Interface (POSIX)-compliant. The storage layer must provide maximum data durability and must be shareable across the EC2 instances. The data in the storage layer will be accessed frequently for the first 30 days and will be accessed infrequently after that time.
+
+Which solution will meet these requirements MOST cost-effectively?
+
+A) Use the Amazon S3 Standard storage class. Create an S3 Lifecycle policy to move infrequently accessed data to S3 Glacier  
+B) Use the Amazon S3 Standard storage class. Create an S3 Lifecycle policy to move infrequently accessed data to S3 Standard-Infrequent Access (S3 Standard-IA)  
+C) Use the Amazon Elastic File System (Amazon EFS) Standard storage class. Create a lifecycle management policy to move infrequently accessed data to EFS Standard-Infrequent Access (EFS Standard-IA)  
+D) Use the Amazon Elastic File System (Amazon EFS) One Zone storage class. Create a lifecycle management policy to move infrequently accessed data to EFS One Zone-Infrequent Access (EFS One Zone-IA)
+
+---
+
+### Question 385: VPC Security Group Configuration
+A solutions architect is creating a new VPC design. There are two public subnets for the load balancer, two private subnets for web servers, and two private subnets for MySQL. The web servers use only HTTPS. The solutions architect has already created a security group for the load balancer allowing port 443 from 0.0.0.0/0. Company policy requires that each resource has the least access required to still be able to perform its tasks.
+
+Which additional configuration strategy should the solutions architect use to meet these requirements?
+
+A) Create a security group for the web servers and allow port 443 from 0.0.0.0/0. Create a security group for the MySQL servers and allow port 3306 from the web servers security group  
+B) Create a network ACL for the web servers and allow port 443 from 0.0.0.0/0. Create a network ACL for the MySQL servers and allow port 3306 from the web servers security group  
+C) Create a security group for the web servers and allow port 443 from the load balancer. Create a security group for the MySQL servers and allow port 3306 from the web servers security group  
+D) Create a network ACL for the web servers and allow port 443 from the load balancer. Create a network ACL for the MySQL servers and allow port 3306 from the web servers security group
+
+---
+
+### Question 386: Database Caching for Performance
+An ecommerce company is running a multi-tier application on AWS. The front-end and backend tiers both run on Amazon EC2, and the database runs on Amazon RDS for MySQL. The backend tier communicates with the RDS instance. There are frequent calls to return identical datasets from the database that are causing performance slowdowns.
+
+Which action should be taken to improve the performance of the backend?
+
+A) Implement Amazon SNS to store the database calls  
+B) Implement Amazon ElastiCache to cache the large datasets  
+C) Implement an RDS for MySQL read replica to cache database calls  
+D) Implement Amazon Kinesis Data Firehose to stream the calls to the database
+
+---
+
+### Question 387: CloudFormation Deployment Engineer IAM
+A new employee has joined a company as a deployment engineer. The deployment engineer will be using AWS CloudFormation templates to create multiple AWS resources. A solutions architect wants the deployment engineer to perform job activities while following the principle of least privilege.
+
+Which combination of actions should the solutions architect take to accomplish this goal? (Choose two.)
+
+A) Have the deployment engineer use AWS account root user credentials for performing AWS CloudFormation stack operations  
+B) Create a new IAM user for the deployment engineer and add the IAM user to a group that has the PowerUsers IAM policy attached  
+C) Create a new IAM user for the deployment engineer and add the IAM user to a group that has the AdministratorAccess IAM policy attached  
+D) Create a new IAM user for the deployment engineer and add the IAM user to a group that has an IAM policy that allows AWS CloudFormation actions only  
+E) Create an IAM role for the deployment engineer to explicitly define the permissions specific to the AWS CloudFormation stack and launch stacks using that IAM role
+
+---
+
+### Question 388: Web Application Database Connectivity
+A company is deploying a two-tier web application in a VPC. The web tier is using an Amazon EC2 Auto Scaling group with public subnets that span multiple Availability Zones. The database tier consists of an Amazon RDS for MySQL DB instance in separate private subnets. The web tier requires access to the database to retrieve product information.
+
+The web application is not working as intended. The web application reports that it cannot connect to the database. The database is confirmed to be up and running. All configurations for the network ACLs, security groups, and route tables are still in their default states.
+
+What should a solutions architect recommend to fix the application?
+
+A) Add an explicit rule to the private subnet's network ACL to allow traffic from the web tier's EC2 instances  
+B) Add a route in the VPC route table to allow traffic between the web tier's EC2 instances and the database tier  
+C) Deploy the web tier's EC2 instances and the database tier's RDS instance into two separate VPCs, and configure VPC peering  
+D) Add an inbound rule to the security group of the database tier's RDS instance to allow traffic from the web tiers security group
+
+---
+
+### Question 389: RDS Read Replica for Reporting
+A company has a large dataset for its online advertising business stored in an Amazon RDS for MySQL DB instance in a single Availability Zone. The company wants business reporting queries to run without impacting the write operations to the production DB instance.
+
+Which solution meets these requirements?
+
+A) Deploy RDS read replicas to process the business reporting queries  
+B) Scale out the DB instance horizontally by placing it behind an Elastic Load Balancer  
+C) Scale up the DB instance to a larger instance type to handle write operations and queries  
+D) Deploy the DB instance in multiple Availability Zones to process the business reporting queries
+
+---
+
+### Question 390: E-commerce Session Management
+A company hosts a three-tier ecommerce application on a fleet of Amazon EC2 instances. The instances run in an Auto Scaling group behind an Application Load Balancer (ALB). All ecommerce data is stored in an Amazon RDS for MariaDB Multi-AZ DB instance.
+
+The company wants to optimize customer session management during transactions. The application must store session data durably.
+
+Which solutions will meet these requirements? (Choose two.)
+
+A) Turn on the sticky sessions feature (session affinity) on the ALB  
+B) Use an Amazon DynamoDB table to store customer session information  
+C) Deploy an Amazon Cognito user pool to manage user session information  
+D) Deploy an Amazon ElastiCache for Redis cluster to store customer session information  
+E) Use AWS Systems Manager Application Manager in the application to manage user session information
+
+---
+
 ## Answer Key
 
 | Question | Answer(s) | Explanation |
@@ -542,39 +896,32 @@ E) Write the messages to an Amazon Simple Queue Service (Amazon SQS) FIFO queue.
 | 360 | B | Interface endpoint allows private API Gateway communication within VPC without code changes. |
 | 361 | C | DynamoDB + DAX provides sub-millisecond latency, table export + Athena enables historical queries. |
 | 362 | B, E | Kinesis with partition key maintains order per payment ID (B), SQS FIFO with message group ensures ordering (E). |
+| 363 | B | SNS FIFO topics guarantee message ordering while delivering to multiple services concurrently. |
+| 364 | B, D | SNS with customer managed KMS key and key policy (B), SQS with customer managed KMS key, key policy, and TLS condition (D). |
+| 365 | C | Automated backups enable point-in-time recovery within the backup retention period (up to 35 days). |
+| 366 | D | API usage plans and API keys provide subscription-based access control with minimal operational overhead. |
+| 367 | A | Global Accelerator with NLBs optimizes UDP traffic performance for on-premises endpoints across regions. |
+| 368 | A | Account-level password policy applies to all IAM users in the AWS account automatically. |
+| 369 | A | AWS Batch handles multi-language tasks with scaling and EventBridge provides scheduling automation. |
+| 370 | C | NAT Gateway in public subnet provides managed internet access for private subnet instances. |
+| 371 | C, D | EBS default encryption with customer managed key (C), IAM role with KMS permissions for EKS (D). |
+| 372 | B | S3 for image storage + DynamoDB for metadata provides scalable, cost-effective solution for GIS data. |
+| 373 | A | S3 Intelligent-Tiering optimizes costs automatically, lifecycle policy moves to Deep Archive after 1 year. |
+| 374 | D | Single Direct Connect with Transit Gateway provides cost-effective connectivity for multiple VPCs. |
+| 375 | A | Step Functions orchestrates serverless workflows with manual approvals and minimal operational overhead. |
+| 376 | A | RDS Proxy manages database connections and reduces rejection errors for serverless applications. |
+| 377 | B | Auto Scaling lifecycle hooks trigger custom scripts at instance launch and termination events. |
+| 378 | B | Network Load Balancer handles UDP traffic, DynamoDB on-demand scales automatically for gaming data. |
+| 379 | B | Provisioned concurrency reduces Lambda cold start latency by keeping functions warm. |
+| 380 | D | Lambda function with EventBridge scheduling provides automated start/stop with minimal infrastructure. |
+| 381 | B | Aurora PostgreSQL with Aurora Replica provides better performance for reporting without affecting primary. |
+| 382 | A | TLS listener on NLB with server certificate encrypts data in transit for the three-tier application. |
+| 383 | A | Dedicated Reserved Hosts provide license mobility and predictable costs for socket/core-based licensing. |
+| 384 | C | EFS Standard with lifecycle policy to EFS Standard-IA provides POSIX compliance and cost optimization. |
+| 385 | C | Security groups with least privilege: web servers from load balancer only, MySQL from web servers only. |
+| 386 | B | ElastiCache provides in-memory caching for frequently accessed database datasets. |
+| 387 | D, E | IAM policy for CloudFormation actions only (D), IAM role with specific stack permissions (E). |
+| 388 | D | Security group inbound rule allows database tier to accept connections from web tier. |
+| 389 | A | RDS read replicas offload reporting queries from the primary write instance. |
+| 390 | B, D | DynamoDB provides durable session storage (B), ElastiCache Redis offers fast session access (D). |
 
-## Study Tips
-
-1. **Focus on the requirements**: Always identify what the question is asking for (cost optimization, high availability, security, etc.)
-
-2. **Consider operational overhead**: AWS prefers managed services over self-managed solutions
-
-3. **Think about scale**: Consider how solutions will perform under load and growth
-
-4. **Security first**: Always choose the most secure option that meets requirements
-
-5. **Cost optimization**: Look for solutions that balance performance with cost-effectiveness
-
-## Contributing
-
-If you find errors in the questions or answers, or want to contribute additional practice questions, please:
-
-1. Fork this repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## Disclaimer
-
-These practice questions are for educational purposes only. They are not official AWS questions and do not guarantee success on the actual AWS Certified Solutions Architect Associate exam. Always refer to official AWS documentation and training materials for the most current information.
-
-## Resources
-
-- [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
-- [AWS Architecture Center](https://aws.amazon.com/architecture/)
-- [AWS Solutions Library](https://aws.amazon.com/solutions/)
-- [AWS Whitepapers](https://aws.amazon.com/whitepapers/)
-
----
-
-**Happy studying and good luck with your AWS certification!** 🚀
