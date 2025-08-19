@@ -885,9 +885,6 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 ## Answer Key
 
-```
-## Answer Key
-
 | Question | Answer | Key Concepts |
 |----------|--------|--------------|
 | 261 | A, C | CloudFront caching, Lambda@Edge, User-Agent header |
@@ -955,9 +952,6 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 | 323 | B | API Gateway HTTPS endpoint, Lambda processing, DynamoDB storage |
 | 324 | C | Storage Gateway cached volumes, iSCSI protocol, Disaster recovery |
 | 325 | A | Cognito identity pool, IAM roles, Protected content access |
-
-
-```
 
 ---
 
