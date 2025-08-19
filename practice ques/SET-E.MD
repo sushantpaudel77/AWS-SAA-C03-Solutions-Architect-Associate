@@ -882,3 +882,95 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 - D) Update Amazon Cognito pool to use custom attribute mappings within identity pool and grant users proper permissions to access protected content
 
 ---
+
+## Answer Key
+
+```
+┌─────┬─────────┬──────────────────────────────────────────────────────────────┐
+│ Q#  │ Answer  │ Key Concepts                                                 │
+├─────┼─────────┼──────────────────────────────────────────────────────────────┤
+│ 261 │ A, C    │ CloudFront caching, Lambda@Edge, User-Agent header          │
+│ 262 │ A       │ VPC peering, Cost optimization, Security groups             │
+│ 263 │ A, D    │ ECS cluster, Fargate launch type, Managed services          │
+│ 264 │ D       │ Application Load Balancer, Health checks, Route 53          │
+│ 265 │ C       │ Private subnets, ALB origin, CloudFront security            │
+│ 266 │ A       │ AWS Global Accelerator, Regional endpoints, Gaming latency  │
+│ 267 │ D       │ Kinesis Data Firehose, Kinesis Data Analytics, Minimal overhead │
+│ 268 │ A       │ ElastiCache, Database read performance, Caching layer       │
+│ 269 │ C       │ RDS read replica, Read-only queries, Minimal changes        │
+│ 270 │ A       │ Client-side encryption, Data encryption in transit          │
+│ 271 │ C       │ Scheduled scaling, Auto Scaling groups, Cost optimization   │
+│ 272 │ B       │ CloudFront distribution, Accept-Language header, Global performance │
+│ 273 │ B       │ Aurora global database, Warm standby, Low RTO               │
+│ 274 │ B       │ AMI backups, CloudFormation automation, Operational efficiency │
+│ 275 │ A       │ Scheduled scaling actions, Morning performance, Cost minimization │
+│ 276 │ A, D    │ RDS storage Auto Scaling, CPU-based scaling metrics         │
+│ 277 │ D       │ Amazon S3 storage, EBS processing, Cost-effective solution  │
+│ 278 │ B, E    │ DynamoDB hierarchical data, Macie PII detection, SNS notifications │
+│ 279 │ A       │ AWS Backup plans, Lifecycle policies, Compliance requirements │
+│ 280 │ B       │ Amazon Athena SQL queries, QuickSight visualizations        │
+│ 281 │ A       │ Multi-AZ deployment, RPO requirements, Database availability │
+│ 282 │ B       │ Security group references, ALB to EC2 security              │
+│ 283 │ D       │ FSx for NetApp ONTAP, NFS and SMB support                   │
+│ 284 │ B       │ Cost Explorer reports, Billing by user                      │
+│ 285 │ B       │ API Gateway, Lambda backend, SES integration                │
+│ 286 │ C       │ CloudFront cache invalidation, Static website updates       │
+│ 287 │ B       │ FSx for Windows File Server, SQL Server features            │
+│ 288 │ C       │ Amazon EFS, Shared file system, Linux web servers           │
+│ 289 │ B       │ IAM roles, Lambda security, Least privilege                 │
+│ 290 │ C       │ On-Demand and Spot instances, Cost optimization, Auto Scaling │
+│ 291 │ A, B    │ CloudFront signed cookies and URLs, Access control          │
+│ 292 │ A, B    │ Kinesis streaming, AWS Glue transformation, Athena queries   │
+│ 293 │ D       │ Storage Gateway stored volumes, Hybrid backup               │
+│ 294 │ B       │ VPC endpoints, Private S3 access, No internet traffic       │
+│ 295 │ B       │ S3 Object Lambda, PII processing, Minimal overhead          │
+│ 296 │ D       │ VPC CIDR blocks, Peering requirements, Non-overlapping ranges │
+│ 297 │ B       │ Auto Scaling groups, Target tracking, CPU optimization      │
+│ 298 │ C       │ Multi-AZ subnets, RDS Multi-AZ deployment, High availability │
+│ 299 │ B       │ FSx for Lustre, Persistent SSD, High-performance computing  │
+│ 300 │ C       │ Reserved Instances, Aurora Reserved, 24/7 workloads         │
+│ 301 │ C       │ AWS DataSync, Bandwidth control, Data migration             │
+│ 302 │ A, C    │ CloudFront CDN, Elastic Transcoder, Video optimization      │
+│ 303 │ D       │ Application Auto Scaling, ECS Fargate, Target tracking      │
+│ 304 │ A       │ AWS DataSync, Cross-region transfers, Minimal overhead      │
+│ 305 │ C       │ FSx for Windows File Server, SMB protocol, Fully managed    │
+│ 306 │ A       │ Placement groups cluster strategy, Same AZ, Network performance │
+│ 307 │ D       │ Storage Gateway cached volumes, Local access, Hybrid storage │
+│ 308 │ A, C    │ Account-specific Trusted Advisor, RDS Reserved Instance optimization │
+│ 309 │ A       │ S3 Storage Lens, Access pattern analysis, Cost optimization │
+│ 310 │ B       │ CloudFront distribution, Signed URLs, Global content delivery │
+│ 311 │ C       │ SNS with SQS, Message filtering, Quote processing           │
+│ 312 │ B       │ AWS Backup, EC2 instances as resources, Cross-region recovery │
+│ 313 │ C       │ CloudFront signed URLs, Mobile content streaming, Authorized access │
+│ 314 │ B       │ Aurora Serverless, Auto scaling, Infrequent access patterns │
+│ 315 │ D       │ Amazon Inspector, Vulnerability scanning, Agent deployment  │
+│ 316 │ C       │ Lambda functions, SQS processing, Cost optimization         │
+│ 317 │ A       │ AWS Glue ETL, CSV to Redshift, Scheduled processing         │
+│ 318 │ A, D    │ CloudTrail auditing, AWS Config compliance, Change tracking │
+│ 319 │ A       │ Systems Manager Session Manager, SSH key elimination        │
+│ 320 │ A       │ Kinesis Data Streams, Real-time analytics, Data loss prevention │
+│ 321 │ D       │ S3 bucket policy, Server-side encryption enforcement        │
+│ 322 │ C       │ SQS message queues, Asynchronous processing, Fast response  │
+│ 323 │ B       │ API Gateway HTTPS endpoint, Lambda processing, DynamoDB storage │
+│ 324 │ C       │ Storage Gateway cached volumes, iSCSI protocol, Disaster recovery │
+│ 325 │ A       │ Cognito identity pool, IAM roles, Protected content access  │
+└─────┴─────────┴──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Study Tips
+
+1. **Focus on Cost Optimization:** Many questions test your ability to choose the most cost-effective solution
+2. **Security Best Practices:** Always choose solutions that follow the principle of least privilege
+3. **Operational Efficiency:** Prefer managed services over self-managed infrastructure when possible
+4. **Performance:** Consider latency, throughput, and caching strategies
+5. **Disaster Recovery:** Understand RTO/RPO requirements and appropriate DR strategies
+
+## Contributing
+
+Feel free to contribute additional questions, corrections, or improvements to this repository. Please ensure all questions follow the AWS SAA exam format and include proper explanations for answers.
+
+## License
+
+This content is provided for educational purposes. Please refer to AWS documentation for the most current information on services and best practices.
