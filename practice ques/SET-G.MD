@@ -971,8 +971,66 @@ F) Encryption of the data that moves in transit through Direct Connect
 
 ---
 
-### Question 452 - Java Job Cost Optimization
-A company runs a Java-based job on an Amazon EC2 instance. The job runs every hour and takes 10 seconds to run. The job runs
+Question 452 - Java Job Cost Optimization
+A company runs a Java-based job on an Amazon EC2 instance. The job runs every hour and takes 10 seconds to run. The job runs on a scheduled interval and consumes 1 GB of memory. The CPU utilization of the instance is low except for short surges during which the job uses the maximum CPU available. The company wants to optimize the costs to run the job.
+
+Which solution will meet these requirements?
+
+A) Use AWS App2Container (A2C) to containerize the job. Run the job as an Amazon Elastic Container Service (Amazon ECS) task on AWS Fargate with 0.5 virtual CPU (vCPU) and 1 GB of memory.
+
+B) Copy the code into an AWS Lambda function that has 1 GB of memory. Create an Amazon EventBridge scheduled rule to run the code each hour.
+
+C) Use AWS App2Container (A2C) to containerize the job. Install the container in the existing Amazon Machine Image (AMI). Ensure that the schedule stops the container when the task finishes.
+
+D) Configure the existing schedule to stop the EC2 instance at the completion of the job and restart the EC2 instance when the next job starts.
+
+
+Question 453 - Backup Strategy with Immutable Files
+A company wants to implement a backup strategy for Amazon EC2 data and multiple Amazon S3 buckets. Because of regulatory requirements, the company must retain backup files for a specific time period. The company must not alter the files for the duration of the retention period.
+
+Which solution will meet these requirements?
+
+A) Use AWS Backup to create a backup vault that has a vault lock in governance mode. Create the required backup plan.
+
+B) Use Amazon Data Lifecycle Manager to create the required automated snapshot policy.
+
+C) Use Amazon S3 File Gateway to create the backup. Configure the appropriate S3 Lifecycle management.
+
+D) Use AWS Backup to create a backup vault that has a vault lock in compliance mode. Create the required backup plan.
+
+
+Question 454 - Workload Discovery and Mapping
+A company has resources across multiple AWS Regions and accounts. A newly hired solutions architect discovers a previous employee did not provide details about the resources inventory. The solutions architect needs to build and map the relationship details of the various workloads across all accounts.
+
+Which solution will meet these requirements in the MOST operationally efficient way?
+
+A) Use AWS Systems Manager Inventory to generate a map view from the detailed view report.
+
+B) Use AWS Step Functions to collect workload details. Build architecture diagrams of the workloads manually.
+
+C) Use Workload Discovery on AWS to generate architecture diagrams of the workloads.
+
+D) Use AWS X-Ray to view the workload details. Build architecture diagrams with relationships.
+
+Question 455 - Budget Controls with Organizations
+A company uses AWS Organizations. The company wants to operate some of its AWS accounts with different budgets. The company wants to receive alerts and automatically prevent provisioning of additional resources on AWS accounts when the allocated budget threshold is met during a specific period.
+
+Which combination of solutions will meet these requirements? (Choose three.)
+
+A) Use AWS Budgets to create a budget. Set the budget amount under the Cost and Usage Reports section of the required AWS accounts.
+
+B) Use AWS Budgets to create a budget. Set the budget amount under the Billing dashboards of the required AWS accounts.
+
+C) Create an IAM user for AWS Budgets to run budget actions with the required permissions.
+
+D) Create an IAM role for AWS Budgets to run budget actions with the required permissions.
+
+E) Add an alert to notify the company when each account meets its budget threshold. Add a budget action that selects the IAM identity created with the appropriate config rule to prevent provisioning of additional resources.
+
+F) Add an alert to notify the company when each account meets its budget threshold. Add a budget action that selects the IAM identity created with the appropriate service control policy (SCP) to prevent provisioning of additional resources.
+
+
+---
 
 ## Answer Key
 
@@ -1009,40 +1067,40 @@ A company runs a Java-based job on an Amazon EC2 instance. The job runs every ho
 | 419 | A, C | EBS encryption account setting and SCP |
 | 420 | D | RDS Multi-AZ cluster with reader endpoint |
 | 421 | C | AWS Transfer Family with S3 |
-
----
-
-## Explanations
-
-### Question 391 Explanation
-**Answer: C** - For a stateless three-tier application, AMIs are sufficient for the web/application tiers since no persistent data is stored locally. RDS automated backups with point-in-time recovery provide the required 2-hour RPO for the database tier.
-
-### Question 392 Explanation
-**Answer: A** - Web servers need to accept HTTPS traffic from anywhere (0.0.0.0/0) since customers have dynamic IPs. The database should only accept connections from the web servers' security group, following the principle of least privilege.
-
-### Question 393 Explanation
-**Answer: C** - Amazon Transcribe is the appropriate service for audio-to-text conversion and has built-in PII redaction capabilities. This is more suitable than Textract (for documents) or manually scanning for PII patterns.
-
-### Question 394 Explanation
-**Answer: B** - GP3 volumes allow independent scaling of IOPS up to 16,000 IOPS, making it the most cost-effective solution. IO2 would be more expensive and unnecessary for this use case.
-
-### Question 395 Explanation
-**Answer: C** - AWS CloudTrail logs all API calls including who made changes to security groups. This is the appropriate service for auditing AWS API activity.
-
-### Question 396 Explanation
-**Answer: A** - AWS Shield Advanced provides DDoS protection for Global Accelerator endpoints. WAF cannot be directly associated with Global Accelerator standard endpoints.
-
-### Question 397 Explanation
-**Answer: C** - ECS Fargate is ideal for scheduled tasks that run for extended periods (up to 1 hour). Lambda has a 15-minute timeout limit, making it unsuitable for this use case.
-
-### Question 398 Explanation
-**Answer: C** - With 100 Mbps internet, transferring 600 TB would take approximately 13 months. Snow Family devices can transfer this amount within the 2-week requirement and are encrypted in transit.
-
-### Question 399 Explanation
-**Answer: B** - AWS WAF with rate-based rules provides the most direct protection against HTTP flood attacks with minimal operational overhead compared to custom Lambda solutions.
-
-### Question 400 Explanation
-**Answer: C** - DynamoDB Streams automatically capture data changes without affecting application performance. A single SNS topic with multiple subscribers is more efficient than multiple topics.
+| 422 | D | ECS with SQS for microservices |
+| 423 | A, B | IAM identity-based policies |
+| 424 | B | Reserved + Spot Instance strategy |
+| 425 | C | GP3 for cost-effective IOPS |
+| 426 | A | DataSync with CloudTrail data events |
+| 427 | B | Elastic Beanstalk for Java applications |
+| 428 | B | IAM execution role for Lambda |
+| 429 | D | Conditional IAM permissions |
+| 430 | B, C | Lambda processing with S3 lifecycle |
+| 431 | B | ElastiCache Redis for gaming scoreboards |
+| 432 | B | SageMaker with QuickSight |
+| 433 | C | Service Control Policy for tag protection |
+| 434 | A | DynamoDB Global Tables for DR |
+| 435 | A | Snowball Edge for database migration |
+| 436 | A | Vertical scaling with Reserved Instances |
+| 437 | B | AWS WAF for DDoS protection |
+| 438 | D | Encrypted snapshot sharing |
+| 439 | A | Additional CIDR blocks |
+| 440 | A, C | RDS to Aurora migration options |
+| 441 | C | CloudFront for static content |
+| 442 | D | Lake Formation cross-account access |
+| 443 | A | S3 Transfer Acceleration |
+| 444 | B | Multi-AZ with Auto Scaling |
+| 445 | A | DataSync for large data migration |
+| 446 | D | S3 Object Lock compliance mode |
+| 447 | A | Route 53 health checks |
+| 448 | C | Redundant VPN connections |
+| 449 | B | RDS Custom for Oracle |
+| 450 | C, E, F | Well-Architected three-tier design |
+| 451 | B, C, F | Customer responsibilities in shared model |
+| 452 | B | Lambda for short-duration scheduled jobs |
+| 453 | D | AWS Backup vault lock compliance mode |
+| 454 | C | Workload Discovery on AWS |
+| 455 | B, D, F | AWS Budgets with automated actions |
 
 ---
 

@@ -28,9 +28,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Configure Amazon CloudFront to cache multiple versions of the content
+
 - B) Configure a host header in a Network Load Balancer to forward traffic to different instances
+
 - C) Configure a Lambda@Edge function to send specific objects to users based on the User-Agent header
+
 - D) Configure AWS Global Accelerator with NLB for host-based routing to different EC2 instances
+
 - E) Configure AWS Global Accelerator with NLB for path-based routing to different EC2 instances
 
 ---
@@ -42,8 +46,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create VPC peering connection, add route table entries, configure ElastiCache security group inbound rule from application security group
+
 - B) Create Transit VPC, update route tables, configure ElastiCache security group inbound rule from application security group
+
 - C) Create VPC peering connection, add route table entries, configure peering connection security group inbound rule from application security group
+
 - D) Create Transit VPC, update route tables, configure Transit VPC security group inbound rule from application security group
 
 ---
@@ -55,9 +62,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Deploy an Amazon Elastic Container Service (Amazon ECS) cluster
+
 - B) Deploy Kubernetes control plane on Amazon EC2 instances across multiple AZs
+
 - C) Deploy ECS service with EC2 launch type, specify desired task number ≥ 2
+
 - D) Deploy ECS service with Fargate launch type, specify desired task number ≥ 2
+
 - E) Deploy Kubernetes worker nodes on EC2 instances across multiple AZs with 2+ replicas
 
 ---
@@ -69,8 +80,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create Route 53 simple routing policy record for each EC2 instance with health checks
+
 - B) Create Route 53 failover routing policy record for each EC2 instance with health checks
+
 - C) Create CloudFront distribution with EC2 instances as origin and associate health checks
+
 - D) Create Application Load Balancer (ALB) with health check in front of EC2 instances, route to ALB from Route 53
 
 ---
@@ -82,8 +96,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Public ALB with EC2 instances in public subnets, CloudFront with public ALB as origin
+
 - B) Public ALB with EC2 instances in private subnets, CloudFront with EC2 instances as origin
+
 - C) Public ALB with EC2 instances in private subnets, CloudFront with public ALB as origin
+
 - D) Public ALB with EC2 instances in public subnets, CloudFront with EC2 instances as origin
 
 ---
@@ -95,8 +112,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Configure AWS Global Accelerator accelerator, add listener for application port, attach to Regional endpoint in each Region with ALB as endpoint
+
 - B) Create CloudFront distribution with ALB as origin server, configure cache behavior to use origin cache headers, use Lambda functions to optimize traffic
+
 - C) Create CloudFront distribution with S3 as origin server, configure cache behavior to use origin cache headers, use Lambda functions to optimize traffic
+
 - D) Configure DynamoDB database as data store, create DynamoDB Accelerator (DAX) cluster as in-memory cache
 
 ---
@@ -108,8 +128,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Kinesis data stream to store in S3, Kinesis Data Analytics for analysis, Lambda function to send data to analytics
+
 - B) Kinesis data stream to store in S3, EMR cluster for analysis, Lambda function to send data to EMR
+
 - C) Kinesis Data Firehose delivery stream to store in S3, EMR cluster for analysis
+
 - D) Kinesis Data Firehose delivery stream to store in S3, Kinesis Data Analytics for analysis
 
 ---
@@ -121,8 +144,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use Amazon ElastiCache in front of the database
+
 - B) Use RDS Proxy between the application and the database
+
 - C) Migrate the application from EC2 instances to AWS Lambda
+
 - D) Migrate the database from Amazon RDS for MySQL to Amazon DynamoDB
 
 ---
@@ -134,8 +160,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Export data to Amazon DynamoDB for business analysts' queries
+
 - B) Load data into Amazon ElastiCache for business analysts' queries
+
 - C) Create a read replica of the primary database for business analysts' queries
+
 - D) Copy data into Amazon Redshift cluster for business analysts' queries
 
 ---
@@ -147,8 +176,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use client-side encryption to encrypt data being uploaded to S3 buckets
+
 - B) Use server-side encryption to encrypt data being uploaded to S3 buckets
+
 - C) Create bucket policies requiring server-side encryption with S3 managed encryption keys (SSE-S3)
+
 - D) Enable security option to encrypt S3 buckets through default AWS KMS key
 
 ---
@@ -162,8 +194,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Increase the minimum capacity for the Auto Scaling group
+
 - B) Increase the maximum capacity for the Auto Scaling group
+
 - C) Configure scheduled scaling to scale up to the desired compute level
+
 - D) Change the scaling policy to add more EC2 instances during each scaling operation
 
 ---
@@ -175,8 +210,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Replace with S3-hosted website, configure CloudFront distribution with S3 as origin, cache based on Accept-Language header
+
 - B) Configure CloudFront distribution with ALB as origin, set cache behavior to cache based on Accept-Language header
+
 - C) Create API Gateway API integrated with ALB, configure HTTP integration type, enable API cache based on Accept-Language header
+
 - D) Launch EC2 instances in additional Regions with NGINX cache servers, use Route 53 with geolocation routing policy
 
 ---
@@ -188,8 +226,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use Amazon Aurora global database with pilot light deployment
+
 - B) Use Amazon Aurora global database with warm standby deployment
+
 - C) Use Amazon RDS Multi-AZ DB instance with pilot light deployment
+
 - D) Use Amazon RDS Multi-AZ DB instance with warm standby deployment
 
 ---
@@ -201,8 +242,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create AMIs to back up EC2 instances, copy to secondary Region, automate infrastructure deployment using Lambda and custom scripts
+
 - B) Create AMIs to back up EC2 instances, copy to secondary Region, automate infrastructure deployment using CloudFormation
+
 - C) Launch EC2 instances in secondary AWS Region, keep active at all times
+
 - D) Launch EC2 instances in secondary Availability Zone, keep active at all times
 
 ---
@@ -214,8 +258,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Implement scheduled action setting desired capacity to 20 before office opens
+
 - B) Implement step scaling action at lower CPU threshold with decreased cooldown period
+
 - C) Implement target tracking action at lower CPU threshold with decreased cooldown period
+
 - D) Implement scheduled action setting minimum and maximum capacity to 20 before office opens
 
 ---
@@ -227,9 +274,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Configure storage Auto Scaling on RDS for Oracle instance
+
 - B) Migrate database to Amazon Aurora to use Auto Scaling storage
+
 - C) Configure alarm on RDS for Oracle instance for low free storage space
+
 - D) Configure Auto Scaling group to use average CPU as scaling metric
+
 - E) Configure Auto Scaling group to use average free memory as scaling metric
 
 ---
@@ -241,8 +292,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use AWS Storage Gateway for files to store and process video content
+
 - B) Use AWS Storage Gateway for volumes to store and process video content
+
 - C) Use Amazon EFS for storing, transfer to Amazon EBS after processing
+
 - D) Use Amazon S3 for storing, temporarily move to EBS volume for processing
 
 ---
@@ -254,9 +308,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use Amazon Redshift to store employee data hierarchies, unload to S3 monthly
+
 - B) Use Amazon DynamoDB to store employee data hierarchies, export to S3 monthly
+
 - C) Configure Amazon Macie, integrate with EventBridge to send monthly events to Lambda
+
 - D) Use Amazon Athena to analyze employee data in S3, integrate with QuickSight for dashboards
+
 - E) Configure Amazon Macie, integrate with EventBridge to send monthly SNS notifications
 
 ---
@@ -268,8 +326,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create AWS Backup plan for monthly DynamoDB backup, lifecycle policy to cold storage after 6 months, 7-year retention
+
 - B) Create monthly DynamoDB on-demand backup, transition to S3 Glacier Flexible Retrieval after 6 months, S3 Lifecycle policy to delete after 7 years
+
 - C) Use AWS SDK script for monthly on-demand backup, EventBridge rule for monthly execution, second script for lifecycle management
+
 - D) Use AWS CLI for monthly on-demand backup, EventBridge rule with cron expression, specify transition and deletion in command
 
 ---
@@ -281,8 +342,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use standard SQL queries in Amazon Athena to analyze CloudFront logs, visualize with AWS Glue
+
 - B) Use standard SQL queries in Amazon Athena to analyze CloudFront logs, visualize with Amazon QuickSight
+
 - C) Use standard SQL queries in Amazon DynamoDB to analyze CloudFront logs, visualize with AWS Glue
+
 - D) Use standard SQL queries in Amazon DynamoDB to analyze CloudFront logs, visualize with Amazon QuickSight
 
 ---
@@ -296,8 +360,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Enable Multi-AZ deployment for the DB instance
+
 - B) Enable auto scaling for DB instance in one Availability Zone
+
 - C) Configure DB instance in one AZ, create multiple read replicas in separate AZ
+
 - D) Configure DB instance in one AZ, configure AWS DMS change data capture (CDC) tasks
 
 ---
@@ -309,8 +376,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Configure route table to direct internet traffic to private IP addresses of EC2 instances
+
 - B) Configure security group for EC2 instances to only allow traffic from ALB security group
+
 - C) Move EC2 instances to public subnet, assign Elastic IP addresses
+
 - D) Configure ALB security group to allow any TCP traffic on any port
 
 ---
@@ -322,8 +392,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Migrate both applications to AWS Lambda, use S3 bucket for data exchange
+
 - B) Migrate both applications to Amazon ECS, configure Amazon FSx File Gateway for storage
+
 - C) Migrate simulation to Linux EC2, visualization to Windows EC2, configure Amazon SQS for data exchange
+
 - D) Migrate simulation to Linux EC2, visualization to Windows EC2, configure Amazon FSx for NetApp ONTAP for storage
 
 ---
@@ -335,8 +408,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Run a query with Amazon Athena to generate the report
+
 - B) Create a report in Cost Explorer and download the report
+
 - C) Access bill details from billing dashboard and download the bill
+
 - D) Modify cost budget in AWS Budgets to alert with Amazon SES
 
 ---
@@ -348,8 +424,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Host dynamic contact form in Amazon ECS, set up Amazon SES with third-party email provider
+
 - B) Create API Gateway endpoint with Lambda backend calling Amazon SES
+
 - C) Convert static webpage to dynamic using Lightsail, use client-side scripting for contact form, integrate with WorkMail
+
 - D) Create t2.micro EC2 instance, deploy LAMP stack, use client-side scripting for contact form, integrate with WorkMail
 
 ---
@@ -361,8 +440,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Add an Application Load Balancer
+
 - B) Add Amazon ElastiCache for Redis or Memcached to database layer
+
 - C) Invalidate the CloudFront cache
+
 - D) Use AWS Certificate Manager (ACM) to validate website's SSL certificate
 
 ---
@@ -374,8 +456,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Host all three tiers on EC2 instances, use Amazon FSx File Gateway for file sharing
+
 - B) Host all three tiers on EC2 instances, use Amazon FSx for Windows File Server for file sharing
+
 - C) Host application and business tiers on EC2, database tier on RDS, use Amazon EFS for file sharing
+
 - D) Host application and business tiers on EC2, database tier on RDS, use Provisioned IOPS SSD (io2) EBS volume for file sharing
 
 ---
@@ -387,8 +472,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create Amazon S3 Standard bucket with access to web servers
+
 - B) Configure CloudFront distribution with S3 bucket as origin
+
 - C) Create Amazon Elastic File System (EFS), mount EFS on all web servers
+
 - D) Configure General Purpose SSD (gp3) EBS volume, mount to all web servers
 
 ---
