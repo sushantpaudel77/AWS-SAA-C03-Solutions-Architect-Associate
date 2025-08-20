@@ -785,9 +785,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Enable AWS CloudTrail and use it for auditing
+
 - B) Use data lifecycle policies for Amazon EC2 instances
+
 - C) Enable AWS Trusted Advisor and reference security dashboard
+
 - D) Enable AWS Config and create rules for auditing and compliance purposes
+
 - E) Restore previous resource configurations with CloudFormation template
 
 ---
@@ -799,9 +803,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use AWS Systems Manager Session Manager to connect to EC2 instances
+
 - B) Use AWS STS to generate one-time SSH keys on demand
-- C) Allow shared SSH access to bastion instances, configure other instances to allow SSH only from bastion instances
+
+- C) Allow shared SSH access to bastion instances, configure other instances to allow SSH only from bastion instance
+
 - D) Use Amazon Cognito custom authorizer to authenticate users, invoke Lambda function to generate temporary SSH key
+
 
 ---
 
@@ -812,9 +820,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Publish data to Kinesis Data Streams, use Kinesis Data Analytics to query data
+
 - B) Publish data to Kinesis Data Firehose with Redshift as destination, use Redshift to query data
+
 - C) Store ingested data in EC2 instance store, publish to Kinesis Data Firehose with S3 as destination, use Athena to query data
+
 - D) Store ingested data in EBS volume, publish to ElastiCache for Redis, subscribe to Redis channel to query data
+
 
 ---
 
@@ -825,8 +837,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Update bucket policy to deny if PutObject does not have s3:x-amz-acl header set
+
 - B) Update bucket policy to deny if PutObject does not have s3:x-amz-acl header set to private
+
 - C) Update bucket policy to deny if PutObject does not have aws:SecureTransport header set to true
+
 - D) Update bucket policy to deny if PutObject does not have x-amz-server-side-encryption header set
 
 ---
@@ -838,8 +853,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Write custom Lambda function to generate thumbnail and alert user, use image upload process as event source to invoke Lambda
+
 - B) Create AWS Step Functions workflow to handle orchestration between application tiers and alert user when thumbnail generation complete
+
 - C) Create Amazon SQS message queue, place message on queue for thumbnail generation as images uploaded, alert user through application message that image was received
+
 - D) Create Amazon SNS notification topics and subscriptions - one for thumbnail generation after upload, second to message user's mobile app after thumbnail generation complete
 
 ---
@@ -851,8 +869,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Launch EC2 instance as HTTPS endpoint to process messages, configure to save results to S3 bucket
+
 - B) Create HTTPS endpoint in API Gateway, configure to invoke Lambda function to process messages and save results to DynamoDB table
+
 - C) Use Route 53 to direct incoming sensor messages to Lambda function, configure to process messages and save results to DynamoDB table
+
 - D) Create gateway VPC endpoint for S3, configure Site-to-Site VPN from facility network to VPC for direct sensor data writing to S3 bucket
 
 ---
@@ -864,8 +885,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Provision Amazon S3 File Gateway as on-premises VM with 10 TB local cache, modify applications to access files through NFS protocol, recover by provisioning EC2 instance and mounting S3 bucket
+
 - B) Provision AWS Storage Gateway tape gateway, use data backup solution to back up to virtual tape library with nightly runs, recover by provisioning EC2 instance and restoring data to EBS volume
+
 - C) Provision AWS Storage Gateway Volume Gateway cached volume with 10 TB local cache, mount to existing file server using iSCSI and copy files, configure scheduled snapshots, recover by restoring snapshot to EBS volume on EC2 instance
+
 - D) Provision AWS Storage Gateway Volume Gateway stored volume with same disk space as existing storage, mount to existing file server using iSCSI and copy files, configure scheduled snapshots, recover by restoring snapshot to EBS volume on EC2 instance
 
 ---
@@ -877,8 +901,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Update Amazon Cognito identity pool to assume proper IAM role for access to protected content
+
 - B) Update S3 ACL to allow application to access protected content
+
 - C) Redeploy application to Amazon S3 to prevent eventually consistent reads affecting user access to protected content
+
 - D) Update Amazon Cognito pool to use custom attribute mappings within identity pool and grant users proper permissions to access protected content
 
 ---
