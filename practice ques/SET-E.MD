@@ -400,8 +400,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Apply S3 bucket policy that grants read access to the S3 bucket
+
 - B) Apply IAM role to Lambda function with IAM policy granting read access to the S3 bucket
+
 - C) Embed access key and secret key in Lambda function's code for required IAM permissions
+
 - D) Apply IAM role to Lambda function with IAM policy granting read access to all S3 buckets in account
 
 ---
@@ -413,8 +416,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Dedicated Instances only
+
 - B) On-Demand Instances only
+
 - C) Mix of On-Demand Instances and Spot Instances
+
 - D) Mix of On-Demand Instances and Reserved Instances
 
 ---
@@ -428,9 +434,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Signed cookies
+
 - B) Signed URLs
+
 - C) AWS AppSync
+
 - D) JSON Web Token (JWT)
+
 - E) AWS Secrets Manager
 
 ---
@@ -443,8 +453,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 **Options:**
 - A) Use Kinesis Data Streams for streaming, Kinesis Data Analytics for transformation, Kinesis Data Firehose to write to S3, Amazon Athena to query transformed data
 - B) Use Amazon MSK for streaming, AWS Glue for transformation and writing to S3, Amazon Athena to query transformed data
+
 - C) Use AWS DMS to ingest data, Amazon EMR for transformation and writing to S3, Amazon Athena to query transformed data
+
 - D) Use Amazon MSK for streaming, Kinesis Data Analytics for transformation and writing to S3, RDS query editor to query transformed data
+
 - E) Use Kinesis Data Streams for streaming, AWS Glue for transformation, Kinesis Data Firehose to write to S3, RDS query editor to query transformed data
 
 ---
@@ -456,8 +469,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use AWS Snowball to migrate data to S3, configure on-premises systems to mount Snowball S3 endpoint for local access
+
 - B) Use AWS Snowball Edge to migrate data to S3, use Snowball Edge file interface for on-premises local access
+
 - C) Use AWS Storage Gateway with cached volume gateway, run appliance on-premises, configure percentage of data to cache locally, mount gateway storage volumes for local access
+
 - D) Use AWS Storage Gateway with stored volume gateway, run appliance on-premises, map gateway storage volumes to on-premises storage, mount for local access
 
 ---
@@ -469,8 +485,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create private hosted zone using Amazon Route 53
+
 - B) Set up gateway VPC endpoint for Amazon S3 in the VPC
+
 - C) Configure EC2 instances to use NAT gateway to access S3 bucket
+
 - D) Establish AWS Site-to-Site VPN connection between VPC and S3 bucket
 
 ---
@@ -484,8 +503,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Store data in DynamoDB table, create proxy application layer to intercept and process data for each application
+
 - B) Store data in S3 bucket, process and transform data using S3 Object Lambda before returning to requesting application
+
 - C) Process data and store transformed data in three separate S3 buckets for each application's custom dataset
+
 - D) Process data and store transformed data in three separate DynamoDB tables for each application's custom dataset
 
 ---
@@ -497,8 +519,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) 10.0.1.0/32
+
 - B) 192.168.0.0/24
+
 - C) 192.168.1.0/32
+
 - D) 10.0.1.0/24
 
 ---
@@ -510,8 +535,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create CloudWatch alarm for CPUUtilization < 20%, Lambda function to terminate EC2 instance when alarm triggers
+
 - B) Create Auto Scaling group with existing ALB and target group, target tracking scaling policy based on ASGAverageCPUUtilization, min 2/desired 3/max 6 instances, target value 50%
+
 - C) Create Auto Scaling group with existing ALB and target group, min 2/desired 3/max 6 instances
+
 - D) Create two CloudWatch alarms (< 20% and > 50% CPU), publish to SNS topic to send email for manual scaling
 
 ---
@@ -523,8 +551,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Provision subnet in each AZ, configure Auto Scaling group across both AZs, configure DB instance with connections to each network
+
 - B) Provision two subnets extending across both AZs, configure Auto Scaling group across both AZs, configure DB instance with connections to each network
+
 - C) Provision subnet in each AZ, configure Auto Scaling group across both AZs, configure DB instance for Multi-AZ deployment
+
 - D) Provision subnet extending across both AZs, configure Auto Scaling group across both AZs, configure DB instance for Multi-AZ deployment
 
 ---
@@ -536,8 +567,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create Amazon FSx for NetApp ONTAP file system, set each volume's tiering policy to ALL, import raw data, mount on EC2 instances
+
 - B) Create S3 bucket for raw data, create Amazon FSx for Lustre file system with persistent SSD storage, select import/export to S3 option, mount on EC2 instances
+
 - C) Create S3 bucket for raw data, create Amazon FSx for Lustre file system with persistent HDD storage, select import/export to S3 option, mount on EC2 instances
+
 - D) Create Amazon FSx for NetApp ONTAP file system, set each volume's tiering policy to NONE, import raw data, mount on EC2 instances
 
 ---
@@ -549,8 +583,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Migrate application layer to EC2 Spot Instances, data storage layer to S3
+
 - B) Migrate application layer to EC2 Reserved Instances, data storage layer to RDS On-Demand Instances
+
 - C) Migrate application layer to EC2 Reserved Instances, data storage layer to Aurora Reserved Instances
+
 - D) Migrate application layer to EC2 On-Demand Instances, data storage layer to RDS Reserved Instances
 
 ---
@@ -562,8 +599,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) AWS Snowcone
+
 - B) Amazon FSx File Gateway
+
 - C) AWS DataSync
+
 - D) AWS Transfer Family
 
 ---
@@ -575,9 +615,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Deploy Amazon CloudFront for content delivery and caching
+
 - B) Use AWS DataSync to replicate video files across AWS Regions in other S3 buckets
+
 - C) Use Amazon Elastic Transcoder to convert video files to more appropriate formats
+
 - D) Deploy Auto Scaling group of EC2 instances in Local Zones for content delivery and caching
+
 - E) Deploy Auto Scaling group of EC2 instances to convert video files to more appropriate formats
 
 ---
@@ -589,8 +633,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use Amazon EC2 Auto Scaling to scale at certain periods based on previous traffic patterns
+
 - B) Use AWS Lambda function to scale ECS based on metric breaches triggering CloudWatch alarm
+
 - C) Use Amazon EC2 Auto Scaling with simple scaling policies when ECS metrics breach CloudWatch alarms
+
 - D) Use AWS Application Auto Scaling with target tracking policies when ECS metrics breach CloudWatch alarms
 
 ---
@@ -602,8 +649,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use AWS DataSync
+
 - B) Use AWS Snowball devices
+
 - C) Set up SFTP server on Amazon EC2
+
 - D) Use AWS Database Migration Service (AWS DMS)
 
 ---
@@ -615,9 +665,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create AWS DataSync task sharing data as mountable file system, mount to application server
+
 - B) Create Amazon EC2 Windows instance, install and configure Windows file share role, connect application server
+
 - C) Create Amazon FSx for Windows File Server file system, attach to origin server, connect application server
+
 - D) Create Amazon S3 bucket, assign IAM role to application for S3 access, mount S3 bucket to application server
+
 
 ---
 
@@ -628,8 +682,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Launch all EC2 instances in same AZ within same Region, specify placement group with cluster strategy
+
 - B) Launch all EC2 instances in different AZs within same Region, specify placement group with partition strategy
+
 - C) Deploy Auto Scaling group launching EC2 instances in different AZs based on network utilization target
+
 - D) Deploy Auto Scaling group with step scaling policy launching EC2 instances in different AZs
 
 ---
@@ -641,9 +698,13 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Amazon S3 File Gateway
+
 - B) AWS Storage Gateway Tape Gateway
+
 - C) AWS Storage Gateway Volume Gateway stored volumes
+
 - D) AWS Storage Gateway Volume Gateway cached volumes
+
 
 ---
 
@@ -654,10 +715,15 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Use Trusted Advisor recommendations from account where RDS instances are running
+
 - B) Use Trusted Advisor recommendations from consolidated billing account to see all RDS instance checks
+
 - C) Review Trusted Advisor check for Amazon RDS Reserved Instance Optimization
+
 - D) Review Trusted Advisor check for Amazon RDS Idle DB Instances
+
 - E) Review Trusted Advisor check for Amazon Redshift Reserved Node Optimization
+
 
 ---
 
@@ -668,8 +734,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Analyze bucket access patterns using S3 Storage Lens dashboard for advanced activity metrics
+
 - B) Analyze bucket access patterns using S3 dashboard in AWS Management Console
+
 - C) Turn on CloudWatch BucketSizeBytes metric, analyze with Amazon Athena
+
 - D) Turn on AWS CloudTrail for S3 object monitoring, analyze with CloudWatch Logs
 
 ---
@@ -681,8 +750,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Configure S3 Transfer Acceleration on existing bucket, direct requests to Transfer Acceleration endpoint, continue using S3 signed URLs
+
 - B) Deploy CloudFront distribution with existing S3 bucket as origin, direct requests to CloudFront URL, switch to CloudFront signed URLs
+
 - C) Set up second S3 bucket in eu-central-1 with Cross-Region Replication, direct requests to closest Region, continue using S3 signed URLs
+
 - D) Modify web application for streaming datasets to end users, configure to read from existing S3 bucket, implement access control in application
 
 ---
@@ -694,8 +766,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create multiple Kinesis data streams by quote type, configure web application to send to proper stream, configure backend servers to use KCL to pool messages
+
 - B) Create Lambda function and SNS topic for each quote type, subscribe Lambda to associated SNS topic, configure application to publish to appropriate SNS topic
+
 - C) Create single SNS topic, subscribe SQS queues to SNS topic, configure SNS message filtering to publish to proper SQS queue by quote type, configure backend servers to use own SQS queue
+
 - D) Create multiple Kinesis Data Firehose delivery streams by quote type to deliver to OpenSearch Service cluster, configure application to send to proper stream, configure backend servers to search and process from OpenSearch
 
 ---
@@ -707,8 +782,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Write Lambda function scheduling nightly EBS snapshots and copying to different Region
+
 - B) Create AWS Backup plan for nightly backups, copy to another Region, add EC2 instances as resources
+
 - C) Create AWS Backup plan for nightly backups, copy to another Region, add EBS volumes as resources
+
 - D) Write Lambda function scheduling nightly EBS snapshots and copying to different AZ
 
 ---
@@ -720,8 +798,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Publish content to public S3 bucket, use AWS KMS keys to stream content
+
 - B) Set up IPsec VPN between mobile app and AWS environment to stream content
+
 - C) Use Amazon CloudFront, provide signed URLs to stream content
+
 - D) Set up AWS Client VPN between mobile app and AWS environment to stream content
 
 ---
@@ -733,8 +814,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Amazon Aurora MySQL
+
 - B) Amazon Aurora Serverless for MySQL
+
 - C) Amazon Redshift Spectrum
+
 - D) Amazon RDS for MySQL
 
 ---
@@ -746,8 +830,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Deploy AWS Shield to scan EC2 instances, create Lambda function to log findings to CloudTrail
+
 - B) Deploy Amazon Macie and Lambda functions to scan EC2 instances, log findings to CloudTrail
+
 - C) Turn on Amazon GuardDuty, deploy GuardDuty agents to EC2 instances, configure Lambda function to automate report generation and distribution
+
 - D) Turn on Amazon Inspector, deploy Inspector agent to EC2 instances, configure Lambda function to automate report generation and distribution
 
 ---
@@ -759,8 +846,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Increase EC2 instance size to process messages faster
+
 - B) Use Amazon EventBridge to turn off EC2 instance when underutilized
+
 - C) Migrate script on EC2 instance to AWS Lambda function with appropriate runtime
+
 - D) Use AWS Systems Manager Run Command to run script on demand
 
 ---
@@ -772,8 +862,11 @@ A comprehensive collection of practice questions for the AWS Certified Solutions
 
 **Options:**
 - A) Create AWS Glue ETL job running on schedule to process CSV files and store in Redshift
+
 - B) Develop Python script on EC2 instances to convert CSV to SQL files, invoke on cron schedule to store in S3
+
 - C) Create Lambda function and DynamoDB table, use S3 event to invoke Lambda, configure ETL job to process CSV and store in DynamoDB
+
 - D) Use EventBridge to launch EMR cluster weekly, configure ETL job to process CSV files and store in Redshift table
 
 ---
