@@ -38,8 +38,11 @@ A company runs applications on Amazon EC2 instances in one AWS Region. The compa
 
 **Options:**
 1. Create a disaster recovery (DR) plan that has a similar number of EC2 instances in the second Region. Configure data replication.
+
 2. Create point-in-time Amazon Elastic Block Store (Amazon EBS) snapshots of the EC2 instances. Copy the snapshots to the second Region periodically.
+
 3. Create a backup plan by using AWS Backup. Configure cross-Region backup to the second Region for the EC2 instances.
+
 4. Deploy a similar number of EC2 instances in the second Region. Use AWS DataSync to transfer the data from the source Region to the second Region.
 
 ---
@@ -49,8 +52,11 @@ A company that uses AWS is building an application to transfer data to a product
 
 **Options:**
 1. Use AWS DataSync to transfer the data. Create an AWS Lambda function for IdP authentication.
+
 2. Use Amazon AppFlow flows to transfer the data. Create an Amazon Elastic Container Service (Amazon ECS) task for IdP authentication.
+
 3. Use AWS Transfer Family to transfer the data. Create an AWS Lambda function for IdP authentication.
+
 4. Use AWS Storage Gateway to transfer the data. Create an Amazon Cognito identity pool for IdP authentication.
 
 ---
@@ -188,8 +194,11 @@ A company uses AWS Organizations. A member account has purchased a Compute Savin
 
 **Options:**
 1. Turn on discount sharing from the Billing Preferences section of the account console in the member account that purchased the Compute Savings Plan.
+
 2. Turn on discount sharing from the Billing Preferences section of the account console in the company's Organizations management account.
+
 3. Migrate additional compute workloads from another AWS account to the account that has the Compute Savings Plan.
+
 4. Sell the excess Savings Plan commitment in the Reserved Instance Marketplace.
 
 ---
@@ -199,8 +208,11 @@ A company is developing a microservices application that will provide a search c
 
 **Options:**
 1. Design a WebSocket API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a private VPC link for API Gateway to access Amazon ECS.
+
 2. Design a REST API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a private VPC link for API Gateway to access Amazon ECS.
+
 3. Design a WebSocket API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a security group for API Gateway to access Amazon ECS.
+
 4. Design a REST API by using Amazon API Gateway. Host the application in Amazon Elastic Container Service (Amazon ECS) in a private subnet. Create a security group for API Gateway to access Amazon ECS.
 
 ---
@@ -210,8 +222,11 @@ A company stores raw collected data in an Amazon S3 bucket. The data is used for
 
 **Options:**
 1. Use S3 replication to transition infrequently accessed objects to S3 Standard-Infrequent Access (S3 Standard-IA)
+
 2. Use S3 Lifecycle rules to transition objects from S3 Standard to Standard-Infrequent Access (S3 Standard-IA)
+
 3. Use S3 Lifecycle rules to transition objects from S3 Standard to S3 Intelligent-Tiering
+
 4. Use S3 Inventory to identify and transition objects that have not been accessed from S3 Standard to S3 Intelligent-Tiering
 
 ---
@@ -221,8 +236,11 @@ A company has applications hosted on Amazon EC2 instances with IPv6 addresses. T
 
 **Options:**
 1. Create a NAT gateway and make it the destination of the subnet's route table
+
 2. Create an internet gateway and make it the destination of the subnet's route table
+
 3. Create a virtual private gateway and make it the destination of the subnet's route table
+
 4. Create an egress-only internet gateway and make it the destination of the subnet's route table
 
 ---
@@ -232,8 +250,11 @@ A company is creating an application that runs on containers in a VPC. The appli
 
 **Options:**
 1. Enable S3 Intelligent-Tiering for the S3 bucket
+
 2. Enable S3 Transfer Acceleration for the S3 bucket
+
 3. Create a gateway VPC endpoint for Amazon S3. Associate this endpoint with all route tables in the VPC
+
 4. Create an interface endpoint for Amazon S3 in the VPC. Associate this endpoint with all route tables in the VPC
 
 ---
@@ -243,8 +264,11 @@ A company has a mobile chat application with a data store based in Amazon Dynamo
 
 **Options:**
 1. Configure Amazon DynamoDB Accelerator (DAX) for the new messages table. Update the code to use the DAX endpoint.
+
 2. Add DynamoDB read replicas to handle the increased read load. Update the application to point to the read endpoint for the read replicas.
+
 3. Double the number of read capacity units for the new messages table in DynamoDB. Continue to use the existing DynamoDB endpoint.
+
 4. Add an Amazon ElastiCache for Redis cache to the application stack. Update the application to point to the Redis cache endpoint instead of DynamoDB.
 
 ---
@@ -254,8 +278,11 @@ A company hosts a website on Amazon EC2 instances behind an Application Load Bal
 
 **Options:**
 1. Create an Amazon CloudFront distribution to cache static files at edge locations
+
 2. Create an Amazon ElastiCache cluster. Connect the ALB to the ElastiCache cluster to serve cached files
+
 3. Create an AWS WAF web ACL and associate it with the ALB. Add a rule to the web ACL to cache static files
+
 4. Create a second ALB in an alternative AWS Region. Route user traffic to the closest Region to minimize data transfer costs
 
 ---
@@ -265,8 +292,11 @@ A company has multiple VPCs across AWS Regions to support and run workloads that
 
 **Options:**
 1. Use VPC peering to manage VPC communication in a single Region. Use VPC peering across Regions to manage VPC communications.
+
 2. Use AWS Direct Connect gateways across all Regions to connect VPCs across regions and manage VPC communications.
+
 3. Use AWS Transit Gateway to manage VPC communication in a single Region and Transit Gateway peering across Regions to manage VPC communications.
+
 4. Use AWS PrivateLink across all Regions to connect VPCs across Regions and manage VPC communications.
 
 ---
@@ -276,8 +306,11 @@ A company is designing a containerized application that will use Amazon Elastic 
 
 **Options:**
 1. Amazon FSx for Windows File Server with a Multi-AZ deployment
+
 2. Amazon FSx for NetApp ONTAP with a Multi-AZ deployment
+
 3. Amazon Elastic File System (Amazon EFS) with the Standard storage class
+
 4. Amazon FSx for OpenZFS
 
 ---
@@ -287,8 +320,11 @@ A company is expecting rapid growth in the near future. A solutions architect ne
 
 **Options:**
 1. Apply service control policies (SCPs) to manage access permissions
+
 2. Create IAM roles that have least privilege permission. Attach the roles to the IAM groups
+
 3. Create an IAM policy that grants least privilege permission. Attach the policy to the IAM groups
+
 4. Create IAM roles. Associate the roles with a permissions boundary that defines the maximum permissions
 
 ---
@@ -298,8 +334,11 @@ A company uses NFS to store large video files in on-premises network attached st
 
 **Options:**
 1. Create an S3 bucket. Create an IAM role that has permissions to write to the S3 bucket. Use the AWS CLI to copy all files locally to the S3 bucket.
+
 2. Create an AWS Snowball Edge job. Receive a Snowball Edge device on premises. Use the Snowball Edge client to transfer data to the device. Return the device so that AWS can import the data into Amazon S3.
+
 3. Deploy an S3 File Gateway on premises. Create a public service endpoint to connect to the S3 File Gateway. Create an S3 bucket. Create a new NFS file share on the S3 File Gateway. Point the new file share to the S3 bucket. Transfer the data from the existing NFS file share to the S3 File Gateway.
+
 4. Set up an AWS Direct Connect connection between the on-premises network and AWS. Deploy an S3 File Gateway on premises. Create a public virtual interface (VIF) to connect to the S3 File Gateway. Create an S3 bucket. Create a new NFS file share on the S3 File Gateway. Point the new file share to the S3 bucket. Transfer the data from the existing NFS file share to the S3 File Gateway.
 
 ---
@@ -309,8 +348,11 @@ A law firm needs to share information with the public. The information includes 
 
 **Options:**
 1. Upload all files to an Amazon S3 bucket that is configured for static website hosting. Grant read-only IAM permissions to any AWS principals that access the S3 bucket until the designated date.
+
 2. Create a new Amazon S3 bucket with S3 Versioning enabled. Use S3 Object Lock with a retention period in accordance with the designated date. Configure the S3 bucket for static website hosting. Set an S3 bucket policy to allow read-only access to the objects.
+
 3. Create a new Amazon S3 bucket with S3 Versioning enabled. Configure an event trigger to run an AWS Lambda function in case of object modification or deletion. Configure the Lambda function to replace the objects with the original versions from a private S3 bucket.
+
 4. Upload all files to an Amazon S3 bucket that is configured for static website hosting. Select the folder that contains the files. Use S3 Object Lock with a retention period in accordance with the designated date. Grant read-only IAM permissions to any AWS principals that access the S3 bucket.
 
 ---
@@ -320,8 +362,11 @@ A company is making a prototype of the infrastructure for its new website by man
 
 **Options:**
 1. Use AWS Systems Manager to replicate and provision the prototype infrastructure in two Availability Zones
+
 2. Define the infrastructure as a template by using the prototype infrastructure as a guide. Deploy the infrastructure with AWS CloudFormation.
+
 3. Use AWS Config to record the inventory of resources that are used in the prototype infrastructure. Use AWS Config to deploy the prototype infrastructure into two Availability Zones.
+
 4. Use AWS Elastic Beanstalk and configure it to use an automated reference to the prototype infrastructure to automatically deploy new environments in two Availability Zones.
 
 ---
@@ -331,8 +376,11 @@ A business application is hosted on Amazon EC2 and uses Amazon S3 for encrypted 
 
 **Options:**
 1. AWS Key Management Service (AWS KMS)
+
 2. VPC endpoint
+
 3. Private subnet
+
 4. Virtual private gateway
 
 ---
@@ -342,8 +390,11 @@ A company hosts a three-tier web application in the AWS Cloud. A Multi-AZ Amazon
 
 **Options:**
 1. Implement the lazy loading caching strategy
+
 2. Implement the write-through caching strategy
+
 3. Implement the adding TTL caching strategy
+
 4. Implement the AWS AppConfig caching strategy
 
 ---
@@ -353,8 +404,11 @@ A company wants to migrate 100 GB of historical data from an on-premises locatio
 
 **Options:**
 1. Use the s3 sync command in the AWS CLI to move the data directly to an S3 bucket
+
 2. Use AWS DataSync to migrate the data from the on-premises location to an S3 bucket
+
 3. Use AWS Snowball to move the data to an S3 bucket
+
 4. Set up an IPsec VPN from the on-premises location to AWS. Use the s3 cp command in the AWS CLI to move the data directly to an S3 bucket
 
 ---
@@ -364,8 +418,11 @@ A company containerized a Windows job that runs on .NET 6 Framework under a Wind
 
 **Options:**
 1. Create an AWS Lambda function based on the container image of the job. Configure Amazon EventBridge to invoke the function every 10 minutes.
+
 2. Use AWS Batch to create a job that uses AWS Fargate resources. Configure the job scheduling to run every 10 minutes.
+
 3. Use Amazon Elastic Container Service (Amazon ECS) on AWS Fargate to run the job. Create a scheduled task based on the container image of the job to run every 10 minutes.
+
 4. Use Amazon Elastic Container Service (Amazon ECS) on AWS Fargate to run the job. Create a standalone task based on the container image of the job. Use Windows task scheduler to run the job every 10 minutes.
 
 ---
@@ -375,9 +432,13 @@ A company wants to move from many standalone AWS accounts to a consolidated, mul
 
 **Options:**
 1. Create a new organization in AWS Organizations with all features turned on. Create the new AWS accounts in the organization.
+
 2. Set up an Amazon Cognito identity pool. Configure AWS IAM Identity Center (AWS Single Sign-On) to accept Amazon Cognito authentication.
+
 3. Configure a service control policy (SCP) to manage the AWS accounts. Add AWS IAM Identity Center (AWS Single Sign-On) to AWS Directory Service.
+
 4. Create a new organization in AWS Organizations. Configure the organization's authentication mechanism to use AWS Directory Service directly.
+
 5. Set up AWS IAM Identity Center (AWS Single Sign-On) in the organization. Configure IAM Identity Center, and integrate it with the company's corporate directory service.
 
 ---
@@ -387,8 +448,11 @@ A company is looking for a solution that can store video archives in AWS from ol
 
 **Options:**
 1. Store the video archives in Amazon S3 Glacier and use Expedited retrievals.
+
 2. Store the video archives in Amazon S3 Glacier and use Standard retrievals.
+
 3. Store the video archives in Amazon S3 Standard-Infrequent Access (S3 Standard-IA).
+
 4. Store the video archives in Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA).
 
 ---
@@ -398,8 +462,11 @@ A company is building a three-tier application on AWS. The presentation tier wil
 
 **Options:**
 1. Use Amazon S3 to host static content. Use Amazon Elastic Container Service (Amazon ECS) with AWS Fargate for compute power. Use a managed Amazon RDS cluster for the database.
+
 2. Use Amazon CloudFront to host static content. Use Amazon Elastic Container Service (Amazon ECS) with Amazon EC2 for compute power. Use a managed Amazon RDS cluster for the database.
+
 3. Use Amazon S3 to host static content. Use Amazon Elastic Kubernetes Service (Amazon EKS) with AWS Fargate for compute power. Use a managed Amazon RDS cluster for the database.
+
 4. Use Amazon EC2 Reserved Instances to host static content. Use Amazon Elastic Kubernetes Service (Amazon EKS) with Amazon EC2 for compute power. Use a managed Amazon RDS cluster for the database.
 
 ---
@@ -409,8 +476,11 @@ A company seeks a storage solution for its application. The solution must be hig
 
 **Options:**
 1. Amazon FSx Multi-AZ deployments
+
 2. Amazon Elastic Block Store (Amazon EBS) Multi-Attach volumes
+
 3. Amazon Elastic File System (Amazon EFS) with multiple mount targets
+
 4. Amazon Elastic File System (Amazon EFS) with a single mount target and multiple access points
 
 ---
@@ -420,8 +490,11 @@ A 4-year-old media company is using the AWS Organizations all features feature s
 
 **Options:**
 1. Add all finance team users to an IAM group. Attach an AWS managed policy named Billing to the group.
+
 2. Attach an identity-based policy to deny access to the billing information to all users, including the root user.
+
 3. Create a service control policy (SCP) to deny access to the billing information. Attach the SCP to the root organizational unit (OU).
+
 4. Convert from the Organizations all features feature set to the Organizations consolidated billing feature set.
 
 ---
@@ -431,8 +504,11 @@ An ecommerce company runs an application in the AWS Cloud that is integrated wit
 
 **Options:**
 1. Configure an Amazon SNS dead letter queue that has an Amazon Kinesis Data Stream target with a retention period of 14 days.
+
 2. Add an Amazon Simple Queue Service (Amazon SQS) queue with a retention period of 14 days between the application and Amazon SNS.
+
 3. Configure an Amazon SNS dead letter queue that has an Amazon Simple Queue Service (Amazon SQS) target with a retention period of 14 days.
+
 4. Configure an Amazon SNS dead letter queue that has an Amazon DynamoDB target with a TTL attribute set for a retention period of 14 days.
 
 ---
@@ -442,8 +518,11 @@ A gaming company uses Amazon DynamoDB to store user information such as geograph
 
 **Options:**
 1. Use an Amazon EMR cluster. Create an Apache Hive job to back up the data to Amazon S3.
+
 2. Export the data directly from DynamoDB to Amazon S3 with continuous backups. Turn on point-in-time recovery for the table.
+
 3. Configure Amazon DynamoDB Streams. Create an AWS Lambda function to consume the stream and export the data to an Amazon S3 bucket.
+
 4. Create an AWS Lambda function to export the data from the database tables to Amazon S3 on a regular basis. Turn on point-in-time recovery for the table.
 
 ---
@@ -453,8 +532,11 @@ A solutions architect is designing an asynchronous application to process credit
 
 **Options:**
 1. Use AWS Lambda event source mapping. Set Amazon Simple Queue Service (Amazon SQS) standard queues as the event source. Use AWS Key Management Service (SSE-KMS) for encryption. Add the kms:Decrypt permission for the Lambda execution role.
+
 2. Use AWS Lambda event source mapping. Use Amazon Simple Queue Service (Amazon SQS) FIFO queues as the event source. Use SQS managed encryption keys (SSE-SQS) for encryption. Add the encryption key invocation permission for the Lambda function.
+
 3. Use the AWS Lambda event source mapping. Set Amazon Simple Queue Service (Amazon SQS) FIFO queues as the event source. Use AWS KMS keys (SSE-KMS). Add the kms:Decrypt permission for the Lambda execution role.
+
 4. Use the AWS Lambda event source mapping. Set Amazon Simple Queue Service (Amazon SQS) standard queues as the event source. Use AWS KMS keys (SSE-KMS) for encryption. Add the encryption key invocation permission for the Lambda function.
 
 ---
@@ -464,8 +546,11 @@ A company has multiple AWS accounts for development work. Some staff consistentl
 
 **Options:**
 1. Develop AWS Systems Manager templates that use an approved EC2 creation process. Use the approved Systems Manager templates to provision EC2 instances.
+
 2. Use AWS Organizations to organize the accounts into organizational units (OUs). Define and attach a service control policy (SCP) to control the usage of EC2 instance types.
+
 3. Configure an Amazon EventBridge rule that invokes an AWS Lambda function when an EC2 instance is created. Stop disallowed EC2 instance types.
+
 4. Set up AWS Service Catalog products for the staff to create the allowed EC2 instance types. Ensure that staff can deploy EC2 instances only by using the Service Catalog products.
 
 ---
@@ -475,10 +560,15 @@ A company wants to use artificial intelligence (AI) to determine the quality of 
 
 **Options:**
 1. Use Amazon Comprehend to translate the audio recordings into English.
+
 2. Use Amazon Lex to create the written sentiment analysis reports.
+
 3. Use Amazon Polly to convert the audio recordings into text.
+
 4. Use Amazon Transcribe to convert the audio recordings in any language into text.
+
 5. Use Amazon Translate to translate text in any language to English.
+
 6. Use Amazon Comprehend to create the sentiment analysis reports.
 
 ---
@@ -488,8 +578,11 @@ A company uses Amazon EC2 instances to host its internal systems. As part of a d
 
 **Options:**
 1. The EC2 instance has a resource-based policy with a Deny statement.
+
 2. The principal has not been specified in the policy statement.
+
 3. The "Action" field does not grant the actions that are required to terminate the EC2 instance.
+
 4. The request to terminate the EC2 instance does not originate from the CIDR blocks 192.0.2.0/24 or 203.0.113.0/24.
 
 ---
@@ -499,8 +592,11 @@ A company is conducting an internal audit. The company wants to ensure that the 
 
 **Options:**
 1. Configure AWS Audit Manager on the account. Select the Payment Card Industry Data Security Standards (PCI DSS) for auditing.
+
 2. Configure Amazon S3 Inventory on the S3 bucket. Configure Amazon Athena to query the inventory.
+
 3. Configure Amazon Macie to run a data discovery job that uses managed identifiers for the required data types.
+
 4. Use Amazon S3 Select to run a report across the S3 bucket.
 
 ---
@@ -510,9 +606,13 @@ A company uses on-premises servers to host its applications. The company is runn
 
 **Options:**
 1. Mount Amazon S3 as a file system to the on-premises servers.
+
 2. Deploy an AWS Storage Gateway file gateway to replace NFS storage.
+
 3. Deploy AWS Snowball Edge to provision NFS mounts to on-premises servers.
+
 4. Deploy an AWS Storage Gateway volume gateway to replace the block storage.
+
 5. Deploy Amazon Elastic File System (Amazon EFS) volumes and mount them to on-premises servers.
 
 ---
