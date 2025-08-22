@@ -622,8 +622,11 @@ A company has a service that reads and writes large amounts of data from an Amaz
 
 **Options:**
 1. Provision a dedicated EC2 NAT instance in the public subnet. Configure the route table for the private subnet to use the elastic network interface of this instance as the destination for all S3 traffic.
+
 2. Provision a dedicated EC2 NAT instance in the private subnet. Configure the route table for the public subnet to use the elastic network interface of this instance as the destination for all S3 traffic.
+
 3. Provision a VPC gateway endpoint. Configure the route table for the private subnet to use the gateway endpoint as the route for all S3 traffic.
+
 4. Provision a second NAT gateway. Configure the route table for the private subnet to use this NAT gateway as the destination for all S3 traffic.
 
 ---
@@ -633,8 +636,11 @@ A company uses Amazon S3 to store high-resolution pictures in an S3 bucket. To m
 
 **Options:**
 1. Use S3 Lifecycle to delete expired object versions and retain the two most recent versions.
+
 2. Use an AWS Lambda function to check for older versions and delete all but the two most recent versions.
+
 3. Use S3 Batch Operations to delete noncurrent object versions and retain only the two most recent versions.
+
 4. Deactivate versioning on the S3 bucket and retain the two most recent versions.
 
 ---
@@ -644,8 +650,11 @@ A company needs to minimize the cost of its 1 Gbps AWS Direct Connect connection
 
 **Options:**
 1. Set up a new 1 Gbps Direct Connect connection. Share the connection with another AWS account.
+
 2. Set up a new 200 Mbps Direct Connect connection in the AWS Management Console.
+
 3. Contact an AWS Direct Connect Partner to order a 1 Gbps connection. Share the connection with another AWS account.
+
 4. Contact an AWS Direct Connect Partner to order a 200 Mbps hosted connection for an existing AWS account.
 
 ---
