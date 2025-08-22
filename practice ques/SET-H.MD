@@ -825,3 +825,80 @@ A company is designing a new web application that will run on Amazon EC2 Instanc
 
 ---
 
+## Answer Key
+
+| Question | Answer | Explanation |
+|----------|--------|-------------|
+| 456 | 3 | AWS Backup provides automated, cost-effective cross-region backup for EC2 instances |
+| 457 | 3 | AWS Transfer Family supports AS2 protocol and can integrate with custom IdP via Lambda |
+| 458 | 2, 3 | Lambda (1GB memory) + RDS (relational data) with minimal admin overhead |
+| 459 | 1 | User-defined tags from management account provide centralized cost allocation |
+| 460 | 3 | Amazon AppFlow natively supports Salesforce integration with encryption |
+| 461 | 2 | Global Accelerator + NLB supports both TCP/UDP for gaming applications |
+| 462 | 2 | SQS queue + Auto Scaling group provides reliable order processing during high traffic |
+| 463 | 3 | Lambda is most cost-effective for short-duration (30s), small data processing |
+| 464 | 1 | Converting to Multi-AZ requires no application code changes |
+| 465 | 3 | io2 volumes support EBS Multi-Attach for simultaneous access |
+| 466 | 1 | Multi-AZ Auto Scaling + ALB provides high availability for stateless apps |
+| 467 | 2 | Discount sharing must be enabled from the management account |
+| 468 | 2 | REST API + private VPC link enables secure access to private ECS services |
+| 469 | 3 | S3 Intelligent-Tiering automatically optimizes costs for unpredictable access patterns |
+| 470 | 4 | Egress-only IGW allows IPv6 outbound traffic while blocking inbound connections |
+| 471 | 3 | Gateway VPC endpoint for S3 eliminates internet traffic and reduces costs |
+| 472 | 1 | DynamoDB DAX provides microsecond latency with minimal application changes |
+| 473 | 1 | CloudFront distribution reduces costs by caching static content at edge locations |
+| 474 | 3 | Transit Gateway provides the least administrative effort for multi-region VPC connectivity |
+| 475 | 3 | Amazon EFS supports cross-AZ mount targets and AWS Backup integration |
+| 476 | 3 | IAM policies attached to groups provide least privilege permissions securely |
+| 477 | 2 | Snowball Edge is most efficient for large data migration with limited bandwidth |
+| 478 | 2 | S3 Object Lock with versioning prevents modifications while allowing public read access |
+| 479 | 2 | CloudFormation templates enable automated infrastructure deployment |
+| 480 | 2 | VPC endpoints keep traffic between EC2 and S3 within AWS network |
+| 481 | 2 | Write-through caching ensures cache and database data consistency |
+| 482 | 1 | AWS CLI s3 sync provides encryption in transit with least operational overhead |
+| 483 | 3 | ECS Fargate with scheduled tasks is most cost-effective for regular container jobs |
+| 484 | 1, 5 | Organizations + IAM Identity Center enables centralized account management and authentication |
+| 485 | 1 | S3 Glacier with Expedited retrieval meets 5-minute requirement cost-effectively |
+| 486 | 1 | S3 for static hosting, ECS Fargate for containers, RDS for database - simplest deployment |
+| 487 | 3 | EFS with multiple mount targets supports Linux, on-premises access via VPN |
+| 488 | 3 | SCP at root OU level restricts billing access across all member accounts |
+| 489 | 3 | SNS dead letter queue with SQS target retains failed messages for analysis |
+| 490 | 2 | DynamoDB export to S3 provides continuous backup without affecting RCUs |
+| 491 | 1 | Standard SQS + SSE-KMS is most cost-effective for at-least-once processing |
+| 492 | 2 | Organizations with SCP provides centralized resource restrictions with least effort |
+| 493 | 4, 5, 6 | Transcribe (audio to text) + Translate (to English) + Comprehend (sentiment) |
+| 494 | 4 | 403 error likely due to IP condition in policy not matching request origin |
+| 495 | 3 | Amazon Macie specializes in PII and sensitive data discovery in S3 |
+| 496 | 2, 4 | Storage Gateway file gateway (NFS) + volume gateway (block storage) |
+| 497 | 3 | VPC gateway endpoint eliminates NAT gateway costs for S3 traffic |
+| 498 | 1 | S3 Lifecycle rules automatically manage object versions with least overhead |
+| 499 | 4 | Direct Connect Partner hosted connection reduces cost for low utilization |
+| 500 | 1, 4 | DataSync agents preserve permissions; Snowcone for large datasets |
+| 501 | 3 | Kinesis Data Firehose + Analytics provides operational efficiency for streaming data |
+| 502 | 3, 5 | EFS for shared storage + Auto Scaling with CloudFront for performance/resilience |
+| 503 | 1 | Cross-account IAM roles with trust policies provide secure access |
+| 504 | 3 | Transit Gateway from networking account provides centralized VPC connectivity |
+| 505 | 3 | Spot Instances are most cost-effective for fault-tolerant batch jobs |
+| 506 | 3 | S3 presigned URLs provide direct, scalable file uploads |
+| 507 | 1 | DynamoDB Global Tables provide global consistency with sub-second latency |
+| 508 | 2, 4 | AMI lifecycle with cross-region copy + AWS Backup with automated scheduling |
+| 509 | 2 | Network ACL deny rules at web tier subnet level block malicious traffic |
+| 510 | 2 | VPC peering + route tables + security group references enable secure cross-region communication |
+| 511 | 3 | Aurora On-Demand is most cost-effective for part-time development usage |
+| 512 | 1 | AWS Config identifies untagged resources for comprehensive backup coverage |
+| 513 | 1 | S3 static hosting + Lambda for image processing provides scalable, serverless solution |
+| 514 | 2 | Interface VPC endpoints required for private EKS nodes to access control plane |
+| 515 | 1, 2, 3 | Redshift supports data APIs, encryption, and analytics workloads |
+| 516 | 2 | API Gateway + Lambda with provisioned concurrency ensures consistent low latency |
+| 517 | 4 | CloudWatch agent + Kinesis Data Firehose provides automated log streaming to S3 |
+| 518 | 1 | RDS storage autoscaling increases space automatically without downtime |
+| 519 | 2 | AWS Service Catalog provides centralized, self-service solution deployment |
+| 520 | 2 | DynamoDB on-demand mode automatically scales for unpredictable traffic patterns |
+
+---
+
+## Contributing
+Feel free to contribute additional questions, corrections, or improvements to this collection.
+
+## License
+This content is for educational purposes only and is not affiliated with AWS or Amazon.
