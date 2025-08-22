@@ -60,9 +60,13 @@ A solutions architect is designing a REST API in Amazon API Gateway for a cash p
 
 **Options:**
 1. Amazon EC2
+
 2. AWS Lambda
+
 3. Amazon RDS
+
 4. Amazon DynamoDB
+
 5. Amazon Elastic Kubernetes Services (Amazon EKS)
 
 ---
@@ -72,8 +76,11 @@ A company uses AWS Organizations to run workloads within multiple AWS accounts. 
 
 **Options:**
 1. From the Organizations management account billing console, activate a user-defined cost allocation tag named department. Create one cost report in Cost Explorer grouping by tag name, and filter by EC2.
+
 2. From the Organizations management account billing console, activate an AWS-defined cost allocation tag named department. Create one cost report in Cost Explorer grouping by tag name, and filter by EC2.
+
 3. From the Organizations member account billing console, activate a user-defined cost allocation tag named department. Create one cost report in Cost Explorer grouping by the tag name, and filter by EC2.
+
 4. From the Organizations member account billing console, activate an AWS-defined cost allocation tag named department. Create one cost report in Cost Explorer grouping by tag name, and filter by EC2.
 
 ---
@@ -83,8 +90,11 @@ A company wants to securely exchange data between its software as a service (Saa
 
 **Options:**
 1. Create AWS Lambda functions to transfer the data securely from Salesforce to Amazon S3.
+
 2. Create an AWS Step Functions workflow. Define the task to transfer the data securely from Salesforce to Amazon S3.
+
 3. Create Amazon AppFlow flows to transfer the data securely from Salesforce to Amazon S3.
+
 4. Create a custom connector for Salesforce to transfer the data securely from Salesforce to Amazon S3.
 
 ---
@@ -94,8 +104,11 @@ A company is developing a mobile gaming app in a single AWS Region. The app runs
 
 **Options:**
 1. Use AWS Global Accelerator to create an accelerator. Create an Application Load Balancer (ALB) behind an accelerator endpoint that uses Global Accelerator integration and listening on the TCP and UDP ports. Update the Auto Scaling group to register instances on the ALB.
+
 2. Use AWS Global Accelerator to create an accelerator. Create a Network Load Balancer (NLB) behind an accelerator endpoint that uses Global Accelerator integration and listening on the TCP and UDP ports. Update the Auto Scaling group to register instances on the NLB.
+
 3. Create an Amazon CloudFront content delivery network (CDN) endpoint. Create a Network Load Balancer (NLB) behind the endpoint and listening on the TCP and UDP ports. Update the Auto Scaling group to register instances on the NLB. Update CloudFront to use the NLB as the origin.
+
 4. Create an Amazon CloudFront content delivery network (CDN) endpoint. Create an Application Load Balancer (ALB) behind the endpoint and listening on the TCP and UDP ports. Update the Auto Scaling group to register instances on the ALB. Update CloudFront to use the ALB as the origin.
 
 ---
@@ -105,8 +118,11 @@ A company has an application that processes customer orders. The company hosts t
 
 **Options:**
 1. Increase the instance size of the EC2 instance when traffic is high. Write orders to Amazon Simple Notification Service (Amazon SNS). Subscribe the database endpoint to the SNS topic.
+
 2. Write orders to an Amazon Simple Queue Service (Amazon SQS) queue. Use EC2 instances in an Auto Scaling group behind an Application Load Balancer to read from the SQS queue and process orders into the database.
+
 3. Write orders to Amazon Simple Notification Service (Amazon SNS). Subscribe the database endpoint to the SNS topic. Use EC2 instances in an Auto Scaling group behind an Application Load Balancer to read from the SNS topic.
+
 4. Write orders to an Amazon Simple Queue Service (Amazon SQS) queue when the EC2 instance reaches CPU threshold limits. Use scheduled scaling of EC2 instances in an Auto Scaling group behind an Application Load Balancer to read from the SQS queue and process orders into the database.
 
 ---
@@ -116,8 +132,11 @@ An IoT company is releasing a mattress that has sensors to collect data about a 
 
 **Options:**
 1. Use AWS Glue with a Scala job
+
 2. Use Amazon EMR with an Apache Spark script
+
 3. Use AWS Lambda with a Python script
+
 4. Use AWS Glue with a PySpark job
 
 ---
@@ -127,8 +146,11 @@ A company hosts an online shopping application that stores all orders in an Amaz
 
 **Options:**
 1. Convert the existing database instance to a Multi-AZ deployment by modifying the database instance and specifying the Multi-AZ option.
+
 2. Create a new RDS Multi-AZ deployment. Take a snapshot of the current RDS instance and restore the new Multi-AZ deployment with the snapshot.
+
 3. Create a read-only replica of the PostgreSQL database in another Availability Zone. Use Amazon Route 53 weighted record sets to distribute requests across the databases.
+
 4. Place the RDS for PostgreSQL database in an Amazon EC2 Auto Scaling group with a minimum group size of two. Use Amazon Route 53 weighted record sets to distribute requests across instances.
 
 ---
@@ -138,8 +160,11 @@ A company is developing an application to support customer demands. The company 
 
 **Options:**
 1. Use General Purpose SSD (gp3) EBS volumes with Amazon Elastic Block Store (Amazon EBS) Multi-Attach
+
 2. Use Throughput Optimized HDD (st1) EBS volumes with Amazon Elastic Block Store (Amazon EBS) Multi-Attach
+
 3. Use Provisioned IOPS SSD (io2) EBS volumes with Amazon Elastic Block Store (Amazon EBS) Multi-Attach
+
 4. Use General Purpose SSD (gp2) EBS volumes with Amazon Elastic Block Store (Amazon EBS) Multi-Attach
 
 ---
@@ -149,8 +174,11 @@ A company designed a stateless two-tier application that uses Amazon EC2 in a si
 
 **Options:**
 1. Configure the application to use Multi-AZ EC2 Auto Scaling and create an Application Load Balancer
+
 2. Configure the application to take snapshots of the EC2 instances and send them to a different AWS Region
+
 3. Configure the application to use Amazon Route 53 latency-based routing to feed requests to the application
+
 4. Configure Amazon Route 53 rules to handle incoming requests and create a Multi-AZ Application Load Balancer
 
 ---
