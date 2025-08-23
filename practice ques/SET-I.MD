@@ -434,3 +434,18 @@ D) Set up a list of products in AWS Service Catalog in the AWS accounts to manag
 
 ---
 
+## Study Tips
+
+- Focus on understanding the scenario requirements (security, cost-optimization, performance, operational efficiency)
+- Pay attention to keywords like "MOST secure," "LEAST operational overhead," "cost-effective"
+- Consider AWS Well-Architected Framework principles
+- Practice identifying the best service for each use case
+- Review AWS service integrations and limitations
+
+## Contributing
+
+Feel free to add more questions or improve existing ones by submitting a pull request.
+
+## Disclaimer
+
+These questions are for educational purposes only and may not reflect the exact format or content of the actual AWS certification exam.
