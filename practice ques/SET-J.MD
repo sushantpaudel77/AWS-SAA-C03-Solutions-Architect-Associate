@@ -483,3 +483,20 @@ A comprehensive collection of AWS Solutions Architect Associate practice questio
 
 ---
 
+## Study Tips
+
+1. **Focus on Cost Optimization**: Many questions test your ability to choose the most cost-effective solution
+2. **Understand Service Limits**: Know when to use managed services vs. custom solutions
+3. **Security Best Practices**: Principle of least privilege, encryption at rest and in transit
+4. **High Availability Patterns**: Multi-AZ deployments, load balancing, auto scaling
+5. **Storage Classes**: Understand S3 storage classes and their use cases
+6. **Database Scaling**: Read replicas, caching, connection pooling
+7. **Monitoring and Logging**: CloudWatch, CloudTrail, VPC Flow Logs
+
+## Contributing
+
+Feel free to contribute additional questions or improvements to existing ones. Please ensure all contributions follow the same format and include detailed explanations.
+
+## License
+
+This repository is for educational purposes only. These questions are designed to help prepare for AWS Solutions Architect certification exams.
