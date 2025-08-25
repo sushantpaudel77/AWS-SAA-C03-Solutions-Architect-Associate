@@ -442,3 +442,44 @@ A comprehensive collection of AWS Solutions Architect Associate practice questio
 
 **Key Concepts:** VPC Flow Logs, Kinesis Data Firehose, OpenSearch Service
 
+---
+
+## Answer Key Summary
+
+| Question | Answer | Topic |
+|----------|---------|-------|
+| 651 | 3 | S3 Lifecycle Management |
+| 652 | 1 | EMR Cluster Configuration |
+| 653 | 2 | Resource Tagging Automation |
+| 654 | 4 | Web Application Architecture |
+| 655 | 3,5 | Load Balancer + WAF |
+| 656 | 4 | S3 Storage Classes |
+| 657 | 2 | Security Group Management |
+| 658 | 1,5 | HPC Migration |
+| 659 | 3 | Data Transfer |
+| 660 | 4 | Auto Scaling |
+| 661 | 2 | Database Scaling |
+| 662 | 4 | Cost Optimization |
+| 663 | 3 | Access Control |
+| 664 | 1 | Elastic Beanstalk |
+| 665 | 2 | Infrastructure as Code |
+| 666 | 2,5 | High Availability |
+| 667 | 1 | VPC Endpoints |
+| 668 | 4 | Tag Policies |
+| 669 | 3 | Password Management |
+| 670 | 2 | DynamoDB Pricing |
+| 671 | 2 | Cost Monitoring |
+| 672 | 2 | Data Analytics |
+| 673 | 2 | File Storage |
+| 674 | 2,4 | Database Performance |
+| 675 | 3 | Data Protection |
+| 676 | 2 | Network Monitoring |
+| 677 | 1 | EKS Cost Optimization |
+| 678 | 2 | Encryption Management |
+| 679 | 2,5,6 | Backup Retention |
+| 680 | 1 | File Synchronization |
+| 681 | 1 | EBS Encryption |
+| 682 | 1 | Compliance Automation |
+
+---
+
