@@ -962,128 +962,76 @@ A company is designing a new web application that will run on Amazon EC2 Instanc
 
 ---
 
-# AWS Solutions Architect Practice Questions - Complete Answer Key
-
-## Questions 521-585 Answer Key
+## Answer Key
 
 | Question | Answer | Explanation |
 |----------|--------|-------------|
-| 521 | C | Cross-account IAM roles with assume role is the most secure approach for cross-account access. Avoids long-term credentials and provides fine-grained access control. |
-| 522 | B, C | Kubernetes Metrics Server enables horizontal pod autoscaling (HPA), while Cluster Autoscaler manages node scaling with minimal operational overhead. |
-| 523 | A | AWS AppSync pipeline resolvers provide efficient data aggregation from multiple DynamoDB tables without impacting baseline performance. |
-| 524 | C | Amazon Athena can directly query CloudTrail logs stored in S3 with minimal setup and SQL-based queries for Access Denied errors. |
-| 525 | A | AWS Cost Explorer API provides programmatic access to current cost data and 12-month forecasting capabilities with pagination support. |
-| 526 | D | Amazon RDS Proxy provides connection pooling and significantly reduces failover downtime during scaling exercises. |
-| 527 | D | Aurora Global Database with multi-region deployment provides the highest fault tolerance with automatic failover capabilities. |
-| 528 | D | AWS Transfer Family + S3 + Lambda provides serverless, event-driven file processing that scales automatically and processes files immediately upon arrival. |
-| 529 | B | Amazon RDS with encryption at rest provides managed database security with minimal operational overhead compared to self-managed EC2 solutions. |
-| 530 | C | AWS Global Accelerator optimizes TCP/UDP traffic routing globally and reduces latency for gaming applications better than CloudFront (which doesn't support TCP/UDP). |
-| 531 | A | Lambda function URLs provide the simplest way to expose Lambda functions to external services without additional infrastructure. |
-| 532 | A, D, F | Wildcard domain in Route 53 + ACM certificate in same region + API Gateway custom domain provides secure, scalable solution for individual customer URLs. |
-| 533 | A | Amazon Macie detects PII automatically and integrates with EventBridge to send SNS notifications to security teams. |
-| 534 | C | S3 Standard → S3 Glacier Flexible Retrieval after 30 days, delete after 90 days meets availability requirements most cost-effectively. |
-| 535 | B | EKS KMS secrets encryption specifically encrypts secrets in the Kubernetes etcd key-value store. |
-| 536 | D | Multi-AZ cluster deployment with readable standby instances provides high availability and dedicated read capacity for data scientists. |
-| 537 | A | RDS Multi-AZ + ElastiCache Redis (supports HA) + Auto Scaling provides best combination of scalability, session management, and high availability. |
-| 538 | A | CloudFront geographic restrictions with allow list controls content access by specific countries with custom error messages. |
-| 539 | C | AWS Elastic Disaster Recovery provides RPO of seconds and RTO of minutes cost-effectively for SQL Server workloads. |
-| 540 | C | RDS Multi-AZ cluster deployment provides high availability and dedicated reader instances for offloading reporting workloads. |
-| 541 | A, C, E | Lambda + DynamoDB + Cognito User Pool + AWS Amplify provides cost-effective serverless solution for unpredictable traffic patterns. |
-| 542 | B | CloudFront signed URLs provide secure, time-limited access to premium content with granular control over access permissions. |
-| 543 | A, E | Turn on discount sharing from management account + create organization with existing Savings Plan account enables sharing across accounts. |
-| 544 | A | Canary release deployment allows gradual API rollout with traffic splitting and easy rollback, minimizing customer impact. |
-| 545 | B | Route 53 active-passive failover with health checks provides automatic failover to S3-hosted error page when ALB becomes unhealthy. |
-| 546 | D | AWS Storage Gateway with VTL (Virtual Tape Library) interface replaces physical tapes while preserving existing backup workflows. |
-| 547 | A | Kinesis Data Firehose provides fully managed streaming data delivery to S3 with automatic scaling and minimal operational overhead. |
-| 548 | B | AWS Organizations with Service Control Policies (SCPs) provides centralized service control across accounts with minimal operational overhead. |
-| 549 | B | NAT Gateway in public subnet allows private subnet resources to access internet securely while remaining private. |
-| 550 | B, D | Lambda execution role needs KMS decrypt permissions, and the role must be explicitly allowed in the KMS key policy. |
-| 551 | A | S3 Standard → S3 Glacier after 7 days meets 6-hour retrieval requirement cost-effectively (Glacier retrieval: 1-5 minutes to 12 hours). |
-| 552 | B | Compute Savings Plan provides flexibility to change instance families every 2-3 months while maintaining cost optimization. |
-| 553 | A | Amazon Macie in each region provides automated PII discovery and classification with minimal operational overhead. |
-| 554 | C | Memory optimized instances (R5, X1) for both application and database due to high memory utilization requirements from SAP workloads. |
-| 555 | A | Interface VPC endpoint in private subnets with proper security groups ensures secure SQS connectivity without internet traversal. |
-| 556 | B | IAM role with instance profile provides secure access to DynamoDB without exposing credentials in CloudFormation templates. |
-| 557 | A | Amazon Athena enables parallel S3 data processing, while AWS Glue can enrich data using Redshift information efficiently. |
-| 558 | C | VPC Peering is most cost-effective for same-region, same-account VPC connectivity with 500GB monthly transfer. |
-| 559 | B, E | Select user-defined tags in billing console and activate from Organizations management account enables cost allocation by product line. |
-| 560 | A | AWS Control Tower account drift notifications provide automated monitoring of OU hierarchy changes with built-in notifications. |
-| 561 | A | DynamoDB Accelerator (DAX) provides microsecond latency caching with minimal operational overhead and native DynamoDB integration. |
-| 562 | A, B | Gateway endpoint for DynamoDB + route table entry enables private connectivity without internet traversal or additional NICs. |
-| 563 | B | EKS Connector allows centralized management and viewing of both EKS and on-premises Kubernetes clusters from a single console. |
-| 564 | B | RDS with KMS client-side encryption protects data even from database administrators who have database access but not encryption keys. |
-| 565 | C | AWS DMS to Aurora + Auto Scaling provides MySQL compatibility with automatic scaling for transactional workloads. |
-| 566 | B | Amazon EFS provides shared, concurrent POSIX-compliant file system access across multiple EC2 instances with high performance. |
-| 567 | A | API Gateway + Lambda + DynamoDB provides fully managed serverless solution with automatic scaling and modular architecture. |
-| 568 | A | S3 for petabyte-scale storage + CloudFront for global caching and fast delivery of engineering drawings to distributed users. |
-| 569 | A | CloudWatch metrics in AWS/Events namespace show EventBridge rule execution metrics including invocation success/failure. |
-| 570 | B | Auto Scaling scheduled actions automatically scale instances based on predictable time-based patterns with minimal overhead. |
-| 571 | A | Third-party CA certificates must be created locally/externally and imported into ACM, then configured with API Gateway custom domain. |
-| 572 | C | Aurora Serverless v2 provides MySQL compatibility with automatic scaling and 1 ACU minimum meets memory requirements efficiently. |
-| 573 | D | Lambda SnapStart reduces Java cold start times most cost-effectively by pre-initializing execution environments. |
-| 574 | A | Aurora Serverless v2 automatically scales to zero when not in use, making it ideal for 2-hour weekly workloads. |
-| 575 | C | RDS Multi-AZ cluster deployment provides high availability and dedicated read replicas for PostgreSQL workloads. |
-| 576 | D | Edge-optimized endpoint uses CloudFront edge locations to reduce latency for geographically distributed users. |
-| 577 | C | ACM with DNS validation provides automated certificate creation, deployment, and renewal with operational efficiency. |
-| 578 | A | DynamoDB Accelerator (DAX) provides microsecond response times with minimal operational overhead and seamless DynamoDB integration. |
-| 579 | A | Instance Scheduler on AWS automatically starts/stops RDS instances based on schedules, optimizing costs for business-hours-only usage. |
-| 580 | D | EBS GP3 provides cost-effective baseline performance suitable for lift-and-shift applications requiring local storage. |
-| 581 | B | Four instances across two AZs ensures at least two instances remain available during single AZ failure, meeting HA requirements. |
-| 582 | A | Geolocation routing policy directs users to nearest infrastructure based on geographic location, minimizing load time. |
-| 583 | C | Snowball with Tape Gateway handles large data migration most cost-effectively given 1 Gbps limitation and 5 PB volume. |
-| 584 | A | Spread placement group ensures instances run on different underlying hardware across distinct racks/hosts. |
-| 585 | D | Capacity Reservations guarantee EC2 capacity availability in disaster recovery region when needed for failover. |
+| 456 | 3 | AWS Backup provides automated, cost-effective cross-region backup for EC2 instances |
+| 457 | 3 | AWS Transfer Family supports AS2 protocol and can integrate with custom IdP via Lambda |
+| 458 | 2, 3 | Lambda (1GB memory) + RDS (relational data) with minimal admin overhead |
+| 459 | 1 | User-defined tags from management account provide centralized cost allocation |
+| 460 | 3 | Amazon AppFlow natively supports Salesforce integration with encryption |
+| 461 | 2 | Global Accelerator + NLB supports both TCP/UDP for gaming applications |
+| 462 | 2 | SQS queue + Auto Scaling group provides reliable order processing during high traffic |
+| 463 | 3 | Lambda is most cost-effective for short-duration (30s), small data processing |
+| 464 | 1 | Converting to Multi-AZ requires no application code changes |
+| 465 | 3 | io2 volumes support EBS Multi-Attach for simultaneous access |
+| 466 | 1 | Multi-AZ Auto Scaling + ALB provides high availability for stateless apps |
+| 467 | 2 | Discount sharing must be enabled from the management account |
+| 468 | 2 | REST API + private VPC link enables secure access to private ECS services |
+| 469 | 3 | S3 Intelligent-Tiering automatically optimizes costs for unpredictable access patterns |
+| 470 | 4 | Egress-only IGW allows IPv6 outbound traffic while blocking inbound connections |
+| 471 | 3 | Gateway VPC endpoint for S3 eliminates internet traffic and reduces costs |
+| 472 | 1 | DynamoDB DAX provides microsecond latency with minimal application changes |
+| 473 | 1 | CloudFront distribution reduces costs by caching static content at edge locations |
+| 474 | 3 | Transit Gateway provides the least administrative effort for multi-region VPC connectivity |
+| 475 | 3 | Amazon EFS supports cross-AZ mount targets and AWS Backup integration |
+| 476 | 3 | IAM policies attached to groups provide least privilege permissions securely |
+| 477 | 2 | Snowball Edge is most efficient for large data migration with limited bandwidth |
+| 478 | 2 | S3 Object Lock with versioning prevents modifications while allowing public read access |
+| 479 | 2 | CloudFormation templates enable automated infrastructure deployment |
+| 480 | 2 | VPC endpoints keep traffic between EC2 and S3 within AWS network |
+| 481 | 2 | Write-through caching ensures cache and database data consistency |
+| 482 | 1 | AWS CLI s3 sync provides encryption in transit with least operational overhead |
+| 483 | 3 | ECS Fargate with scheduled tasks is most cost-effective for regular container jobs |
+| 484 | 1, 5 | Organizations + IAM Identity Center enables centralized account management and authentication |
+| 485 | 1 | S3 Glacier with Expedited retrieval meets 5-minute requirement cost-effectively |
+| 486 | 1 | S3 for static hosting, ECS Fargate for containers, RDS for database - simplest deployment |
+| 487 | 3 | EFS with multiple mount targets supports Linux, on-premises access via VPN |
+| 488 | 3 | SCP at root OU level restricts billing access across all member accounts |
+| 489 | 3 | SNS dead letter queue with SQS target retains failed messages for analysis |
+| 490 | 2 | DynamoDB export to S3 provides continuous backup without affecting RCUs |
+| 491 | 1 | Standard SQS + SSE-KMS is most cost-effective for at-least-once processing |
+| 492 | 2 | Organizations with SCP provides centralized resource restrictions with least effort |
+| 493 | 4, 5, 6 | Transcribe (audio to text) + Translate (to English) + Comprehend (sentiment) |
+| 494 | 4 | 403 error likely due to IP condition in policy not matching request origin |
+| 495 | 3 | Amazon Macie specializes in PII and sensitive data discovery in S3 |
+| 496 | 2, 4 | Storage Gateway file gateway (NFS) + volume gateway (block storage) |
+| 497 | 3 | VPC gateway endpoint eliminates NAT gateway costs for S3 traffic |
+| 498 | 1 | S3 Lifecycle rules automatically manage object versions with least overhead |
+| 499 | 4 | Direct Connect Partner hosted connection reduces cost for low utilization |
+| 500 | 1, 4 | DataSync agents preserve permissions; Snowcone for large datasets |
+| 501 | 3 | Kinesis Data Firehose + Analytics provides operational efficiency for streaming data |
+| 502 | 3, 5 | EFS for shared storage + Auto Scaling with CloudFront for performance/resilience |
+| 503 | 1 | Cross-account IAM roles with trust policies provide secure access |
+| 504 | 3 | Transit Gateway from networking account provides centralized VPC connectivity |
+| 505 | 3 | Spot Instances are most cost-effective for fault-tolerant batch jobs |
+| 506 | 3 | S3 presigned URLs provide direct, scalable file uploads |
+| 507 | 1 | DynamoDB Global Tables provide global consistency with sub-second latency |
+| 508 | 2, 4 | AMI lifecycle with cross-region copy + AWS Backup with automated scheduling |
+| 509 | 2 | Network ACL deny rules at web tier subnet level block malicious traffic |
+| 510 | 2 | VPC peering + route tables + security group references enable secure cross-region communication |
+| 511 | 3 | Aurora On-Demand is most cost-effective for part-time development usage |
+| 512 | 1 | AWS Config identifies untagged resources for comprehensive backup coverage |
+| 513 | 1 | S3 static hosting + Lambda for image processing provides scalable, serverless solution |
+| 514 | 2 | Interface VPC endpoints required for private EKS nodes to access control plane |
+| 515 | 1, 2, 3 | Redshift supports data APIs, encryption, and analytics workloads |
+| 516 | 2 | API Gateway + Lambda with provisioned concurrency ensures consistent low latency |
+| 517 | 4 | CloudWatch agent + Kinesis Data Firehose provides automated log streaming to S3 |
+| 518 | 1 | RDS storage autoscaling increases space automatically without downtime |
+| 519 | 2 | AWS Service Catalog provides centralized, self-service solution deployment |
+| 520 | 2 | DynamoDB on-demand mode automatically scales for unpredictable traffic patterns |
 
-## Key Study Areas
-
-### Security & IAM
-- Cross-account role assumption (Q521)
-- KMS encryption and permissions (Q535, Q550, Q564)
-- VPC endpoints and private connectivity (Q555, Q562)
-- CloudFront access controls and signed URLs (Q538, Q542)
-
-### High Availability & Disaster Recovery
-- Multi-AZ deployments and Aurora Global Database (Q527, Q536, Q540, Q575)
-- RDS Proxy for reduced failover times (Q526)
-- Route 53 failover configurations (Q545)
-- AWS Elastic Disaster Recovery (Q539)
-
-### Cost Optimization
-- Savings Plans vs Reserved Instances (Q543, Q552)
-- S3 lifecycle policies and storage classes (Q534, Q551)
-- Auto Scaling and serverless architectures (Q541, Q570, Q574)
-- Aurora Serverless for variable workloads (Q572, Q574)
-
-### Performance & Scalability
-- DynamoDB performance optimization with DAX (Q561, Q578)
-- EKS scaling with HPA and Cluster Autoscaler (Q522)
-- Global Accelerator for gaming applications (Q530)
-- Aurora cluster deployments (Q536, Q575)
-
-### Serverless & Event-Driven Architecture
-- Lambda optimization techniques (Q573)
-- API Gateway configurations (Q531, Q544, Q576)
-- Event-driven processing with S3 + Lambda (Q528)
-- AppSync for data aggregation (Q523)
-
-### Data Processing & Analytics
-- Kinesis Data Firehose for streaming (Q547)
-- Athena for log analysis (Q524, Q557)
-- Macie for PII detection (Q533, Q553)
-
-### Migration Strategies
-- Database migration with DMS (Q565)
-- Large data migration with Snowball (Q583)
-- Storage Gateway for hybrid scenarios (Q546)
-
-## Tips for Exam Success
-
-1. **Identify Keywords**: Look for "MOST secure," "LEAST operational overhead," "cost-effective," "minimal changes"
-2. **Well-Architected Framework**: Consider all five pillars when evaluating options
-3. **Service Limitations**: Understand what each AWS service can and cannot do
-4. **Regional Services**: Know which services are global vs regional
-5. **Integration Patterns**: Understand how services work together
-6. **Scaling Patterns**: Differentiate between horizontal, vertical, and automatic scaling approaches
 ---
 
 ## Contributing
