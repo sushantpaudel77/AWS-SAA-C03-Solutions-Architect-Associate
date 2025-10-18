@@ -139,8 +139,11 @@ Which AWS service should a solutions architect use to meet these requirements?
 
 **Options:**
 1. AWS DataSync with a VPC endpoint
+
 2. AWS Direct Connect
+
 3. AWS Snowball Edge Storage Optimized
+
 4. AWS Storage Gateway
 
 ---
@@ -152,8 +155,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Configure an Application Load Balancer to distribute traffic properly to the instances.
+
 2. Configure a dynamic scaling policy for the Auto Scaling group to launch new instances based on memory utilization.
+
 3. Configure a dynamic scaling policy for the Auto Scaling group to launch new instances based on CPU utilization.
+
 4. Configure a scheduled scaling policy for the Auto Scaling group to launch new instances before peak hours.
 
 ---
@@ -165,8 +171,11 @@ Which solution will meet these requirements with the LEAST operational overhead?
 
 **Options:**
 1. Use Amazon DynamoDB with connection pooling with a target group configuration for the database. Change the applications to use the DynamoDB endpoint.
+
 2. Use Amazon RDS Proxy with a target group for the database. Change the applications to use the RDS Proxy endpoint.
+
 3. Use a custom proxy that runs on Amazon EC2 as an intermediary to the database. Change the applications to use the custom proxy endpoint.
+
 4. Use an AWS Lambda function to provide connection pooling with a target group configuration for the database. Change the applications to use the Lambda function.
 
 ---
