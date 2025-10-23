@@ -370,8 +370,11 @@ Which solution will meet these requirements with the LEAST administrative effort
 
 **Options:**
 1. Create an IAM role that has permission to delete snapshots. Attach the role to a new EC2 instance. Use the AWS CLI from the new EC2 instance to delete snapshots.
+
 2. Create an IAM policy that denies snapshot deletion. Attach the policy to the storage administrator user.
+
 3. Add tags to the snapshots. Create retention rules in Recycle Bin for EBS snapshots that have the tags.
+
 4. Lock the EBS snapshots to prevent deletion.
 
 ---
@@ -383,8 +386,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Create a log group in Amazon CloudWatch Logs. Configure VPC Flow Logs to send the log data to the log group. Use Amazon Kinesis Data Streams to stream the logs from the log group to OpenSearch Service.
+
 2. Create a log group in Amazon CloudWatch Logs. Configure VPC Flow Logs to send the log data to the log group. Use Amazon Kinesis Data Firehose to stream the logs from the log group to OpenSearch Service.
+
 3. Create a trail in AWS CloudTrail. Configure VPC Flow Logs to send the log data to the trail. Use Amazon Kinesis Data Streams to stream the logs from the trail to OpenSearch Service.
+
 4. Create a trail in AWS CloudTrail. Configure VPC Flow Logs to send the log data to the trail. Use Amazon Kinesis Data Firehose to stream the logs from the trail to OpenSearch Service.
 
 ---
