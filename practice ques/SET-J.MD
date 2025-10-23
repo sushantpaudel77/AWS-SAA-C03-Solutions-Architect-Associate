@@ -430,10 +430,15 @@ Which combination of steps will meet these requirements? (Choose three.)
 
 **Options:**
 1. Create an S3 bucket that has S3 Object Lock enabled.
+
 2. Create an S3 bucket that has object versioning enabled.
+
 3. Configure a default retention period of 30 days for the objects.
+
 4. Configure an S3 Lifecycle policy to protect the objects for 30 days.
+
 5. Configure an S3 Lifecycle policy to expire the objects after 30 days.
+
 6. Configure the backup solution to tag the objects with a 30-day retention period.
 
 ---
