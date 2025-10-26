@@ -125,9 +125,13 @@ Which solution will meet these requirements with the LEAST latency? (Choose two.
 
 **Options:**
 1. Deploy compute optimized EC2 instances into a cluster placement group.
+
 2. Deploy compute optimized EC2 instances into a partition placement group.
+
 3. Attach the EC2 instances to an Amazon FSx for Lustre file system.
+
 4. Attach the EC2 instances to an Amazon FSx for OpenZFS file system.
+
 5. Attach the EC2 instances to an Amazon FSx for NetApp ONTAP file system.
 
 ---
