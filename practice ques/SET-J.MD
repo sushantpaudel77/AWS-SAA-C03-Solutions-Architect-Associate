@@ -234,8 +234,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Use AWS Organizations to set up the infrastructure. Use AWS Config to track changes.
+
 2. Use AWS CloudFormation to set up the infrastructure. Use AWS Config to track changes.
+
 3. Use AWS Organizations to set up the infrastructure. Use AWS Service Catalog to track changes.
+
 4. Use AWS CloudFormation to set up the infrastructure. Use AWS Service Catalog to track changes.
 
 ---
