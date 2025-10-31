@@ -424,8 +424,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Use default server-side encryption with Amazon S3 managed encryption keys (SSE-S3) to store the sensitive data.
+
 2. Create a customer managed key by using AWS Key Management Service (AWS KMS). Use the new key to encrypt the S3 objects by using server-side encryption with AWS KMS keys (SSE-KMS).
+
 3. Create an AWS managed key by using AWS Key Management Service (AWS KMS). Use the new key to encrypt the S3 objects by using server-side encryption with AWS KMS keys (SSE-KMS).
+
 4. Download S3 objects to an Amazon EC2 instance. Encrypt the objects by using customer managed keys. Upload the encrypted objects back into Amazon S3.
 
 ---
