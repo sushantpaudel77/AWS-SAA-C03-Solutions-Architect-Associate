@@ -191,8 +191,11 @@ Which solution will meet these requirements with the LEAST operational overhead?
 
 **Options:**
 1. Use logs in Amazon CloudWatch Logs to monitor the storage utilization of Amazon EBS. Use Amazon EBS Elastic Volumes to reduce the size of the EBS volumes.
+
 2. Use a custom script to monitor space usage. Use Amazon EBS Elastic Volumes to reduce the size of the EBS volumes.
+
 3. Delete all expired and unused snapshots to reduce snapshot costs.
+
 4. Delete all nonessential snapshots. Use Amazon Data Lifecycle Manager to create and manage the snapshots according to the company's snapshot policy requirements.
 
 ---
