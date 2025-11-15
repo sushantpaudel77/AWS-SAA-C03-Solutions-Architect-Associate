@@ -99,8 +99,11 @@ Which solution will meet these requirements MOST cost-effectively?
 
 **Options:**
 1. Store images in Amazon Elastic Block Store (Amazon EBS). Use a web server that runs on Amazon EC2.
+
 2. Store images in Amazon Elastic File System (Amazon EFS). Use a web server that runs on Amazon EC2.
+
 3. Store images in Amazon S3 Standard. Use S3 Standard to directly deliver images by using a static website.
+
 4. Store images in Amazon S3 Standard-Infrequent Access (S3 Standard-IA). Use S3 Standard-IA to directly deliver images by using a static website.
 
 ---
