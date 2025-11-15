@@ -430,8 +430,11 @@ Which solution will meet these requirements MOST cost-effectively?
 
 **Options:**
 1. Create a managed node group that contains only Spot Instances.
+
 2. Create two managed node groups. Provision one node group with On-Demand Instances. Provision the second node group with Spot Instances.
+
 3. Create an Auto Scaling group that has a launch configuration that uses Spot Instances. Configure the user data to add the nodes to the EKS cluster.
+
 4. Create a managed node group that contains only On-Demand Instances.
 
 ---
