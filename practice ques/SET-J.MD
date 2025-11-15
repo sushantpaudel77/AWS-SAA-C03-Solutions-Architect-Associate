@@ -350,8 +350,11 @@ Which solution will meet these requirements with the LEAST operational overhead?
 
 **Options:**
 1. Create external tables in a Spark catalog. Configure jobs in AWS Glue to query the data.
+
 2. Configure an AWS Glue crawler to crawl the data. Configure Amazon Athena to query the data.
+
 3. Create external tables in a Hive metastore. Configure Spark jobs in Amazon EMR to query the data.
+
 4. Configure an AWS Glue crawler to crawl the data. Configure Amazon Kinesis Data Analytics to use SQL to query the data.
 
 ---
