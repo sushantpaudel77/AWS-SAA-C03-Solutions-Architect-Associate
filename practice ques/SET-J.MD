@@ -281,8 +281,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Create gateway endpoints for Amazon S3. Use the gateway endpoints to securely access the data from the Region and the on-premises location.
+
 2. Create a gateway in AWS Transit Gateway to access Amazon S3 securely from the Region and the on-premises location.
+
 3. Create interface endpoints for Amazon S3. Use the interface endpoints to securely access the data from the Region and the on-premises location.
+
 4. Use an AWS Key Management Service (AWS KMS) key to access the data securely from the Region and the on-premises location.
 
 ---
