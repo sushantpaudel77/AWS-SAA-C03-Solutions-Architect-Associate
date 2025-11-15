@@ -112,8 +112,11 @@ Which solution will meet these requirements MOST cost-effectively?
 
 **Options:**
 1. Create VPC security groups in the organization's management account. Update the security groups when a CIDR range update is necessary.
+
 2. Create a VPC customer managed prefix list that contains the list of CIDRs. Use AWS Resource Access Manager (AWS RAM) to share the prefix list across the organization. Use the prefix list in the security groups across the organization.
+
 3. Create an AWS managed prefix list. Use an AWS Security Hub policy to enforce the security group update across the organization. Use an AWS Lambda function to update the prefix list automatically when the CIDR ranges change.
+
 4. Create security groups in a central administrative AWS account. Create an AWS Firewall Manager common security group policy for the whole organization. Select the previously created security groups as primary groups in the policy.
 
 ---
@@ -257,9 +260,13 @@ Which combination of actions should a solutions architect take to achieve high a
 
 **Options:**
 1. Provision an internet gateway in each Availability Zone in use.
+
 2. Migrate the database to an Amazon RDS for MySQL Multi-AZ DB instance.
+
 3. Migrate the database to Amazon DynamoDB, and enable DynamoDB auto scaling.
+
 4. Use AWS DataSync to synchronize the database data across multiple EC2 instances.
+
 5. Create an Application Load Balancer to distribute traffic to an Auto Scaling group of EC2 instances that are distributed across two Availability Zones.
 
 ---
