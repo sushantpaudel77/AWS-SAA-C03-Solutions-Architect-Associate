@@ -299,8 +299,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Create an IAM group that has a conditional Allow policy that requires the application name tag to be specified for resources to be created.
+
 2. Create a cross-account role that has a Deny policy for any resource that has the application name tag.
+
 3. Create a resource group in AWS Resource Groups to validate that the tags are applied to all resources in all accounts.
+
 4. Create a tag policy in Organizations that has a list of allowed application names.
 
 ---
