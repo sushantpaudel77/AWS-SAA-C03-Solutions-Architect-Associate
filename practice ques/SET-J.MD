@@ -386,8 +386,11 @@ Which actions should a solutions architect take to resolve these performance iss
 **Options:**
 1. Turn on auto scaling for the DB instance.
 2. Create a read replica for the DB instance. Configure the application to send read traffic to the read replica.
+
 3. Convert the DB instance to a Multi-AZ DB instance deployment. Configure the application to send read traffic to the standby DB instance.
+
 4. Create an Amazon ElastiCache cluster. Configure the application to cache query results in the ElastiCache cluster.
+
 5. Configure the Auto Scaling group subnets to ensure that the EC2 instances are provisioned in the same Availability Zone as the DB instance.
 
 ---
