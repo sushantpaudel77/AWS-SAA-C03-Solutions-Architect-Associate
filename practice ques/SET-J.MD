@@ -498,8 +498,11 @@ Which solution will meet these requirements with the LEAST operational overhead?
 
 **Options:**
 1. Create a customer managed key. Use the key to encrypt the EBS volumes.
+
 2. Use an AWS managed key to encrypt the EBS volumes. Use the key to configure automatic key rotation.
+
 3. Create an external KMS key with imported key material. Use the key to encrypt the EBS volumes.
+
 4. Use an AWS owned key to encrypt the EBS volumes.
 
 ---
@@ -541,8 +544,11 @@ Which solution will meet these requirements?
 
 **Options:**
 1. Deploy the applications in eu-central-1. Extend the company's VPC from eu-central-1 to an edge location in Amazon CloudFront.
+
 2. Deploy the applications in AWS Local Zones by extending the company's VPC from eu-central-1 to the chosen Local Zone.
+
 3. Deploy the applications in eu-central-1. Extend the company's VPC from eu-central-1 to the regional edge caches in Amazon CloudFront.
+
 4. Deploy the applications in AWS Wavelength Zones by extending the company's VPC from eu-central-1 to the chosen Wavelength Zone.
 
 ---
